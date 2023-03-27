@@ -28,10 +28,15 @@ import Img_20 from "./Imgs/Img_20.png";
 
 import mapa from "./Imgs/mapa.png";
 
+import GenerateStyle from './Functions/GenerateStyle';
+
 function App() {
+
+
   return (
     <>
       {/* <NavbarsPage /> */}
+      <GenerateStyle />
 
       <nav class='always-on-top'>
         <div className="banner">
@@ -40,7 +45,6 @@ function App() {
           </div>
           <div className="center">
             <header>Nové menu najdete <a href="#">zde</a>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, repudiandae libero!
 
             </header>
           </div>
@@ -73,7 +77,7 @@ function App() {
           <div className="bg">
             <img src={Img_0} alt="" class='make-section-bg to-right' id="a123" />
           </div>
-          <div className="content center">
+          <div className="content ">
             <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
 
             <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
@@ -151,6 +155,84 @@ function App() {
         </div>
 
 
+
+        <div className="accordion-section">
+          <div className="content">
+            <div className="accordion-parent">
+              <div className="accordion">
+                <div className="accordion-item opened">
+
+                  <div className="accordion-header">
+                    <h5>Accordion</h5>
+                  </div>
+                  <div className="accordion-content ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
+                    </p>
+                  </div>
+                </div>
+                <div className="accordion-item ">
+                  <div className="accordion-header">
+                    <h5>Accordion</h5>
+                  </div>
+                  <div className="accordion-content ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
+                    </p>
+                  </div>
+                </div>
+                <div className="accordion-item ">
+                  <div className="accordion-header">
+                    <h5>Accordion</h5>
+                  </div>
+                  <div className="accordion-content ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div className="width-test-section">
+          <div className="content">
+            <div className="w-2 test">
+              Tomato
+            </div>
+            <div className="w-5 test">
+              Tomato
+            </div>
+            <div className="w-12 test">
+              Tomato
+            </div>
+            <div className="w-10 test">
+              Tomato
+            </div>
+
+            <div style={{ display: "flex" }}>
+              <div className="w-2 test">
+                AA
+              </div>            <div className="w-1 test ">
+                AA
+              </div>            <div className="w-2 test ">
+                AA
+              </div>            <div className="w-3 test ">
+                AA
+              </div>            <div className="w-5 test ">
+                AA
+              </div>            <div className="w-1 test ">
+                AA
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+
         <div className="footer-section">
           <div className="content footer-paloma">
 
@@ -178,14 +260,14 @@ function App() {
                 <tbody>
 
                   <tr>
-                    <td><span class="icon material-symbols-outlined">
+                    <td><span class="g-icon ">
                       call
                     </span></td>
                     <td>+420 123 456 789</td>
                   </tr>
 
                   <tr>
-                    <td><span class="icon material-symbols-outlined">
+                    <td><span class="g-icon">
                       mail
                     </span></td>
                     <td> example@gmail.com </td>

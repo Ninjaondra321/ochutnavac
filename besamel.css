@@ -34,6 +34,16 @@ body {
     display: grid;
 }
 
+/* Nemám šajna jak to konkrétně upravit, takže pokud by se ti to nelíbilo, 
+   nic ti nebrání to změnit na něco rozumnějšího.
+   Ondra z minulosti ;-)
+*/
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
 /* 2 COMMONLY USED THINGS   */
 
 /* 2.1 Item position */
@@ -157,6 +167,12 @@ body {
 
 }
 
+.g-icon {
+    font-family: 'Material Icons';
+    font-size: 1rem;
+
+}
+
 h1 {
     font-size: calc(2.5rem * var(--font-multiplier));
 }
@@ -183,6 +199,15 @@ h6 {
 
 p {
     font-size: calc((1rem) * var(--font-multiplier))
+}
+
+
+.responsive-heading {
+    /* font-size: calc(2.5rem * var(--font-multiplier)); */
+
+    font-size: calc((1.4rem + 3.3vw) * var(--font-multiplier));
+    font-size: clamp(0.2rem, 1.4rem + 3.3vw, 5rem);
+
 }
 
 /* 5 DEFAULT COMPONENTS STYLING */
@@ -286,6 +311,34 @@ nav .navbar.island {
 }
 
 
+/* Accordion */
+.accordion .accordion-item .accordion-header {
+    cursor: pointer;
+    width: 100%;
+    border: 1px black solid;
+
+    display: flex;
+
+}
+
+.accordion .accordion-item .accordion-header::before {
+    font-family: 'Material Icons';
+    content: 'mail';
+    font-size: 1rem;
+    height: 100%;
+
+    transform: rotate(180deg);
+
+
+
+
+    /* This is the code for Google icon */
+
+
+}
+
+
+
 
 
 /* TODO! tohle vyaz*/
@@ -327,18 +380,7 @@ nav .navbar.island {
     background-color: rgba(231, 222, 91, 0.747);
 }
 
-.hero .content {
-    background-color: blue;
-    padding: 50px;
-    border-radius: 120px;
 
-}
-
-
-img {
-    width: 100%;
-    height: 100%;
-}
 
 .footer-section {
     background-color: darkcyan;
@@ -364,4 +406,13 @@ img {
 
 .footer-paloma .icon {
     padding-right: 5px !important;
+}
+
+.accordion-section {
+    background-color: dodgerblue;
+}
+
+.test {
+    background-color: tomato;
+    border: 1px solid black;
 }
