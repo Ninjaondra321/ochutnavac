@@ -17,6 +17,8 @@
             /* Minimal */
             40px);
 
+    --main-part-width: calc(100vw - 2 * var(--padding-from-edge));
+
 
 
 }
@@ -29,14 +31,17 @@ body {
 }
 
 body {
-    width: 100vw;
+    /* width: 100vw; */
     overflow-x: hidden;
     display: grid;
 }
 
-/* Nemám šajna jak to konkrétně upravit, takže pokud by se ti to nelíbilo, 
+/* TODO Nemám šajna jak to konkrétně upravit, takže pokud by se ti to nelíbilo, 
    nic ti nebrání to změnit na něco rozumnějšího.
    Ondra z minulosti ;-)
+
+    - Je to celkem fajn. Dik
+    Ondra z budoucnosti ;-)
 */
 
 img {
@@ -110,12 +115,47 @@ img.make-section-bg.default {
 }
 
 /* 2.4 Padding */
+/* TODO: - you can change those values: */
+.padding-small {
+    padding: 5px;
+}
+
 .padding {
     padding: 10px;
 }
 
 .padding-large {
     padding: 20px;
+}
+
+.horizontal-padding-small {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.horizontal-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.horizontal-padding-large {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.vertical-padding-small {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.vertical-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.vertical-padding-large {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -127,11 +167,11 @@ img.make-section-bg.default {
 /* 3.1 Nav */
 nav {
     display: grid;
-    width: 100%;
+    width: 100vw;
+
 }
 
 nav>div {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,8 +192,10 @@ nav>div {
 }
 
 .sections>div>.content {
-    margin: 15px var(--padding-from-edge);
-    width: 100%;
+    /* margin: 15px var(--padding-from-edge); */
+
+    width: var(--main-part-width);
+    /* width: 100%; */
     z-index: 10;
 }
 
@@ -330,10 +372,19 @@ nav .navbar.island {
     transform: rotate(180deg);
 
 
+}
 
 
-    /* This is the code for Google icon */
+.accordion .accordion-item {
+    transition: all 1s ease-in-out;
+}
 
+.accordion .accordion-item .accordion-content {
+    overflow-y: hidden;
+}
+
+.accordion .accordion-item.closed .accordion-content {
+    height: 0 !important;
 
 }
 
@@ -367,11 +418,6 @@ nav .navbar.island {
     height: 600px;
 }
 
-/* .hero .content {
-    background-color: tomato;
-    border-radius: 120px;
-    padding: 50px;
-} */
 
 .cards-section {
     background-color: blue;

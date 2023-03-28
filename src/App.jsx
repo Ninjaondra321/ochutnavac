@@ -30,6 +30,13 @@ import mapa from "./Imgs/mapa.png";
 
 import GenerateStyle from './Functions/GenerateStyle';
 
+import HomePage from './Pages/Homepage';
+
+import { Router, Routes, Route } from "@solidjs/router"
+import NavBar from './Components/NavBar';
+import Abc from './Pages/Abc';
+
+
 function App() {
 
 
@@ -38,265 +45,34 @@ function App() {
       {/* <NavbarsPage /> */}
       <GenerateStyle />
 
-      <nav class='always-on-top'>
-        <div className="banner">
 
-          <div className="left">
-          </div>
-          <div className="center">
-            <header>Nové menu najdete <a href="#">zde</a>
-
-            </header>
-          </div>
-          <div className="right">X</div>
-
-        </div>
-
-        <div className="navbar ">
-
-          <div className="left">
-            <header>Ogarova Pizza</header>
-          </div>
-          <div className="center"></div>
-          <div className="right">
-            <ul>
-              <li>Home</li>
-              <li>Menu</li>
-              <li>Order</li>
-              <li>Contacts</li>
-            </ul>
-          </div>
-
-        </div>
-
-      </nav>
+      <Router>
 
 
-      <div className="sections">
-        <div className="hero">
-          <div className="bg">
-            <img src={Img_0} alt="" class='make-section-bg to-right' id="a123" />
-          </div>
-          <div className="content ">
-            <div className="left padding-large w-6 m-w-12">
-
-              <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
-
-              <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
-                minus architecto modi ut eos blanditiis corporis recusandae, nulla minima beatae ab nemo molestias consequatur?
-              </p>
-
-              <div className="to-right">
-                <button class='btn btn-primary'>Lorem ipsum</button>
-
-              </div>
-            </div>
-          </div>
+        <NavBar />
 
 
+        <Routes>
 
-        </div>
-        <div className="padding-large"></div>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/abc" element={<Abc />} />
 
-        <div className="carousel-section">
-          <div className="content">
-
-
-            <div className="carousel image-carousel carousel-medium">
-              <img src={Img_0} />
-              <img src={Img_1} />
-              <img src={Img_2} />
-              <img src={Img_3} />
-              <img src={Img_4} />
-              <img src={Img_5} />
-            </div>
+          {/* <Route path="/" element={<Home SCREENS={SCREENS} updateCollection={updateCollection} updatePallete={updatePallete} COLLECTION={COLLECTION} updateScreens={updateScreens} />} />
+          <Route path="/extractor" element={<Extractor />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route path="/collections/:selectedCollection" component={Collection} />
+          <Route path="/settings" element={<Settings />} /> */}
 
 
-          </div>
-        </div>
-
-        <div className="vymaz">
-          <div className="content">
-            {/* <img src={Img_20} className="" />
-            <img src={Img_20} className="darken" />
-            <img src={Img_20} className="darken-more" /> */}
-
-          </div>
-        </div>
-
-        <div className="cards-section">
-          <div className="content">
-
-            <div className="cards ">
-              <div className="card">
-                <h5>Ahoj</h5>
-              </div>
-              <div className="card">
-                <h5>Rad te vidim</h5>
-              </div>
-              <div className="card">
-                <h5>Jak je?</h5>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="font-test">
-          <div className="content">
-
-            <h1 class='header'>Font test</h1>
-            <h1>Font test ooooooooooooooo</h1>
-            <h2>Font test ooooooooooooooo</h2>
-            <h3>Font test ooooooooooooooo</h3>
-            <h4>Font test ooooooooooooooo</h4>
-            <h5>Font test ooooooooooooooo</h5>
-            <h6>Font test ooooooooooooooo</h6>
-            <p>Font test</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quae perferendis consectetur soluta doloremque itaque, commodi sapiente magni atque officiis odit architecto eum veniam quidem deserunt, omnis explicabo tenetur nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum sequi quibusdam, necessitatibus provident excepturi iusto tempore, error magnam sunt, vero cumque doloribus perferendis dolorum illo incidunt. Earum, provident tempora</p>
-
-          </div>
-        </div>
-
-
-
-        <div className="accordion-section">
-          <div className="content">
-            <div className="accordion-parent">
-              <div className="accordion">
-                <div className="accordion-item opened">
-
-                  <div className="accordion-header">
-                    <h5>Accordion</h5>
-                  </div>
-                  <div className="accordion-content ">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
-                    </p>
-                  </div>
-                </div>
-                <div className="accordion-item ">
-                  <div className="accordion-header">
-                    <h5>Accordion</h5>
-                  </div>
-                  <div className="accordion-content ">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
-                    </p>
-                  </div>
-                </div>
-                <div className="accordion-item ">
-                  <div className="accordion-header">
-                    <h5>Accordion</h5>
-                  </div>
-                  <div className="accordion-content ">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-        <div className="width-test-section">
-          <div className="content">
-            <div className="w-2 m-w-6 test">
-              Tomato
-            </div>
-            <div className="w-5 test">
-              Tomato
-            </div>
-            <div className="w-12 test">
-              Tomato
-            </div>
-            <div className="w-10 test">
-              Tomato
-            </div>
-
-            <div style={{ display: "flex" }}>
-              <div className="w-2 test">
-                AA
-              </div>            <div className="w-1 test ">
-                AA
-              </div>            <div className="w-2 test ">
-                AA
-              </div>            <div className="w-3 test ">
-                AA
-              </div>            <div className="w-5 test ">
-                AA
-              </div>            <div className="w-1 test ">
-                AA
-              </div>
-            </div>
-
-
-
-          </div>
-        </div>
-
-
-
-        <div className="footer-section">
-          <div className="content footer-paloma">
-
-            <div className="left">
-              <h5>Info</h5>
-              <ul>
-                <li>Home</li>
-                <li>Menu</li>
-                <li>Order</li>
-                <li>Contacts</li>
-              </ul>
-            </div>
-
-            <div className="middle">
-              <h5>Kontakt</h5>
-
-              <table>
-                <thead style={{ display: "none" }}>
-                  <tr>
-                    <th>x</th>
-                    <th>x</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-
-                  <tr>
-                    <td><span class="g-icon ">
-                      call
-                    </span></td>
-                    <td>+420 123 456 789</td>
-                  </tr>
-
-                  <tr>
-                    <td><span class="g-icon">
-                      mail
-                    </span></td>
-                    <td> example@gmail.com </td>
-                  </tr>
-                </tbody>
-              </table>
-
-            </div>
-            <div className="right">
-              <h5>Adresa</h5>
-
-              <img src={mapa} alt="" style={{ "height": "25vh", width: "25vw" }} />
-
-            </div>
-
-
-
-          </div>
-
-        </div>
+        </Routes>
 
 
 
 
-      </div>
+      </Router>
+
+
+
 
       <div style={{
         background: "black", height: "35px",
