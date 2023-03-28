@@ -78,15 +78,18 @@ function App() {
             <img src={Img_0} alt="" class='make-section-bg to-right' id="a123" />
           </div>
           <div className="content ">
-            <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
+            <div className="left padding-large w-6 m-w-12">
 
-            <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
-              minus architecto modi ut eos blanditiis corporis recusandae, nulla minima beatae ab nemo molestias consequatur?
-            </p>
+              <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
 
-            <div className="to-right">
-              <button class='btn btn-primary'>Lorem ipsum</button>
+              <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
+                minus architecto modi ut eos blanditiis corporis recusandae, nulla minima beatae ab nemo molestias consequatur?
+              </p>
 
+              <div className="to-right">
+                <button class='btn btn-primary'>Lorem ipsum</button>
+
+              </div>
             </div>
           </div>
 
@@ -150,6 +153,7 @@ function App() {
             <h5>Font test ooooooooooooooo</h5>
             <h6>Font test ooooooooooooooo</h6>
             <p>Font test</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quae perferendis consectetur soluta doloremque itaque, commodi sapiente magni atque officiis odit architecto eum veniam quidem deserunt, omnis explicabo tenetur nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum sequi quibusdam, necessitatibus provident excepturi iusto tempore, error magnam sunt, vero cumque doloribus perferendis dolorum illo incidunt. Earum, provident tempora</p>
 
           </div>
         </div>
@@ -197,7 +201,7 @@ function App() {
 
         <div className="width-test-section">
           <div className="content">
-            <div className="w-2 test">
+            <div className="w-2 m-w-6 test">
               Tomato
             </div>
             <div className="w-5 test">

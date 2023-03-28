@@ -84,18 +84,18 @@ img {
 }
 
 .make-section-bg.to-right {
-    right: 0 !important;
-    left: unset !important;
+    right: 0;
+    left: unset;
 }
 
 .make-section-bg.stretch {
     width: 100vw !important;
-    height: 100% !important;
+    height: 100%;
 }
 
 img.make-section-bg.default {
     width: 100vw !important;
-    height: auto !important;
+    height: auto;
 }
 
 
@@ -337,6 +337,19 @@ nav .navbar.island {
 
 }
 
+/* 6 RESPONSIVNESS */
+
+@media only screen and (max-width: 768px) {
+    .m-hidden {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .pc-hidden {
+        display: none;
+    }
+}
 
 
 
@@ -415,4 +428,8 @@ nav .navbar.island {
 .test {
     background-color: tomato;
     border: 1px solid black;
+}
+
+.hero .content div {
+    background-color: dodgerblue;
 }
