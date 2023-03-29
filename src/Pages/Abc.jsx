@@ -1,7 +1,7 @@
 
 function Abc() {
     return (<>
-        <div className="sidebar-left">
+        <div className="sidebar-left m-w-100px">
             <h3>Sidebar - L</h3>
             <ul>
                 <li>A</li>
@@ -25,7 +25,7 @@ function Abc() {
 
         </div>
 
-        <div className="sidebar-right">
+        <div className="sidebar-right m-hidden">
             <h3>Sidebar - R</h3>
             <ul>
                 <li>A</li>

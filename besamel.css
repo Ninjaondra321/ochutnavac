@@ -158,11 +158,26 @@ img.make-section-bg.default {
     padding-bottom: 20px;
 }
 
+/* 2.6  Cards things */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 
 
 /* 3 PAGE LAYOUT */
+
+/* 3.0 Page */
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
 
 /* 3.1 Nav */
 nav {
@@ -178,9 +193,21 @@ nav>div {
 }
 
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 
 /* 3.2 Sections */
+.sections {
+    width: 100%;
+}
+
 .sections>div {
     position: relative;
     /* center */
@@ -189,12 +216,14 @@ nav>div {
     align-items: center;
 
     overflow: hidden;
+
+    width: 100%;
 }
 
 .sections>div>.content {
     /* margin: 15px var(--padding-from-edge); */
 
-    width: var(--main-part-width);
+    max-width: var(--main-part-width);
     /* width: 100%; */
     z-index: 10;
 }
@@ -332,20 +361,14 @@ nav .navbar.island {
 }
 
 /* Cards */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
+/* Todo hvjhvuhvjvhjhviviv */
 .no-wrap {
     flex-wrap: nowrap;
 }
 
 /* make the .cards responsive */
 .cards>div {
-    flex: 1 1 200px;
+    flex: 1 1 250px;
     margin: 10px;
     width: 200px;
 
@@ -392,13 +415,13 @@ nav .navbar.island {
 
 @media only screen and (max-width: 768px) {
     .m-hidden {
-        display: none;
+        display: none !important;
     }
 }
 
 @media only screen and (min-width: 768px) {
     .pc-hidden {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -440,30 +463,29 @@ nav .navbar.island {
 }
 
 
-
-.footer-section {
-    background-color: darkcyan;
+footer {
+    background-color: rgb(36, 146, 110);
+    padding-left: var(--padding-from-edge);
+    padding-right: var(--padding-from-edge);
 }
 
-.footer-paloma {
+
+footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 
-.footer-paloma>div {
-    flex: 1 1 250px;
-}
 
-.footer-paloma h3,
-.footer-paloma h4,
-.footer-paloma h5 {
+footer h3,
+footer h4,
+footer h5 {
     padding-bottom: 5px;
     margin-bottom: 5px;
 }
 
-.footer-paloma .icon {
+footer .icon {
     padding-right: 5px !important;
 }
 
@@ -478,4 +500,14 @@ nav .navbar.island {
 
 .hero .content div {
     background-color: dodgerblue;
+}
+
+.sidebar-left,
+.sidebar-right {
+    width: 400px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

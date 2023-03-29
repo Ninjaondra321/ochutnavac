@@ -24,6 +24,7 @@ import mapa from "../Imgs/mapa.png";
 
 function HomePage() {
     return (<>
+
         <div className="sections">
             <div className="hero">
                 <div className="bg">
@@ -116,6 +117,32 @@ function HomePage() {
             </div>
 
 
+            <div className="cards-section">
+
+                <div className="content">
+                    <div className="cards">
+                        <div className="card">
+                            <h5>Ahoj</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, odio fugit laudantium suscipit asperiores minima libero voluptates ea molestias nulla sed itaque, ab perferendis totam enim repudiandae provident! Magni, cum.</p>
+                        </div>
+                        <div className="card">
+                            <h5>Ahoj</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, minus, voluptas soluta, repellendus voluptatum hic facere dolores similique praesentium modi voluptatibus ipsam fuga blanditiis. Soluta laborum distinctio reiciendis autem accusamus?</p>
+                        </div>
+                        <div className="card">
+                            <h5>Ahoj</h5>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, vitae? Officia, quo. Ipsa ducimus quisquam id quasi dolore asperiores dolorem dignissimos ad earum temporibus. Magnam cum eius fugit mollitia enim.</p>
+                        </div>
+                        <div className="card">
+                            <h5>Ahoj</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sit dolorem consequatur eum velit quae vel cupiditate obcaecati doloremque asperiores sequi distinctio adipisci corporis maiores, quia quidem unde rem incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
 
             <div className="accordion-section">
                 <div className="content">
@@ -172,84 +199,30 @@ function HomePage() {
                         Tomato
                     </div>
 
-                    <div style={{ display: "flex" }}>
-                        <div className="w-2 test">
+                    <div style={{ display: "flex" }} className="w-8 ">
+                        <div className="w-2 test m-w-4">
                             AA
-                        </div>            <div className="w-1 test ">
+                        </div>            <div className="w-1 test m-w-6 ">
                             AA
-                        </div>            <div className="w-2 test ">
+                        </div>            <div className="w-2 test m-w-12 ">
                             AA
-                        </div>            <div className="w-3 test ">
+                        </div>            <div className="w-3 test m-w-8">
                             AA
-                        </div>            <div className="w-5 test ">
+                        </div>            <div className="w-5 test  m-w-2">
                             AA
-                        </div>            <div className="w-1 test ">
+                        </div>            <div className="w-1 test  m-w-3">
                             AA
                         </div>
                     </div>
 
 
 
+
                 </div>
             </div>
 
 
-
-            <div className="footer-section">
-                <div className="content footer-paloma">
-
-                    <div className="left">
-                        <h5>Info</h5>
-                        <ul>
-                            <li>Home</li>
-                            <li>Menu</li>
-                            <li>Order</li>
-                            <li>Contacts</li>
-                        </ul>
-                    </div>
-
-                    <div className="middle">
-                        <h5>Kontakt</h5>
-
-                        <table>
-                            <thead style={{ display: "none" }}>
-                                <tr>
-                                    <th>x</th>
-                                    <th>x</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td><span class="g-icon ">
-                                        call
-                                    </span></td>
-                                    <td>+420 123 456 789</td>
-                                </tr>
-
-                                <tr>
-                                    <td><span class="g-icon">
-                                        mail
-                                    </span></td>
-                                    <td> example@gmail.com </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                    <div className="right">
-                        <h5>Adresa</h5>
-
-                        <img src={mapa} alt="" style={{ "height": "25vh", width: "25vw" }} />
-
-                    </div>
-
-
-
-                </div>
-
-            </div>
+            <div className="padding"></div>
 
 
 

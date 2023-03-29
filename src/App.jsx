@@ -52,20 +52,72 @@ function App() {
         <NavBar />
 
 
-        <Routes>
 
-          <Route path="/" element={<HomePage />} />
-          <Route path="/abc" element={<Abc />} />
-
-          {/* <Route path="/" element={<Home SCREENS={SCREENS} updateCollection={updateCollection} updatePallete={updatePallete} COLLECTION={COLLECTION} updateScreens={updateScreens} />} />
-          <Route path="/extractor" element={<Extractor />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/collections/:selectedCollection" component={Collection} />
-          <Route path="/settings" element={<Settings />} /> */}
+        <div className="main">
+          <Routes>
 
 
-        </Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/abc" element={<Abc />} />
 
+
+          </Routes>
+        </div>
+
+        <footer>
+
+
+          <div className="left">
+            <h5>Info</h5>
+            <ul>
+              <li>Home</li>
+              <li>Menu</li>
+              <li>Order</li>
+              <li>Contacts</li>
+            </ul>
+          </div>
+
+          <div className="middle">
+            <h5>Kontakt</h5>
+
+            <table>
+              <thead style={{ display: "none" }}>
+                <tr>
+                  <th>x</th>
+                  <th>x</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td><span class="g-icon ">
+                    call
+                  </span></td>
+                  <td>+420 123 456 789</td>
+                </tr>
+
+                <tr>
+                  <td><span class="g-icon">
+                    mail
+                  </span></td>
+                  <td> example@gmail.com </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div className="right">
+            <h5>Adresa</h5>
+
+            <img src={mapa} alt="" style={{ "height": "25vh", width: "25vw" }} />
+
+          </div>
+
+
+
+
+        </footer>
 
 
 
