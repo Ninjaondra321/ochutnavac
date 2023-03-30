@@ -1,3 +1,8 @@
+/* Test */
+* {
+    box-sizing: border-box;
+}
+
 /* 0 VARIABLES */
 
 :root {
@@ -32,7 +37,7 @@ body {
 
 body {
     /* width: 100vw; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     display: grid;
 }
 
@@ -175,14 +180,14 @@ img.make-section-bg.default {
 .main {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 
 /* 3.1 Nav */
 nav {
     display: grid;
-    width: 100vw;
+    /* width: 100vw; */
 
 }
 
@@ -217,14 +222,15 @@ nav>div {
 
     overflow: hidden;
 
-    width: 100%;
 }
 
 .sections>div>.content {
     /* margin: 15px var(--padding-from-edge); */
 
     max-width: var(--main-part-width);
-    /* width: 100%; */
+    /* ! Neodstraňu, usnadníš si život */
+    width: 100%;
+
     z-index: 10;
 }
 

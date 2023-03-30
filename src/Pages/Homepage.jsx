@@ -20,6 +20,7 @@ import Img_16 from "../Imgs/Img_16.png";
 import Img_20 from "../Imgs/Img_20.png";
 
 import mapa from "../Imgs/mapa.png";
+import Accordion from "../Components/Accordion";
 
 
 function HomePage() {
@@ -103,7 +104,7 @@ function HomePage() {
             <div className="font-test">
                 <div className="content">
 
-                    <h1 class='header'>Font test</h1>
+                    <h1 class='header responsive-heading'>Font test</h1>
                     <h1>Font test ooooooooooooooo</h1>
                     <h2>Font test ooooooooooooooo</h2>
                     <h3>Font test ooooooooooooooo</h3>
@@ -113,6 +114,12 @@ function HomePage() {
                     <p>Font test</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quae perferendis consectetur soluta doloremque itaque, commodi sapiente magni atque officiis odit architecto eum veniam quidem deserunt, omnis explicabo tenetur nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum sequi quibusdam, necessitatibus provident excepturi iusto tempore, error magnam sunt, vero cumque doloribus perferendis dolorum illo incidunt. Earum, provident tempora</p>
 
+                </div>
+            </div>
+
+            <div className="accordion-section">
+                <div className="content">
+                    <Accordion />
                 </div>
             </div>
 
@@ -144,41 +151,10 @@ function HomePage() {
 
 
 
+
+
             <div className="accordion-section">
                 <div className="content">
-                    <div className="accordion-parent">
-                        <div className="accordion">
-                            <div className="accordion-item opened">
-
-                                <div className="accordion-header">
-                                    <h5>Accordion</h5>
-                                </div>
-                                <div className="accordion-content ">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="accordion-item ">
-                                <div className="accordion-header">
-                                    <h5>Accordion</h5>
-                                </div>
-                                <div className="accordion-content ">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
-                                    </p>
-                                </div>
-                            </div>
-                            <div className={
-                                Math.random() > 0.5 ? "accordion-item " : "accordion-item closed"
-                            }>                  <div className="accordion-header">
-                                    <h5>Accordion</h5>
-                                </div>
-                                <div className="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
