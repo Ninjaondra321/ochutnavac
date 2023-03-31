@@ -1,21 +1,36 @@
 import { A } from "@solidjs/router"
 
+import { createSignal } from "solid-js";
+
 function NavBar() {
+
+    const [showBanner, setShowBanner] = createSignal(true);
+
+
     return (<>
 
         <nav class='always-on-top'>
-            <div className="banner">
 
-                <div className="left">
+            {showBanner() &&
+                <div className="banner">
+
+                    <div className="left">
+                    </div>
+                    <div className="center">
+                        <header>Nové menu najdete <a href="#">zde</a>
+
+                        </header>
+                    </div>
+
+                    <div className="right">
+
+                        <button className="icon-btn small " onClick={() => setShowBanner(false)}>
+                            close
+                        </button>
+                    </div>
+
                 </div>
-                <div className="center">
-                    <header>Nové menu najdete <a href="#">zde</a>
-
-                    </header>
-                </div>
-                <div className="right">X</div>
-
-            </div>
+            }
 
             <div className="navbar ">
 
@@ -24,12 +39,21 @@ function NavBar() {
                 </div>
                 <div className="center"></div>
                 <div className="right">
-                    <ul>
-                        <A href="/">Home</A>
-                        <A href="/abc">abc</A>
-                        <li>Order</li>
-                        <li>Contacts</li>
-                    </ul>
+                    <div className="m-hidden">
+                        <ul>
+                            <A href="/">Home</A>
+                            <A href="/abc">abc</A>
+                            <li>Order</li>
+                            <li>Contacts</li>
+                        </ul>
+                    </div>
+                    <div className="pc-hidden">
+                        <button className="icon-btn large">
+
+                            menu
+
+                        </button>
+                    </div>
                 </div>
 
             </div>

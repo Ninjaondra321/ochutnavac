@@ -244,9 +244,10 @@ body {
 
 }
 
+.icon-btn,
 .g-icon {
     font-family: 'Material Icons';
-    font-size: 1rem;
+    font-size: 1.5rem + var(--font-multiplier);
 
 }
 
@@ -306,7 +307,7 @@ nav ul li {
 /* Nav bar */
 
 nav>.navbar {
-    padding: 12px var(--padding-from-edge);
+    padding: 2px var(--padding-from-edge);
 }
 
 nav>.navbar.navbar-medium {
@@ -328,6 +329,31 @@ nav .navbar.island {
     margin: 5px var(--padding-from-edge);
     padding: 5px 20px;
 }
+
+/* Buttons */
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0 inherit;
+    height: min-content;
+
+    font-family: 'Material Icons';
+
+    font-size: calc(1.55rem * var(--font-multiplier));
+}
+
+.icon-btn.small {
+    font-size: calc(1.2rem * var(--font-multiplier));
+}
+
+.icon-btn.large {
+    font-size: calc(2rem * var(--font-multiplier));
+}
+
 
 /* Carousel */
 .carousel {
@@ -389,19 +415,36 @@ nav .navbar.island {
     border: 1px black solid;
 
     display: flex;
+    align-items: center;
 
 }
 
-.accordion .accordion-item .accordion-header::before {
+.accordion .accordion-item .accordion-header::before,
+.accordion .accordion-item .accordion-header::after {
     font-family: 'Material Icons';
-    content: 'mail';
-    font-size: 1rem;
+    content: 'expand_more';
+    font-size: 2rem;
     height: 100%;
 
     transform: rotate(180deg);
+    /* transform: rotate(0deg); */
+}
+
+.accordion .accordion-item.closed .accordion-header::before,
+.accordion .accordion-item.closed .accordion-header::after {
+    transform: rotate(0deg);
+    /* transform: rotate(180deg); */
 
 
 }
+
+.accordion-header::before,
+.accordion-header::after {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+
 
 
 .accordion .accordion-item {
@@ -516,4 +559,21 @@ footer .icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body,
+.main>* {
+    animation: fade-in 1s ease-in-out;
+
 }
