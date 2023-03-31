@@ -124,8 +124,11 @@ function App() {
       </Router>
 
 
+      <kbd>AHOJ</kbd>
 
 
+
+      {/* 
       <div style={{
         background: "black", height: "35px",
         display: "flex",
@@ -146,7 +149,7 @@ function App() {
 
 
         }}>NoTime</a>
-      </div>
+      </div> */}
     </>
   );
 }
