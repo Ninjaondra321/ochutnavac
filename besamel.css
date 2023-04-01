@@ -76,6 +76,16 @@ img {
     align-items: center;
 }
 
+.always-on-top {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+
+}
+
+
 /* 2.2 Custom image bg */
 .make-section-bg {
     pointer-events: none;
@@ -227,14 +237,40 @@ nav>div {
 .sections>div>.content {
     /* margin: 15px var(--padding-from-edge); */
 
+
     max-width: var(--main-part-width);
-    /* ! Neodstraňu, usnadníš si život */
+
+    /* ! Neodstraňuj, usnadníš si život */
+    /* PS: díky, pomohlo ;-) */
     width: 100%;
 
     z-index: 10;
 }
 
 /* 4 TYPOGRAPHY */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(src/Fonts/g-icons.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -291,7 +327,8 @@ p {
 /* 5 DEFAULT COMPONENTS STYLING */
 
 /* 5.1 Nav bar */
-nav ul {
+nav ul,
+nav .right>* {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -300,14 +337,14 @@ nav ul {
     margin: 0;
 }
 
+
 nav ul li {
     padding: 0 10px;
 }
 
-/* Nav bar */
-
 nav>.navbar {
-    padding: 2px var(--padding-from-edge);
+    padding: 0 var(--padding-from-edge);
+    height: 60px;
 }
 
 nav>.navbar.navbar-medium {
@@ -329,6 +366,103 @@ nav .navbar.island {
     margin: 5px var(--padding-from-edge);
     padding: 5px 20px;
 }
+
+
+/* (Navbar) Dropdown */
+
+/* .dropdown {} */
+
+
+.dropdown-window {
+    position: relative;
+    z-index: 50;
+    position: absolute;
+    display: none;
+    background-color: whitesmoke;
+    padding: 15px;
+}
+
+
+
+/* Animation */
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.dropdown:hover .dropdown-window {
+    display: inherit;
+    animation: dropdown 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dropdown-window * {
+    padding: 5px;
+}
+
+
+/* Navbar - drawer */
+
+
+
+
+nav .drawer {
+    padding-left: var(--padding-from-edge);
+    padding-right: var(--padding-from-edge);
+    flex-direction: column;
+    align-items: flex-start;
+    /* height: 0px !important; */
+    display: none;
+    overflow: hidden;
+    background-color: aquamarine;
+
+
+    transition: all 0.8s ease-in-out;
+
+    transform-origin: top;
+
+}
+
+/* Animation */
+
+@keyframes drawer {
+    0% {
+        /* height: 0; */
+        /* scale so that it looks like height 0  */
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+nav .drawer.opened {
+    /* height: fit-content !important; */
+    animation: drawer 0.3s ease-in-out;
+    display: flex;
+}
+
+nav .drawer.closed {
+    /* height: 0px !important; */
+    animation: drawer 0.4s ease-in-out;
+
+    height: 0px !important;
+}
+
+
+
 
 /* Buttons */
 
@@ -574,6 +708,6 @@ footer .icon {
 
 body,
 .main>* {
-    animation: fade-in 1s ease-in-out;
+    animation: fade-in 0.6s ease-out;
 
 }

@@ -1,11 +1,17 @@
 import { A } from "@solidjs/router"
 
-import { createSignal } from "solid-js";
+import { createSignal, createEffect } from "solid-js";
 
 function NavBar() {
 
     const [showBanner, setShowBanner] = createSignal(true);
 
+    const [drawerShown, setDrawerShown] = createSignal(true);
+
+
+    createEffect(() => {
+        console.log("drawerShown", drawerShown());
+    });
 
     return (<>
 
@@ -40,15 +46,27 @@ function NavBar() {
                 <div className="center"></div>
                 <div className="right">
                     <div className="m-hidden">
-                        <ul>
-                            <A href="/">Home</A>
-                            <A href="/abc">abc</A>
-                            <li>Order</li>
-                            <li>Contacts</li>
-                        </ul>
+                        <A href="/">Home</A>
+                        <A href="/abc">abc</A>
+                        <div className="dropdown">
+
+                            <p className="dropdown-heading">Dropdown</p>
+                            <div className="dropdown-window">
+                                <A href="/dropdown">Dropdown</A>
+                                <A href="/dropdown">Dropdown</A>
+                            </div>
+                        </div>
+                        <div className="dropdown">
+                            <p className="dropdown-heading">Dropdown</p>
+                            <div className="dropdown-window">
+                                <A href="/dropdown">Dropdown</A>
+                                <A href="/dropdown">Dropdown</A>
+                            </div>
+                        </div>
+
                     </div>
                     <div className="pc-hidden">
-                        <button className="icon-btn large">
+                        <button className="icon-btn large" id="menu-opener" onclick={() => setDrawerShown(!drawerShown())}>
 
                             menu
 
@@ -58,7 +76,32 @@ function NavBar() {
 
             </div>
 
-        </nav>
+            <div
+                className={drawerShown() ? "drawer pc-hidden opened" : "drawer pc-hidden closed"}
+            >
+                <A href="/">Home</A>
+                <A href="/abc">abc</A>
+                <div className="accordion">
+                    <div className="accordion-item closed" >
+
+                        <button className="accordion-header"
+                            onTouch={(e) => { e.target.parentElement.classList.toggle("closed"); }}
+                            onClick={(e) => { e.target.parentElement.classList.toggle("closed"); }}
+                        >
+                            Accordion
+                        </button>
+                        <div className="accordion-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </nav >
     </>);
 }
 

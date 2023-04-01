@@ -35,6 +35,7 @@ import HomePage from './Pages/Homepage';
 import { Router, Routes, Route } from "@solidjs/router"
 import NavBar from './Components/NavBar';
 import Abc from './Pages/Abc';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -59,67 +60,14 @@ function App() {
 
             <Route path="/" element={<HomePage />} />
             <Route path="/abc" element={<Abc />} />
+            {/* Not found */}
+            <Route path="*" element={<div>Not found</div>} />
 
 
           </Routes>
         </div>
 
-        <footer>
-
-
-          <div className="left">
-            <h5>Info</h5>
-            <ul>
-              <li>Home</li>
-              <li>Menu</li>
-              <li>Order</li>
-              <li>Contacts</li>
-            </ul>
-          </div>
-
-          <div className="middle">
-            <h5>Kontakt</h5>
-
-            <table>
-              <thead style={{ display: "none" }}>
-                <tr>
-                  <th>x</th>
-                  <th>x</th>
-                </tr>
-              </thead>
-
-              <tbody>
-
-                <tr>
-                  <td><span class="g-icon ">
-                    call
-                  </span></td>
-                  <td>+420 123 456 789</td>
-                </tr>
-
-                <tr>
-                  <td><span class="g-icon">
-                    mail
-                  </span></td>
-                  <td> example@gmail.com </td>
-                </tr>
-              </tbody>
-            </table>
-
-          </div>
-          <div className="right">
-            <h5>Adresa</h5>
-
-            <img src={mapa} alt="" style={{ "height": "25vh", width: "25vw" }} />
-
-          </div>
-
-
-
-
-        </footer>
-
-
+        <Footer />
 
       </Router>
 

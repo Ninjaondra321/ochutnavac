@@ -27,12 +27,14 @@ function HomePage() {
     return (<>
 
         <div className="sections">
+            <div className="padding-large"></div>
+            <div className="padding"></div>
             <div className="hero">
                 <div className="bg">
                     <img src={Img_0} alt="" class='make-section-bg to-right' id="a123" />
                 </div>
                 <div className="content ">
-                    <div className="left padding-large w-6 m-w-12">
+                    <div className="left padding-large w-7 m-w-12">
 
                         <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
 
@@ -53,7 +55,7 @@ function HomePage() {
             <div className="padding-large"></div>
             <div className="hned-vymaz-section">
                 <div className="content">
-                    <img src={Img_20} className="" />
+                    <img src={Img_20} className="" loading="eager" />
                 </div>
             </div>
 
@@ -72,6 +74,10 @@ function HomePage() {
 
 
                 </div>
+            </div>
+
+            <div className="klidne-vymaz-section content">
+                <img src={Img_13} alt="" />
             </div>
 
             <div className="vymaz">
@@ -149,6 +155,11 @@ function HomePage() {
 
             </div>
 
+            <div className="idk-section">
+                <div className="content">
+                    <img src={Img_15} alt="" loading="lazy" />
+                </div>
+            </div>
 
 
 

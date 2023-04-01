@@ -7,12 +7,12 @@ function Accordion() {
             <div className="accordion">
                 <div className="accordion-item opened">
 
-                    <div className="accordion-header"
+                    <button className=" accordion-header"
                         onTouch={(e) => { e.target.parentElement.classList.toggle("closed"); }}
                         onClick={(e) => { e.target.parentElement.classList.toggle("closed"); }}
                     >
-                        <h6>Accordion</h6>
-                    </div>
+                        Accordion
+                    </button>
                     <div className="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
                         </p>
