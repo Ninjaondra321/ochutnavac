@@ -76,6 +76,7 @@ img {
     align-items: center;
 }
 
+/* TODO: tohle přidej k nav */
 .always-on-top {
     position: fixed;
     z-index: 100;
@@ -99,8 +100,11 @@ img {
     /* ? Tady si nejsu jistý, jestli to sem patři. 
     Kdyžtak oprav
     Díky, Ondra (z minulosti ;-) )
+
+    ! Nepatří. Opraveno. Díky, Ondra (z budoucnosti ;-)
+    
     */
-    height: 100%;
+    /* height: 100%; */
 }
 
 .make-section-bg.to-right {
@@ -108,15 +112,20 @@ img {
     left: unset;
 }
 
+.make-section-bg.to-left {
+    left: 0;
+    right: unset;
+}
+
 .make-section-bg.stretch {
     width: 100vw !important;
     height: 100%;
 }
 
-img.make-section-bg.default {
+/* img.make-section-bg.default {
     width: 100vw !important;
     height: auto;
-}
+} */
 
 
 /* 2.3 Image filters */
@@ -197,7 +206,6 @@ img.make-section-bg.default {
 /* 3.1 Nav */
 nav {
     display: grid;
-    /* width: 100vw; */
 
 }
 
@@ -208,31 +216,22 @@ nav>div {
 }
 
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-
 
 /* 3.2 Sections */
 .sections {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .sections>div {
     position: relative;
-    /* center */
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     overflow: hidden;
-
 }
+
 
 .sections>div>.content {
     /* margin: 15px var(--padding-from-edge); */
@@ -333,19 +332,22 @@ nav .right>* {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
     margin: 0;
 }
 
-
-nav ul li {
+nav .right>*>*,
+nav .right>* {
     padding: 0 10px;
 }
 
-nav>.navbar {
-    padding: 0 var(--padding-from-edge);
-    height: 60px;
-}
+
+
+
+
+/* nav>.navbar {
+        padding: 0 var(--padding-from-edge);
+        height: 60px;
+    } */
 
 nav>.navbar.navbar-medium {
     padding-top: 20px;
@@ -357,9 +359,9 @@ nav>.navbar.navbar-large {
     padding-bottom: 30px;
 }
 
-nav>.banner {
+/* nav>.banner {
     padding: 4px var(--padding-from-edge);
-}
+} */
 
 
 nav .navbar.island {
@@ -403,7 +405,6 @@ nav .navbar.island {
     animation: dropdown 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-
 }
 
 .dropdown-window * {
@@ -412,11 +413,8 @@ nav .navbar.island {
 
 
 /* Navbar - drawer */
-
-
-
-
-nav .drawer {
+nav .drawer,
+nav .drawer-fullscreen {
     padding-left: var(--padding-from-edge);
     padding-right: var(--padding-from-edge);
     flex-direction: column;
@@ -432,6 +430,44 @@ nav .drawer {
     transform-origin: top;
 
 }
+
+nav .drawer-fullscreen.opened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+nav .drawer-fullscreen.opened .drawer-content {
+    padding-left: var(--padding-from-edge);
+    padding-right: var(--padding-from-edge);
+    height: 100%;
+    max-height: calc(100vh - 200px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+nav .drawer-fullscreen>.icon-btn {
+    position: fixed;
+    top: 11px;
+    right: 21px;
+
+}
+
+
 
 /* Animation */
 
@@ -449,7 +485,6 @@ nav .drawer {
 
 
 nav .drawer.opened {
-    /* height: fit-content !important; */
     animation: drawer 0.3s ease-in-out;
     display: flex;
 }
@@ -509,7 +544,7 @@ nav .drawer.closed {
 }
 
 .image-carousel img {
-    width: 100%;
+    width: auto;
     height: 100%;
     padding: 10px;
 }
@@ -528,6 +563,7 @@ nav .drawer.closed {
 
 /* Cards */
 /* Todo hvjhvuhvjvhjhviviv */
+/* Tento popisek je na dvě věci >:O */
 .no-wrap {
     flex-wrap: nowrap;
 }
@@ -548,13 +584,20 @@ nav .drawer.closed {
     width: 100%;
     border: 1px black solid;
 
+
+
     display: flex;
     align-items: center;
+    /* justify-content: space-between; */
+
+    background-color: transparent;
 
 }
 
-.accordion .accordion-item .accordion-header::before,
-.accordion .accordion-item .accordion-header::after {
+.accordion .accordion-item .accordion-header::before
+
+/* .accordion .accordion-item .accordion-header::after  */
+    {
     font-family: 'Material Icons';
     content: 'expand_more';
     font-size: 2rem;
@@ -562,6 +605,11 @@ nav .drawer.closed {
 
     transform: rotate(180deg);
     /* transform: rotate(0deg); */
+}
+
+.accordion-header::before {
+    transform: rotate(0deg);
+    /* transform: rotate(180deg); */
 }
 
 .accordion .accordion-item.closed .accordion-header::before,
@@ -591,7 +639,6 @@ nav .drawer.closed {
 
 .accordion .accordion-item.closed .accordion-content {
     height: 0 !important;
-
 }
 
 /* 6 RESPONSIVNESS */
@@ -635,9 +682,11 @@ nav .drawer.closed {
 }
 
 .navbar {
-    background-color: rgba(187, 238, 238, 0.808);
+    background: linear-gradient(180deg, rgb(223, 135, 34) 0%, rgba(223, 135, 34, 0.726) 100%);
     padding-top: 15px;
     padding-bottom: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 
 }
 
@@ -681,9 +730,6 @@ footer .icon {
     border: 1px solid black;
 }
 
-.hero .content div {
-    background-color: dodgerblue;
-}
 
 .sidebar-left,
 .sidebar-right {

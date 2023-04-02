@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 
-import '../besamel.css';
+
+// import '../besamel_01.css';
+import '../besamel_02.css';
 
 import NavbarsPage from './Pages/NavbarsPage';
 
@@ -33,6 +35,7 @@ import GenerateStyle from './Functions/GenerateStyle';
 import HomePage from './Pages/Homepage';
 
 import { Router, Routes, Route } from "@solidjs/router"
+
 import NavBar from './Components/NavBar';
 import Abc from './Pages/Abc';
 import Footer from './Components/Footer';
@@ -43,36 +46,23 @@ function App() {
 
   return (
     <>
-      {/* <NavbarsPage /> */}
+
       <GenerateStyle />
-
-
       <Router>
-
-
         <NavBar />
-
-
-
         <div className="main">
           <Routes>
-
-
             <Route path="/" element={<HomePage />} />
             <Route path="/abc" element={<Abc />} />
             {/* Not found */}
             <Route path="*" element={<div>Not found</div>} />
-
-
           </Routes>
         </div>
-
         <Footer />
-
       </Router>
 
 
-      {/* 
+
       <div style={{
         background: "black", height: "35px",
         display: "flex",
@@ -93,7 +83,7 @@ function App() {
 
 
         }}>NoTime</a>
-      </div> */}
+      </div>
     </>
   );
 }

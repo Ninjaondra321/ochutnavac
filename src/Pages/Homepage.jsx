@@ -1,5 +1,5 @@
 // Import images from 0 to 35
-import Img_0 from "../Imgs/Img_0.png";
+import Img_20 from "../Imgs/Img_0.png";
 import Img_1 from "../Imgs/Img_1.png";
 import Img_2 from "../Imgs/Img_2.png";
 import Img_3 from "../Imgs/Img_3.png";
@@ -17,10 +17,14 @@ import Img_14 from "../Imgs/Img_14.png";
 import Img_15 from "../Imgs/Img_15.png";
 import Img_16 from "../Imgs/Img_16.png";
 
-import Img_20 from "../Imgs/Img_20.png";
+import Img_0 from "../Imgs/Img_20.png";
 
 import mapa from "../Imgs/mapa.png";
 import Accordion from "../Components/Accordion";
+
+
+import { MetaProvider, Title, } from '@solidjs/meta';
+
 
 
 function HomePage() {
@@ -31,7 +35,7 @@ function HomePage() {
             <div className="padding"></div>
             <div className="hero">
                 <div className="bg">
-                    <img src={Img_0} alt="" class='make-section-bg to-right' id="a123" />
+                    <img src={Img_0} alt="" class='make-section-bg stretch darken' />
                 </div>
                 <div className="content ">
                     <div className="left padding-large w-7 m-w-12">
@@ -49,9 +53,38 @@ function HomePage() {
                     </div>
                 </div>
 
-
-
             </div>
+            <div className="padding"></div>
+
+
+            <div className="test-section">
+                <div className="bg">
+                    <img src={Img_0} alt="" class='make-section-bg default' />
+                </div>
+                <div className="content h-500px">
+                    <div className="left padding-large w-7 m-w-12">
+                        <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
+                        <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
+                            minus architecto modi ut eos blanditiis corporis recusandae, nulla minima beatae ab nemo molestias consequatur?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="padding"></div>
+            <div className="test-section">
+                <div className="bg">
+                    <img src={Img_0} alt="" class='make-section-bg to-right w-8 auto-height' />
+                </div>
+                <div className="content h-500px">
+                    <div className="left padding-large w-7 m-w-12">
+                        <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
+                        <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
+                            minus architecto modi ut eos blanditiis corporis recusandae, nulla minima beatae ab nemo molestias consequatur?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div className="padding-large"></div>
             <div className="hned-vymaz-section">
                 <div className="content">
@@ -76,8 +109,10 @@ function HomePage() {
                 </div>
             </div>
 
-            <div className="klidne-vymaz-section content">
-                <img src={Img_13} alt="" />
+            <div className="klidne-vymaz-section">
+                <div className="content">
+                    <img src={Img_13} alt="" />
+                </div>
             </div>
 
             <div className="vymaz">

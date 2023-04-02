@@ -1,0 +1,496 @@
+/* 0 VARIABLES */
+
+:root {
+
+    /* Breakpoints */
+    --max-width: 1200px;
+    --optimap-width: 1000px;
+
+    --font-multiplier: 1.04;
+    --font-responsivness: 3.3vw;
+
+    --nav-height: 60px;
+
+    /* Do not touch this! */
+    /* Please touch this! */
+    --padding-from-edge: max(
+            /* Responsive*/
+            calc((100vw - var(--optimap-width))/2),
+            /* Minimal */
+            40px);
+
+    --island-padding: max(
+            /* Responsive*/
+            calc((100vw - var(--optimap-width))/3),
+            /* Minimal */
+            10px);
+
+
+
+    --main-part-width: calc(100vw - 2 * var(--padding-from-edge));
+
+}
+
+/* 1 DEFAULT BROWSER CLEAROUT */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+}
+
+/* TODO Nemám šajna jak to konkrétně upravit, takže pokud by se ti to nelíbilo, 
+   nic ti nebrání to změnit na něco rozumnějšího.
+   Ondra z minulosti ;-)
+
+    - Je to celkem fajn. Dik
+    Ondra z budoucnosti ;-)
+*/
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* 2 COMMONLY USED THINGS   */
+/* 2.1 Item position */
+.center,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.all-center * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.always-on-top {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* 2.2 Custom image bg */
+.make-section-bg {
+    pointer-events: none;
+    user-select: none;
+
+    position: absolute;
+    z-index: 0;
+}
+
+.make-section-bg.default {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.make-section-bg.stretch {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* ! Rozmysli se a uprav to! */
+.make-section-bg.to-right {
+    left: unset;
+    right: 0;
+    top: 0;
+    bottom: unset;
+
+    height: 100%;
+}
+
+/* ! Chybí to-left, to-top, to-bottom */
+.auto-height {
+    height: auto !important;
+}
+
+/* 2.3 Image filters */
+.darken {
+    filter: brightness(0.7);
+}
+
+.darken-more {
+    filter: brightness(0.5);
+}
+
+/* 2.4 Padding and margin */
+/* ? Whis section was moved to generated css */
+
+
+/* * 3 TYPOGRAPHY */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(1rem * var(--font-multiplier));
+    line-height: 1.5;
+    font-weight: 400;
+
+}
+
+/* TODO! Dodělej font-size !! */
+.responsive-heading {
+    /* font-size: calc(2.5rem * var(--font-multiplier)); */
+
+    font-size: calc((1.4rem + 3.3vw) * var(--font-multiplier));
+    font-size: clamp(0.2rem, 1.4rem + 3.3vw, 5rem);
+
+}
+
+
+
+/* * 4 PAGE LAYOUT */
+
+/* 4.0 Page */
+
+.main {
+    min-height: calc(100vh - 200px);
+}
+
+/* TODO! - page layout? */
+
+
+.sections {
+    /* Neodstraňuj, jinak si uškodíš <3 */
+    width: 100%;
+}
+
+.sections>div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content {
+    max-width: var(--main-part-width);
+
+    /* ! Neodstraňuj, usnadníš si život */
+    /* PS: díky, pomohlo ;-) */
+    width: 100%;
+    z-index: 10;
+}
+
+
+/* 4.1 Nav */
+nav {
+    display: grid;
+}
+
+nav>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--padding-from-edge);
+    z-index: 50;
+}
+
+nav ul,
+.navbar .right>* {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    position: relative;
+    /* align-items: center; */
+    align-items: stretch;
+
+}
+
+nav .right>*>*,
+nav .right>* {
+    padding: 0 10px;
+
+}
+
+nav .navbar a {
+    padding-top: 0;
+    padding-bottom: 0;
+    /* height: 250px; */
+}
+
+
+/* TODO! Navbar height!!! */
+
+
+nav .navbar.island {
+    margin: 5px clamp(-50px, var(--island-padding), 99vw);
+    padding-right: 2px;
+    /* Prozože pravá část má padding v děckách */
+    padding-left: 20px;
+}
+
+
+/* (Navbar) Dropdown */
+.dropdown-window {
+    position: relative;
+    z-index: 50;
+    position: absolute;
+    display: none;
+    background-color: whitesmoke;
+    padding: 15px;
+}
+
+.dropdown:hover .dropdown-window {
+    display: inherit;
+    animation: dropdown 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-window * {
+    padding: 5px;
+}
+
+/* * Navbar - drawer */
+/* TODO!! Drawer --viz besamel.css/416:01 */
+
+.nav-drawer {
+    display: none;
+    z-index: 45;
+
+}
+
+.nav-drawer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.nav-drawer.fullscreen {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.nav-drawer.drawer {
+    height: max-content;
+    position: fixed;
+    top: 50px;
+}
+
+.nav-drawer.fullscreen>div {
+    /* ? Static value - klidně změn*/
+    height: calc(100vh - 400px);
+}
+
+.nav-drawer.opened {
+    display: flex;
+}
+
+.nav-drawer.drawer.opened {
+    transform-origin: top;
+    animation: drawer 0.2s ease-in-out;
+}
+
+.nav-drawer.fullscreen.opened {
+    animation: page-animation 0.2s ease-in-out;
+}
+
+.nav-drawer.fullscreen img.make-section-bg {
+    z-index: -1;
+}
+
+
+
+
+
+/* * Buttons */
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0 inherit;
+    height: min-content;
+
+    font-family: 'Material Icons';
+
+    font-size: calc(1.55rem * var(--font-multiplier));
+}
+
+.icon-btn.small {
+    font-size: calc(1.2rem * var(--font-multiplier));
+}
+
+.icon-btn.large {
+    font-size: calc(2rem * var(--font-multiplier));
+}
+
+
+/* * Accordion */
+/* .accordion-nice x .accodion-plain */
+.accordion-plain button.accordion-header,
+.accordion-nice button.accordion-header {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    width: 100%;
+}
+
+.accordion-nice button.accordion-header {
+    justify-content: space-between;
+}
+
+.accordion-plain button.accordion-header::before,
+.accordion-nice button.accordion-header::after {
+    font-family: 'Material Icons';
+    content: 'expand_more';
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    transform: rotate(180deg);
+
+}
+
+
+.accordion-item.closed button.accordion-header::before,
+.accordion-item.closed button.accordion-header::after {
+    transform: rotate(0deg);
+}
+
+ader::before,
+.accordion-header::after {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+.accordion-content {
+    overflow-y: hidden;
+}
+
+.accordion-item.closed .accordion-content {
+    height: 0 !important;
+}
+
+
+/* * 6 RESPONSIVNESS */
+
+@media only screen and (max-width: 768px) {
+    .m-hidden {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .pc-hidden {
+        display: none !important;
+    }
+}
+
+
+/* * 7 ANIMATIONS */
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes drawer {
+    0% {
+        /* height: 0; */
+        /* scale so that it looks like height 0  */
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes page-animation {
+    0% {
+        opacity: 0;
+
+        margin-top: 15px;
+
+
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: inherit;
+
+    }
+}
+
+body,
+.main>* {
+    animation: page-animation 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+
+/* TODO! tohle vyaz*/
+
+.cards>div {
+    width: 250px !important;
+    color: purple;
+}
+
+.hero {
+    background-color: rgba(255, 0, 0, 0.295);
+    height: 600px;
+}
+
+.cards-section {
+    background-color: blue;
+}
+
+.navbar {
+    background: linear-gradient(180deg, rgb(223, 135, 34) 0%, rgba(223, 135, 34, 0.726) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.banner {
+    background-color: rgb(231, 222, 91);
+}
+
+.nav-drawer.fullscreen {
+    background-color: aquamarine;
+
+}

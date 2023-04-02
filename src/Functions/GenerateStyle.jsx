@@ -17,6 +17,14 @@ function GenerateStyle() {
 
     var m_bg_positions = ""
 
+    var padding_size = ""
+    var m_padding_size = ""
+
+    var margin_size = ""
+    var m_margin_size = ""
+
+
+    // TODO! add vertical and horizontal padding ?and margin?
 
     // TWELVES SYSTEM
     for (let i = 1; i <= 12; i++) {
@@ -35,6 +43,24 @@ function GenerateStyle() {
 
         h_i_px += `.h-${pixels}px{height: ${pixels}px;}`
         m_h_i_px += `.m-h-${pixels}px{height: ${pixels}px;}`
+    }
+
+    // SIZES
+    let sizes = {
+        "small": "7px",
+        "medium": "15px",
+        "large": "30px",
+    }
+
+
+
+    for (let size in sizes) {
+        padding_size += `.padding-${size}{padding: ${sizes[size]};}`
+        m_padding_size += `.m-padding-${size}{padding: ${sizes[size]};}`
+
+        margin_size += `.margin-${size}{margin: ${sizes[size]};}`
+        m_margin_size += `.m-margin-${size}{margin: ${sizes[size]};}`
+
 
     }
 
@@ -52,6 +78,8 @@ function GenerateStyle() {
             {h_i_px}
             {h_i_vh}
 
+            {padding_size}
+            {margin_size}
 
 
             {`
@@ -60,6 +88,8 @@ function GenerateStyle() {
                     ${m_w_i_px}
                     ${m_h_i_px}
                     ${m_h_i_vh}
+                    ${m_padding_size}
+                    ${m_margin_size}
             }`}
         </style>
     )
