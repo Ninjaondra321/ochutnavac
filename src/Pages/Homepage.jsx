@@ -23,16 +23,15 @@ import mapa from "../Imgs/mapa.png";
 import Accordion from "../Components/Accordion";
 
 
-import { MetaProvider, Title, } from '@solidjs/meta';
+// import { MetaProvider, Title, } from '@solidjs/meta';
 
 
 
 function HomePage() {
-    return (<>
+    document.title = "A new title";
 
+    return (<>
         <div className="sections">
-            <div className="padding-large"></div>
-            <div className="padding"></div>
             <div className="hero">
                 <div className="bg">
                     <img src={Img_0} alt="" class='make-section-bg stretch darken' />

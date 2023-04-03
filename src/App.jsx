@@ -39,6 +39,8 @@ import { Router, Routes, Route } from "@solidjs/router"
 import NavBar from './Components/NavBar';
 import Abc from './Pages/Abc';
 import Footer from './Components/Footer';
+import Cookies from './Functions/Cookies';
+import CookiesPage from './Pages/CookiesPage';
 
 
 function App() {
@@ -54,9 +56,13 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/abc" element={<Abc />} />
-            {/* Not found */}
+
+            <Route path="/cookies" element={<CookiesPage />} />
+
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
+
+          <Cookies />
         </div>
         <Footer />
       </Router>

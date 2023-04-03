@@ -82,8 +82,14 @@ footer {
 
 .to-right {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+.to-left {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center !important;
 }
 
 .always-on-top {
@@ -302,7 +308,10 @@ nav .navbar.island {
 .nav-drawer.drawer {
     height: max-content;
     position: fixed;
-    top: 50px;
+    padding-top: 80px;
+    top: 0px;
+    left: 0;
+    right: 0;
 }
 
 .nav-drawer.fullscreen>div {
@@ -363,11 +372,15 @@ nav .navbar.island {
     background-color: transparent;
     border: none;
     display: flex;
-    width: 100%;
 }
 
 .accordion-nice button.accordion-header {
     justify-content: space-between;
+    width: 100%;
+}
+
+.accordion-plain button.accordion-header {
+    width: max-content;
 }
 
 .accordion-plain button.accordion-header::before,
@@ -490,7 +503,21 @@ body,
     background-color: rgb(231, 222, 91);
 }
 
-.nav-drawer.fullscreen {
+.nav-drawer {
     background-color: aquamarine;
 
+}
+
+/* ! TODO! - někam tohle zařaď */
+.bg {
+    display: absolute;
+}
+
+.h4,
+h4 {
+    font-size: calc((1.5rem) * var(--font-multiplier))
+}
+
+.main {
+    padding-top: 80px;
 }

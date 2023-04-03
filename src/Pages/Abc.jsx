@@ -1,5 +1,7 @@
 
 function Abc() {
+    document.title = "ABC";
+
     return (<>
         <div className="sidebar-left m-w-100px">
             <h3>Sidebar - L</h3>

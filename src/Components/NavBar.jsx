@@ -105,24 +105,27 @@ function NavBar() {
             </div> */}
 
             <div
-                className={drawerShown() ? " nav-drawer drawer pc-hidden opened" : "nav-drawer drawer pc-hidden closed"}
+                // className={drawerShown() ? " nav-drawer drawer pc-hidden opened" : "nav-drawer drawer pc-hidden closed"}
+                className={"nav-drawer drawer pc-hidden" + (drawerShown() ? " opened" : " closed")}
             >
                 <div className="bg">
                     <img src={Img_26} style={{ filter: "opacity(0.4)" }} class="make-section-bg  default darken-more" />
                 </div>
 
-                <div className="drawer-content">
+                <div className="drawer-content to-left">
 
                     <A href="/">Home</A>
                     <A href="/abc">abc</A>
+                    <h4>Hovno hoří</h4>
                     <div className="accordion-plain">
-                        <div className="accordion-item closed" >
+                        <div className="accordion-item closed center " >
 
-                            <button className="accordion-header"
+                            <button className="accordion-header h4"
                                 onTouch={(e) => { e.target.parentElement.classList.toggle("closed"); }}
                                 onClick={(e) => { e.target.parentElement.classList.toggle("closed"); }}
                             >
                                 Accordion
+
                             </button>
                             <div className="accordion-content">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!
