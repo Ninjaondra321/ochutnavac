@@ -23,6 +23,8 @@ function GenerateStyle() {
     var margin_size = ""
     var m_margin_size = ""
 
+    var typography = ""
+    var typography_mobile = ""
 
     // TODO! add vertical and horizontal padding ?and margin?
 
@@ -91,6 +93,8 @@ function GenerateStyle() {
                     ${m_padding_size}
                     ${m_margin_size}
             }`}
+
+
         </style>
     )
 
