@@ -1,0 +1,58 @@
+:root {
+    --background: #edc4c4;
+    --primary-color: #9d22df;
+    --secondary-color: #bdba1e;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: linear-gradient(180deg, rgb(157, 34, 223) 0%, rgba(157, 34, 223, 0.726) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* font-size: 1.2rem; */
+    font-weight: 600;
+    cursor: pointer;
+    background-color: unset;
+    transition: all 0.2s ease-in-out;
+}
+
+.v-1 button.primary {
+    background: var(--primary-color);
+}
+
+.v-1 button.secondary {
+    /* background: rgba(135, 135, 135, 0.262); */
+    color: var(--primary-color);
+    /* color: black; */
+    background: unset;
+    border: var(--primary-color) 1px solid;
+}
+
+.v-1 button.terciary {
+    color: var(--primary-color);
+    background: none;
+
+}
+
+.v-1 button.plain {
+    background: none;
+    color: var(--primary-color);
+}
+
+
+.v-1 button {}

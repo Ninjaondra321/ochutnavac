@@ -50,9 +50,9 @@ function Cookies() {
 
                     <div className="">
 
-                        <button className="btn btn-primary" >
+                        <button className="primary" >
                             Povolit </button>
-                        <button className="btn btn-secondary" >
+                        <button className="terciary" >
                             Zakázat </button>
 
 

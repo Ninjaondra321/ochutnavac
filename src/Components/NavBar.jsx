@@ -53,6 +53,7 @@ function NavBar() {
                     <div className="m-hidden">
                         <A href="/">Home</A>
                         <A href="/abc">abc</A>
+                        <A href="/components">componentss</A>
                         <div className="dropdown">
 
                             <p className="dropdown-heading">Dropdown</p>

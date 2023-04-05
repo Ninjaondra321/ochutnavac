@@ -2,7 +2,9 @@ import logo from './logo.svg';
 
 
 // import '../besamel_01.css';
-import '../besamel_02.css';
+import '../Styles/besamel_02.css';
+import '../Styles/components.css';
+
 
 import NavbarsPage from './Pages/NavbarsPage';
 
@@ -41,6 +43,7 @@ import Abc from './Pages/Abc';
 import Footer from './Components/Footer';
 import Cookies from './Functions/Cookies';
 import CookiesPage from './Pages/CookiesPage';
+import ComponentsPage from './Pages/Components';
 
 
 function App() {
@@ -58,6 +61,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/abc" element={<Abc />} />
+            <Route path="/components" element={<ComponentsPage />} />
 
             <Route path="/cookies" element={<CookiesPage />} />
 
