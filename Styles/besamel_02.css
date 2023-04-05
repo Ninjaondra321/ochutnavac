@@ -518,6 +518,10 @@ h4 {
     font-size: calc((1.5rem) * var(--font-multiplier))
 }
 
+.padding {
+    padding: 10px;
+}
+
 .main {
     padding-top: 80px;
 }
@@ -530,6 +534,13 @@ h4 {
 
     z-index: 99;
 
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.671);
+    backdrop-filter: blur(51px);
     padding-bottom: 20px;
+
+    color: white;
+}
+
+.flex {
+    display: flex;
 }

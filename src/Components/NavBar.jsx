@@ -1,14 +1,27 @@
-import { A } from "@solidjs/router"
+import { A, } from "@solidjs/router"
+import { createSignal, createEffect } from "solid-js";
 
 import Img_26 from "../Imgs/Img_18.png";
 
-import { createSignal } from "solid-js";
 
 function NavBar() {
 
     const [showBanner, setShowBanner] = createSignal(true);
 
     const [drawerShown, setDrawerShown] = createSignal(false);
+    // const location = useLocation();
+
+    // console.log(location.pathname);
+
+
+
+    // createEffect(() => {
+
+    //     console.log(location.pathname);
+    //     console.log(location.pathname === "/");
+    // })
+
+
 
 
 
@@ -40,7 +53,7 @@ function NavBar() {
             <div className="navbar ">
 
                 <div className="left">
-                    <A href="/#">
+                    <A href="/#" end={true}>
                         <span className="icon-btn ">
                             coffee
                         </span>
@@ -51,8 +64,12 @@ function NavBar() {
                 <div className="center"></div>
                 <div className="right">
                     <div className="m-hidden">
-                        <A href="/">Home</A>
-                        <A href="/abc">abc</A>
+                        <A href="/" end={true}>
+                            Home
+                        </A>
+                        <A href="/abc" >
+                            abc
+                        </A>
                         <A href="/components">componentss</A>
                         <div className="dropdown">
 

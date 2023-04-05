@@ -1,28 +1,29 @@
-import { onMount, createSignal } from "solid-js";
+import { onMount, createSignal, Show } from "solid-js";
+import { A } from "@solidjs/router";
+
+
 
 function Cookies() {
 
     const [showCookies, setShowCookies] = createSignal(false);
     const [cookiesAllowed, setCookiesAllowed] = createSignal(undefined);
 
-    console.warn("Cookies.jsx");
 
     onMount(() => {
         try {
-            c = JSON.parse(localStorage.getItem('COOKIES-NOTIME'));
-            if (c["alalytical"] === true) {
+            let c = JSON.parse(localStorage.getItem('COOKIES-NOTIME'));
+            if (c["analytical"] === true) {
                 setCookiesAllowed(true);
-            } else if (c["alalytical"] === undefined) {
+            } else if (c["analytical"] === undefined) {
                 setShowCookies(true);
             }
         } catch (e) {
             setShowCookies(true);
-            console.log(e)
-            console.log(showCookies())
 
         }
 
     });
+
 
 
     return (<>
@@ -43,17 +44,36 @@ function Cookies() {
         {showCookies() &&
 
             <div className="cookies-banner center">
-                <div className="content">
+                <div className="content flex">
 
-                    <h3>Cookiessss</h3>
-                    ashgask asgzu gs uzgkasfzug uzsaguz gfzhgs uzag fuzsguzhguzag zufgvhsafvheck
 
-                    <div className="">
+                    <div className="head w-9 m-w-12">
 
-                        <button className="primary" >
+                        <Show when={cookiesAllowed()}>
+                            <h1>sad</h1>
+                        </Show>
+                        <button className="primary" onClick={() => setCookiesAllowed(true)}>asd</button>
+                        <h3>Cookies
+                            are:
+                            {cookiesAllowed() ? "allowed" : "not allowed"}
+                            {
+                                cookiesAllowed()
+                            }
+
+
+                        </h3>
+                        <p>Tato stránka používá soubory cookies. Pokud souhlasíte s používáním souborů cookies, klikněte na tlačítko Povolit. Pokud ne, klikněte na tlačítko Zakázat.
+                            Více informací o souborech cookies naleznete <A href="/cookies">zde</A>.</p>
+                    </div>
+                    <div className="center w-3 m-w-12">
+
+                        <button className="primary w-12">
                             Povolit </button>
-                        <button className="terciary" >
+                        <button className="secondary w-12">
                             Zakázat </button>
+
+
+
 
 
 

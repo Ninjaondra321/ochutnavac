@@ -27,10 +27,6 @@ function CookiesPage() {
 
 
     function setCookies(type, value) {
-
-        console.log(type);
-        console.log(value);
-
         let c;
         try {
             c = JSON.parse(localStorage.getItem("COOKIES-NOTIME"));

@@ -1,7 +1,7 @@
 :root {
-    --background: #edc4c4;
+    --background: #f3ef1a38;
     --primary-color: #9d22df;
-    --secondary-color: #bdba1e;
+    --secondary-color: #f3ef1a;
 }
 
 body {
@@ -12,6 +12,13 @@ body {
     box-sizing: border-box;
 }
 
+/* * 0 GENERAL */
+a {
+    color: var(--primary-color);
+}
+
+/* * 1 COMPONENTS */
+/* * 1.0 NAVBAR */
 .navbar {
     background: linear-gradient(180deg, rgb(157, 34, 223) 0%, rgba(157, 34, 223, 0.726) 100%);
     backdrop-filter: blur(10px);
@@ -19,40 +26,77 @@ body {
 
 }
 
+.navbar a {
+    color: var(--secondary-color);
+}
+
+.navbar a:hover {
+    border-bottom: #f3ef1a 2px solid;
+}
+
+.navbar .active {
+    color: var(--primary-color);
+    border-bottom: #f3ef1a 2px solid;
+}
+
 button {
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
+    margin: 3.5px 5px;
     /* font-size: 1.2rem; */
     font-weight: 600;
     cursor: pointer;
     background-color: unset;
     transition: all 0.2s ease-in-out;
-}
 
-.v-1 button.primary {
     background: var(--primary-color);
+
 }
 
-.v-1 button.secondary {
+/* * 1.1 BUTTONS */
+
+
+button.primary {
+    background: var(--primary-color);
+
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+button.primary:hover {
+    background: #4d0d5f;
+
+}
+
+button.secondary {
     /* background: rgba(135, 135, 135, 0.262); */
     color: var(--primary-color);
     /* color: black; */
-    background: unset;
+    background: #9d22df2d;
+
+
+
+    /* border: var(--primary-color) 1px solid; */
+}
+
+button.secondary:hover {
+    outline: var(--primary-color) 1px solid;
+
+}
+
+button.terciary {
+    color: var(--primary-color);
+    background: none;
+    /* text-decoration: underline 1.3px; */
     border: var(--primary-color) 1px solid;
 }
 
-.v-1 button.terciary {
-    color: var(--primary-color);
-    background: none;
-
-}
-
-.v-1 button.plain {
+button.plain,
+.icon-btn {
     background: none;
     color: var(--primary-color);
+    margin: 0;
+    padding: 0;
 }
-
-
-.v-1 button {}

@@ -38,6 +38,8 @@ import HomePage from './Pages/Homepage';
 
 import { Router, Routes, Route } from "@solidjs/router"
 
+import { createSignal, onMount, Show } from "solid-js";
+
 import NavBar from './Components/NavBar';
 import Abc from './Pages/Abc';
 import Footer from './Components/Footer';
@@ -48,17 +50,41 @@ import ComponentsPage from './Pages/Components';
 
 function App() {
 
+  const [analyticalCookiesAllowed, setAnalyticalCookiesAllowed] = createSignal(false);
 
+  function setCookies(type, value) {
+    let c;
+    try {
+      c = JSON.parse(localStorage.getItem("COOKIES-NOTIME"));
+    } catch (e) {
+      console.log(e);
+
+      c = { "analytical": false };
+    }
+    c[type] = value;
+    localStorage.setItem("COOKIES-NOTIME", JSON.stringify(c));
+  }
+
+
+  const my_routes = {
+    "/": HomePage,
+    "/abc": Abc,
+    "/components": ComponentsPage,
+    "/cookies": CookiesPage,
+    "*": () => <div>Not found</div>
+
+
+  }
 
 
   return (
     <>
 
       <GenerateStyle />
-      <Router>
+      <Router  >
         <NavBar />
-        <div className="main">
-          <Routes>
+        <div className="main ">
+          <Routes >
             <Route path="/" element={<HomePage />} />
             <Route path="/abc" element={<Abc />} />
             <Route path="/components" element={<ComponentsPage />} />
