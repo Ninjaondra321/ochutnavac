@@ -9,19 +9,21 @@ function NavBar() {
     const [showBanner, setShowBanner] = createSignal(true);
 
     const [drawerShown, setDrawerShown] = createSignal(false);
-    // const location = useLocation();
 
-    // console.log(location.pathname);
+    function updateHeight(useLessProps = undefined) {
+        // Navbar height + banner height
+        if (showBanner()) {
 
+            document.documentElement.style.setProperty('--navbar-height', `${document.querySelector(".navbar").clientHeight + document.querySelector(".banner").clientHeight}px`);
+        } else {
+            document.documentElement.style.setProperty('--navbar-height', `${document.querySelector(".navbar").clientHeight}px`);
+        }
 
+    }
 
-    // createEffect(() => {
-
-    //     console.log(location.pathname);
-    //     console.log(location.pathname === "/");
-    // })
-
-
+    createEffect(() => {
+        updateHeight(showBanner());
+    });
 
 
 
@@ -73,9 +75,9 @@ function NavBar() {
                         <A href="/components">componentss</A>
                         <div className="dropdown">
 
-                            <p className="dropdown-heading">Dropdown</p>
+                            <A href="/sections" className="dropdown-heading">Sections</A>
                             <div className="dropdown-window">
-                                <A href="/dropdown">Dropdown</A>
+                                <A href="/sections/footers">Footers</A>
                                 <A href="/dropdown">Dropdown</A>
                             </div>
                         </div>
@@ -89,7 +91,7 @@ function NavBar() {
 
                     </div>
                     <div className="pc-hidden">
-                        <button className="icon-btn large" id="menu-opener" onclick={() => setDrawerShown(!drawerShown())}>
+                        <button className="icon-btn large " style="margin-right:-15px" id="menu-opener" onclick={() => setDrawerShown(!drawerShown())}>
 
                             menu
 
@@ -134,7 +136,7 @@ function NavBar() {
 
                     <A href="/">Home</A>
                     <A href="/abc">abc</A>
-                    <h4>Hovno hoří</h4>
+                    <A href="/components">Components</A>
                     <div className="accordion-plain">
                         <div className="accordion-item closed center " >
 

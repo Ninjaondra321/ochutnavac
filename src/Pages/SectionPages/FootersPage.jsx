@@ -1,11 +1,13 @@
 
 import { A } from "@solidjs/router";
 
-function Footer() {
-    return (<>
 
-        {/* <footer  >
-            <div className="content">
+function FootersPage() {
+    return (<div style={{ width: "95vw" }}>
+        <h1>Footers</h1>
+
+        <footer class="malina" >
+            <div className="content responsive-rotate">
                 <div className="left">
                     <h5>Info</h5>
                     <ul>
@@ -52,7 +54,10 @@ function Footer() {
                 </div>
 
             </div>
-        </footer> */}
+        </footer>
+
+        <div className="padding"></div>
+        <div className="padding"></div>
 
 
         <footer className="boruvka">
@@ -82,9 +87,11 @@ function Footer() {
             </div>
         </footer>
 
+        <div className="padding"></div>
+        <div className="padding"></div>
 
 
-    </>);
+    </div>);
 }
 
-export default Footer;
+export default FootersPage;

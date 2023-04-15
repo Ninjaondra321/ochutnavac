@@ -17,6 +17,8 @@ import Img_14 from "../Imgs/Img_14.png";
 import Img_15 from "../Imgs/Img_15.png";
 import Img_16 from "../Imgs/Img_16.png";
 
+import abstract from "../Imgs/abstract.jpg";
+
 import Img_0 from "../Imgs/Img_20.png";
 
 import mapa from "../Imgs/mapa.png";
@@ -32,7 +34,7 @@ function HomePage() {
 
     return (<>
         <div className="sections">
-            <div className="hero">
+            <div className="hero dark">
                 <div className="bg">
                     <img src={Img_0} alt="" class='make-section-bg stretch darken' />
                 </div>
@@ -46,8 +48,7 @@ function HomePage() {
                         </p>
 
                         <div className="to-right">
-                            <button class='btn btn-primary'>Lorem ipsum</button>
-
+                            <button class='primary large'>Lorem ipsum</button>
                         </div>
                     </div>
                 </div>
@@ -161,6 +162,33 @@ function HomePage() {
                 <div className="content">
                     <Accordion />
                 </div>
+            </div>
+
+            <div className="test-section padding">
+
+
+
+                <div className="content padding-large"
+                // style={{
+                //     "background-image": `url(${abstract})`,
+                //     "background-size": "cover",
+                //     "background-position": "center",
+                //     "background-repeat": "no-repeat",
+                //     width: '100%',
+                //     "border-radius": "50px",
+
+                // }}
+                >
+                    <div className="bg">
+                        <img src={abstract} alt="Abstract" class="make-section-bg default" />
+                    </div>
+
+                    <h1>Ahoj</h1>
+
+                    asd
+                </div>
+
+
             </div>
 
 

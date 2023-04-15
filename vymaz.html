@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .animate {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .animate.animate-in {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 150vh;">
+
+    </div>
+
+    <div class="animate">This div will fade in when it's in view.</div>
+    <script>
+        const animateIn = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+        const observer = new IntersectionObserver(animateIn);
+        observer.observe(document.querySelector('.animate'));
+    </script>
+</body>
+
+</html>

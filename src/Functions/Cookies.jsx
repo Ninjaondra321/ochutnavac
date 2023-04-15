@@ -44,32 +44,19 @@ function Cookies() {
         {showCookies() &&
 
             <div className="cookies-banner center">
-                <div className="content flex">
+                <div className="content  responsive-rotate">
 
-
-                    <div className="head w-9 m-w-12">
-
-                        <Show when={cookiesAllowed()}>
-                            <h1>sad</h1>
-                        </Show>
-                        <button className="primary" onClick={() => setCookiesAllowed(true)}>asd</button>
-                        <h3>Cookies
-                            are:
-                            {cookiesAllowed() ? "allowed" : "not allowed"}
-                            {
-                                cookiesAllowed()
-                            }
-
-
-                        </h3>
+                    <div className="head">
+                        <h3>Cookies</h3>
                         <p>Tato stránka používá soubory cookies. Pokud souhlasíte s používáním souborů cookies, klikněte na tlačítko Povolit. Pokud ne, klikněte na tlačítko Zakázat.
                             Více informací o souborech cookies naleznete <A href="/cookies">zde</A>.</p>
                     </div>
-                    <div className="center w-3 m-w-12">
-
+                    <div className="center w-1000px m-w-12">
                         <button className="primary w-12">
+                            <span className="g-icon"> done</span>
                             Povolit </button>
                         <button className="secondary w-12">
+                            <span className="g-icon">close</span>
                             Zakázat </button>
 
 

@@ -1,15 +1,17 @@
+// SolidJS
+import { createSignal, onMount, Show, lazy } from "solid-js";
+import { Router, Routes, Route } from "@solidjs/router"
+
+// Styles
+import '../Styles/besamel_02.css';
+import '../Styles/components.css';
+import GenerateStyle from './Functions/GenerateStyle';
+
+
 import logo from './logo.svg';
 
 
-// import '../besamel_01.css';
-import '../Styles/besamel_02.css';
-import '../Styles/components.css';
-
-
-import NavbarsPage from './Pages/NavbarsPage';
-
-
-// Import images from 0 to 35
+// Images 
 import Img_0 from "./Imgs/Img_0.png";
 import Img_1 from "./Imgs/Img_1.png";
 import Img_2 from "./Imgs/Img_2.png";
@@ -32,21 +34,29 @@ import Img_20 from "./Imgs/Img_20.png";
 
 import mapa from "./Imgs/mapa.png";
 
-import GenerateStyle from './Functions/GenerateStyle';
+//Pages
+// import HomePage from './Pages/Homepage';
+// import NavbarsPage from './Pages/NavbarsPage';
+// import NavBar from './Components/NavBar';
+// import Abc from './Pages/Abc';
+// import Footer from './Components/Footer';
+// import CookiesPage from './Pages/CookiesPage';
+// import ComponentsPage from './Pages/Components';
 
-import HomePage from './Pages/Homepage';
+const HomePage = lazy(() => import('./Pages/Homepage'));
+const NavbarsPage = lazy(() => import('./Pages/NavbarsPage'));
+const NavBar = lazy(() => import('./Components/NavBar'));
+const Abc = lazy(() => import('./Pages/Abc'));
+const Footer = lazy(() => import('./Components/Footer'));
+const CookiesPage = lazy(() => import('./Pages/CookiesPage'));
+const ComponentsPage = lazy(() => import('./Pages/Components'));
 
-import { Router, Routes, Route } from "@solidjs/router"
+// Components
 
-import { createSignal, onMount, Show } from "solid-js";
 
-import NavBar from './Components/NavBar';
-import Abc from './Pages/Abc';
-import Footer from './Components/Footer';
+// Functions
 import Cookies from './Functions/Cookies';
-import CookiesPage from './Pages/CookiesPage';
-import ComponentsPage from './Pages/Components';
-
+import FootersPage from "./Pages/SectionPages/FootersPage";
 
 function App() {
 
@@ -91,6 +101,14 @@ function App() {
 
             <Route path="/cookies" element={<CookiesPage />} />
 
+            {/* /sections */}
+            {/* /sections/footers */}
+            {/* /sections/navbars */}
+
+            <Route path="/sections" element={<NavbarsPage />} />
+            <Route path="/sections/footers" element={<FootersPage />} />
+            <Route path="/sections/navbars" element={<NavbarsPage />} />
+
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
 
@@ -100,28 +118,6 @@ function App() {
       </Router>
 
 
-
-      <div style={{
-        background: "black", height: "35px",
-        display: "flex",
-        "justify-content": "center",
-        "align-items": "center"
-      }} >
-        <p style={{
-          color: "white",
-          fontsize: "16px"
-
-        }}>Created by</p>
-        <a href='#' style={{
-          background: "linear-gradient(to right, #10E332, #1BD6FF)",
-          "-webkit-background-clip": "text",
-          "-webkit-text-fill-color": "transparent",
-          fontsize: "16px",
-          "margin-left": "5px",
-
-
-        }}>NoTime</a>
-      </div>
     </>
   );
 }

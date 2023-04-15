@@ -3,8 +3,8 @@
 :root {
 
     /* Breakpoints */
-    --max-width: 1200px;
-    --optimap-width: 1000px;
+    --max-width: 1500px;
+    --optimap-width: 1500px;
 
     --font-multiplier: 1.04;
     --font-responsivness: 3.3vw;
@@ -66,8 +66,7 @@ a {
 
 /* 2 COMMONLY USED THINGS   */
 /* 2.1 Item position */
-.center,
-footer {
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,6 +98,35 @@ footer {
     left: 0;
     right: 0;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.responsive-rotate {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+    .responsive-rotate {
+        flex-direction: column;
+    }
+}
+
+
+
+
 
 /* 2.2 Custom image bg */
 .make-section-bg {
@@ -182,7 +210,11 @@ body {
 /* 4.0 Page */
 
 .main {
+    margin-top: 0;
+    margin-top: var(--navbar-height);
     min-height: calc(100vh - 200px);
+    display: flex;
+    /* transition: margin 0.4s ease-in-out; */
 }
 
 /* TODO! - page layout? */
@@ -220,7 +252,7 @@ nav>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--padding-from-edge);
+    padding: 0 calc(var(--padding-from-edge) - 15px);
     z-index: 50;
 }
 
@@ -238,6 +270,9 @@ nav ul,
 
 nav .right>*>*,
 nav .right>* {
+    /* Becuase of icons and links*/
+    /* padding-left: 17px;
+    padding-right: 3px; */
     padding: 0 10px;
 
 }
@@ -308,10 +343,10 @@ nav .navbar.island {
 .nav-drawer.drawer {
     height: max-content;
     position: fixed;
-    padding-top: 80px;
-    top: 0px;
+    top: 0;
     left: 0;
     right: 0;
+    padding-top: var(--navbar-height);
 }
 
 .nav-drawer.fullscreen>div {
@@ -349,11 +384,15 @@ nav .navbar.island {
     cursor: pointer;
     outline: inherit;
     padding: 0 inherit;
+    margin: 0;
     height: min-content;
 
     font-family: 'Material Icons';
 
     font-size: calc(1.55rem * var(--font-multiplier));
+
+    /* TODO: idk */
+    color: var(--secondary-color) !important;
 }
 
 .icon-btn.small {
@@ -372,33 +411,52 @@ nav .navbar.island {
     background-color: transparent;
     border: none;
     display: flex;
+    width: 100%;
+
+}
+
+.accordion-plain button.accordion-header {
+    /* To left */
+    justify-content: flex-start;
+    color: black;
+    padding: 0;
+    font-size: 1rem;
+
 }
 
 .accordion-nice button.accordion-header {
     justify-content: space-between;
-    width: 100%;
+    font-size: 1rem;
+    padding: 10px 15px;
 }
 
-.accordion-plain button.accordion-header {
+.accordion-plain button.accordion-header.narrow {
     width: max-content;
 }
 
 .accordion-plain button.accordion-header::before,
-.accordion-nice button.accordion-header::after {
+.accordion-nice button.accordion-header::after,
+select::after {
     font-family: 'Material Icons';
     content: 'expand_more';
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     transform: rotate(180deg);
+}
 
+.accordion-plain button.accordion-header::before {
+    transform: rotate(0deg);
 }
 
 
-.accordion-item.closed button.accordion-header::before,
+.accordion-item.closed button.accordion-header::before {
+    transform: rotate(-90deg);
+}
+
 .accordion-item.closed button.accordion-header::after {
     transform: rotate(0deg);
 }
 
-ader::before,
+.accordion-header::before,
 .accordion-header::after {
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
@@ -406,11 +464,15 @@ ader::before,
 
 .accordion-content {
     overflow-y: hidden;
+    padding: 0 15px;
 }
 
 .accordion-item.closed .accordion-content {
     height: 0 !important;
 }
+
+
+
 
 
 /* * 6 RESPONSIVNESS */
@@ -464,8 +526,7 @@ ader::before,
 
     100% {
         opacity: 1;
-        margin-top: inherit;
-
+        /* margin-top: var(--nav-height); */
     }
 }
 
@@ -478,19 +539,11 @@ body,
 
 /* TODO! tohle vyaz*/
 
-.cards>div {
-    width: 250px !important;
-    color: purple;
-}
-
 .hero {
     background-color: rgba(255, 0, 0, 0.295);
     height: 600px;
 }
 
-.cards-section {
-    background-color: blue;
-}
 
 .navbar {
     background: linear-gradient(180deg, rgb(223, 135, 34) 0%, rgba(223, 135, 34, 0.726) 100%);
@@ -509,9 +562,6 @@ body,
 }
 
 /* ! TODO! - někam tohle zařaď */
-.bg {
-    display: absolute;
-}
 
 .h4,
 h4 {
@@ -522,9 +572,13 @@ h4 {
     padding: 10px;
 }
 
-.main {
-    padding-top: 80px;
+a.dropdown-heading {
+    height: 100%;
 }
+
+
+
+
 
 .cookies-banner {
     bottom: 0;
@@ -543,4 +597,33 @@ h4 {
 
 .flex {
     display: flex;
+}
+
+.g-icon {
+    font-family: 'Material Icons';
+    /* same fontsize as p */
+    width: min-content;
+
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.w-auto {
+    width: auto;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .pc-flex {
+        display: flex;
+    }
+
+    .pc-inline {
+        display: inline;
+    }
 }
