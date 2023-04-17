@@ -17,11 +17,16 @@ import Img_13 from "../Imgs/Img_13.png";
 import Img_14 from "../Imgs/Img_14.png";
 import Img_15 from "../Imgs/Img_15.png";
 import Img_16 from "../Imgs/Img_16.png";
-import ImgCarousel from "../Components/Carousels";
+import { ImgCarousel, CarouselWrap } from "../Components/Carousels";
 
-
+import { createSignal } from "solid-js";
 
 function ComponentsPage() {
+
+    const [activeTab, setActiveTab] = createSignal(0);
+    const [openModal, setOpenModal] = createSignal(false);
+
+
     return (<>
         <div className="sections">
 
@@ -64,6 +69,17 @@ function ComponentsPage() {
                 </div>
             </div>
 
+            <div className="badges-section">
+                <div className="content badges">
+                    <h1>Badges <span className="badge secondary">NEW</span></h1>
+                    <p>Henry McHenry <span className="badge ">NEW</span> tady </p>
+                    <h2>Primary<span className="badge primary">15+</span></h2>
+                    <h2>Secondary<span className="badge secondary">15+</span></h2>
+                    <h2>Terciary<span className="badge terciary">15+</span></h2>
+                </div>
+            </div>
+
+
             <div className="butttons-section">
 
                 <div className="content">
@@ -97,6 +113,8 @@ function ComponentsPage() {
                 </div>
             </div>
 
+
+
             <div className="cards-section">
                 <div className="content">
                     <h1>Cards</h1>
@@ -122,21 +140,118 @@ function ComponentsPage() {
             </div>
 
 
-            <div className="carousel-section ">
+            <div className="carousel-section column">
 
-                <div className="content h-200px" style="margin-bottom:7px">
+                <div className="content" style="margin-bottom:7px">
+                    <h1>Carousels</h1>
+                    <div class="h-300px">
 
-                    <ImgCarousel />
+                        <ImgCarousel />
+                    </div>
+
+
+                    <div style="position:relative; height:100%; width:100%" class="carousel-parent ">
+
+                        <div className="carousel fade-edge   ">
+
+                            <div className="card w-500px">
+                                <h4>Hello World</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                            </div>
+
+                            <div className="card w-500px">
+                                <h4>Hello World</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                            </div>
+
+                            <div className="card secondary w-500px">
+                                <h4>Hello World</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                            </div>
+
+                            <div className="card w-500px">
+                                <h4>Hello World</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <CarouselWrap>
+                        <div className="card w-500px">
+                            <h4>Hello World</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                        </div>
+
+                        <div className="card w-500px">
+                            <h4>Hello World</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                        </div>
+
+                        <div className="card secondary w-500px">
+                            <h4>Hello World</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                        </div>
+
+                        <div className="card w-500px">
+                            <h4>Hello World</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
+                        </div>
+
+
+                    </CarouselWrap>
+
                 </div>
 
 
 
             </div>
 
+            <div className="chips-section">
+                <div className="content">
+                    <h1>Chips</h1>
+                    <div className="row">
+                        <input type="checkbox" id="idkkkasd" />
+                        <label htmlFor="idkkkasd" class="chip primary">Ahoj</label>
+                        <input type="checkbox" id="idkkkasd1" />
+                        <label htmlFor="idkkkasd1" class="chip primary">Ahoj</label>
+                        <input type="checkbox" id="idkkkasd2" />
+                        <label htmlFor="idkkkasd2" class="chip primary with-close">Ahoj</label>
+                        <input type="checkbox" id="idkkkasd21" />
+                        <label htmlFor="idkkkasd21" class="chip primary with-close">Ahoj</label>
+                        <input type="checkbox" id="idkkkasd22" />
+                        <label htmlFor="idkkkasd22" class="chip primary with-close">Ahoj</label>
+                    </div>
+                    <div className="row">
+                        <input type="checkbox" id="ertert1" />
+                        <label htmlFor="ertert1" class="chip">Ahoj</label>
+                        <input type="checkbox" id="ertert12" />
+                        <label htmlFor="ertert12" class="chip">Ahoj</label>
+                        <input type="checkbox" id="ertert13" />
+                        <label htmlFor="ertert13" class="chip with-close">Ahoj</label>
+                        <input type="checkbox" id="ertert14" />
+                        <label htmlFor="ertert14" class="chip with-close">Ahoj</label>
+                        <input type="checkbox" id="ertert15" />
+                        <label htmlFor="ertert15" class="chip with-close">Ahoj</label>
+                    </div>
+                </div>
+            </div>
+
 
             <div className="dropdown-sections">
                 <div className="content">
                     <h1>Dropdown</h1>
+
+                    <div className="dropdown">
+                        <button className="dropdown-heading">Dropdown</button>
+                        <div className="dropdown-window">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
 
                     {/* Select */}
                     <div className="select">
@@ -179,14 +294,8 @@ function ComponentsPage() {
 
 
                         {/* Button dropdown */}
-                        <div className="dropdown">
-                            <button className="primary">Dropdown</button>
-                            <div className="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
+
+
 
 
                     </div>
@@ -199,8 +308,31 @@ function ComponentsPage() {
 
                     <div className="">
                         <div className="inpputs">
-                            <input type="text" name="Hello" placeholder="username@mail.com" />
-                            <input type="text" class="large" name="Hello" placeholder="username@mail.com" />
+                            <div className="column">
+                                <label htmlFor="123654" class="light" >Xddd</label>
+                                <input type="text" name="Hello" id="123564" placeholder="username@mail.com" />
+                            </div>
+
+
+                            <label htmlFor="icooon" class="with-icon">Labell</label>
+                            <div className=" iconned-input column ">
+                                <p class="g-icon ">search</p>
+                                <input type="text" class="with-icon" id="icooon" placeholder="username@mail.com" />
+                            </div>
+
+
+                            <label htmlFor="icooon" class="with-icon">Labell</label>
+                            <div className=" iconned-input column ">
+                                <p class="g-icon large">search</p>
+                                <input type="text" class="with-icon large" id="icooon" placeholder="username@mail.com" />
+                            </div>
+
+
+
+                            <div className="column">
+                                <label htmlFor="852741" class="large">Xddd</label>
+                                <input type="text" class="large" id="852741" name="Hello2" placeholder="username@mail.com" />
+                            </div>
                         </div>
                         {/* Checkboxes */}
                         <div className="checkboxes">
@@ -219,6 +351,13 @@ function ComponentsPage() {
 
                         </div>
 
+                        {/* Sliders */}
+                        <div className="sliders">
+                            <input type="range" id="volume" name="volume" min="0" max="100" />
+                            <label for="volume">Volume</label>
+
+                        </div>
+
 
 
 
@@ -228,22 +367,38 @@ function ComponentsPage() {
                 </div>
             </div>
 
+            <div className="tabs-section">
+                <div className="content">
+                    <h1>Tabs</h1>
+                    <div className="tabs">
+
+                        <h5 class={"tab " + (activeTab() == 0 ? "active" : " ")} onclick={() => setActiveTab(0)}>Jan</h5>
+                        <h5 class={"tab " + (activeTab() == 1 ? "active" : " ")} onclick={() => setActiveTab(1)}>Ámos</h5>
+                        <h5 class={"tab " + (activeTab() == 2 ? "active" : " ")} onclick={() => setActiveTab(2)}>Komenský</h5>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
             <div className="tiles-section">
                 <div className="content">
                     <h1>Tiles</h1>
 
-                    <div className="center row" >
-                        <div className="tile primary w-3 ">
+                    <div className="center flex static" >
+                        <div className="tile primary">
                             <h3>Primary tile</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis placeat totam impedit animi, natus officia quibusdam iure dolore, voluptates earum iste, id blanditiis praesentium quia suscipit voluptatum corrupti pariatur.</p>
                         </div>
-                        <div className="tile secondary w-3">
+                        <div className="tile secondary">
                             <h3>Sec tile</h3>
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, qui sunt eum aperiam ducimus explicabo molestias quod voluptatum eveniet veniam rerum, facilis quas incidunt dolorum ullam harum distinctio consequuntur ab.
                             </p>
                         </div>
-                        <div className="tile terciary  w-3">
+                        <div className="tile terciary ">
                             <h3>Ter tile</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio beatae explicabo aliquam autem deserunt itaque voluptatum? Commodi eius dignissimos id corrupti. Rem reprehenderit laudantium quia cum magnam eveniet perferendis.</p>
                         </div>
@@ -377,6 +532,33 @@ function ComponentsPage() {
                     <p class="row">Default <span className="leader"></span> span.leader</p>
                     <p class="row">Dashed <span className="leader dashed"></span> span.leader.dashed</p>
                     <p class="row">Solid <span className="leader solid"></span> span.leader.solid</p>
+
+                </div>
+            </div>
+
+            <div className="modals-section">
+                <div className="content">
+                    <h1>Modals</h1>
+
+
+                    <button className="btn primary" onClick={() => setOpenModal(!openModal())}>Open modal</button>
+
+                    {openModal() &&
+
+                        <div className="modal-parent">
+                            <div className="modal">
+                                <h3>HelloWorld</h3>
+                                <p>Modal lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nulla non illum nihil debitis tempore! Sequi similique enim perferendis doloremque, ipsa placeat odio exercitationem possimus, inventore iste nesciunt in odit.</p>
+                                <div className="row w-12 to-right">
+                                    <button className="btn primary">Primary</button>
+                                    <button className="btn secondary" onclick={() => setOpenModal(false)} >Secondary</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
 
                 </div>
             </div>

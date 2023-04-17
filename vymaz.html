@@ -2,36 +2,50 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .animate {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+        .input-icons i {
+            position: absolute;
         }
 
-        .animate.animate-in {
-            opacity: 1;
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            padding: 10px;
+            min-width: 40px;
+            pointer-events: none;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            padding-left: 30px;
+            /* text-align: center; */
         }
     </style>
 </head>
 
 <body>
-    <div style="height: 150vh;">
-
+    <h3>
+        Icons inside the input element
+    </h3>
+    <div style="max-width:400px;margin:auto">
+        <div class="input-icons">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-instagram icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-envelope icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-youtube icon"></i>
+            <input class="input-field" type="text">
+            <i class="fa fa-facebook icon"></i>
+            <input class="input-field" type="text">
+        </div>
     </div>
-
-    <div class="animate">This div will fade in when it's in view.</div>
-    <script>
-        const animateIn = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        };
-        const observer = new IntersectionObserver(animateIn);
-        observer.observe(document.querySelector('.animate'));
-    </script>
 </body>
 
 </html>

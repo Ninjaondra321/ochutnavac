@@ -35,9 +35,8 @@ function HomePage() {
     return (<>
         <div className="sections">
             <div className="hero dark">
-                <div className="bg">
-                    <img src={Img_0} alt="" class='make-section-bg stretch darken' />
-                </div>
+                <img src={Img_0} alt="" class='make-section-bg stretch darken' />
+
                 <div className="content ">
                     <div className="left padding-large w-7 m-w-12">
 
@@ -57,11 +56,10 @@ function HomePage() {
             <div className="padding"></div>
 
 
-            <div className="test-section">
-                <div className="bg">
-                    <img src={Img_0} alt="" class='make-section-bg default' />
-                </div>
-                <div className="content h-500px">
+            <div className="test-section bg">
+
+                <img src={Img_0} alt="" class='make-section-bg default' />
+                <div className="content h-500px bg">
                     <div className="left padding-large w-7 m-w-12">
                         <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
                         <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea sequi laudantium et officiis odio
@@ -71,10 +69,10 @@ function HomePage() {
                 </div>
             </div>
             <div className="padding"></div>
-            <div className="test-section">
-                <div className="bg">
-                    <img src={Img_0} alt="" class='make-section-bg to-right w-8 auto-height' />
-                </div>
+            <div className="test-section bg">
+
+                <img src={Img_0} alt="" class='make-section-bg to-right w-8 auto-height' />
+
                 <div className="content h-500px">
                     <div className="left padding-large w-7 m-w-12">
                         <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
@@ -86,11 +84,6 @@ function HomePage() {
             </div>
 
             <div className="padding-large"></div>
-            <div className="hned-vymaz-section">
-                <div className="content">
-                    <img src={Img_20} className="" loading="eager" />
-                </div>
-            </div>
 
             <div className="carousel-section">
                 <div className="content">
@@ -103,38 +96,25 @@ function HomePage() {
                         <img src={Img_3} />
                         <img src={Img_4} />
                         <img src={Img_5} />
+                        <img src={Img_13} alt="" />
+
                     </div>
 
 
                 </div>
             </div>
 
-            <div className="klidne-vymaz-section">
-                <div className="content">
-                    <img src={Img_13} alt="" />
-                </div>
-            </div>
-
-            <div className="vymaz">
-                <div className="content">
-                    {/* <img src={Img_20} className="" />
-            <img src={Img_20} className="darken" />
-            <img src={Img_20} className="darken-more" /> */}
-
-                </div>
-            </div>
-
             <div className="cards-section">
-                <div className="content">
+                <div className="content ">
 
-                    <div className="cards ">
-                        <div className="card">
+                    <div className="cards responsive-rotate ">
+                        <div className="card w-4 m-w-12">
                             <h5>Ahoj</h5>
                         </div>
-                        <div className="card">
+                        <div className="card w-4 m-w-12" >
                             <h5>Rad te vidim</h5>
                         </div>
-                        <div className="card">
+                        <div className="card w-4 m-w-12">
                             <h5>Jak je?</h5>
                         </div>
                     </div>
@@ -168,20 +148,15 @@ function HomePage() {
 
 
 
-                <div className="content padding-large"
-                // style={{
-                //     "background-image": `url(${abstract})`,
-                //     "background-size": "cover",
-                //     "background-position": "center",
-                //     "background-repeat": "no-repeat",
-                //     width: '100%',
-                //     "border-radius": "50px",
+                <div className="content padding-large bg"
+                    style={{
+                        "border-radius": "50px",
+                        overflow: "hidden",
 
-                // }}
+                    }}
                 >
-                    <div className="bg">
-                        <img src={abstract} alt="Abstract" class="make-section-bg default" />
-                    </div>
+                    <img src={abstract} alt="Abstract" class="make-section-bg default" />
+
 
                     <h1>Ahoj</h1>
 
@@ -270,13 +245,10 @@ function HomePage() {
                 </div>
             </div>
 
-
             <div className="padding"></div>
 
 
-
-
-        </div>
+        </div >
     </>);
 }
 

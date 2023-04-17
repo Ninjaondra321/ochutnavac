@@ -182,6 +182,31 @@ input.large {
     font-size: 1.2rem;
 }
 
+.iconned-input {
+    position: relative;
+}
+
+.iconned-input .icon,
+.iconned-input .g-icon {
+    position: absolute;
+    color: var(--primary-color);
+    height: 100%;
+    font-size: 100%;
+    pointer-events: none;
+
+    margin: 9px;
+}
+
+.iconned-input .g-icon.large {
+    font-size: 1.4rem;
+}
+
+.iconned-input input {
+    padding-left: 30px;
+}
+
+
+
 /* * TILES */
 
 .tile {
@@ -505,6 +530,7 @@ span.leader.double {
 
 .carousel {
     display: flex;
+
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -512,6 +538,27 @@ span.leader.double {
     scroll-behavior: smooth;
 
     height: 100% !important;
+
+
+}
+
+.carousel.fade-edge {
+    --mask: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 3%,
+            rgba(0, 0, 0, 1) 97%, rgba(0, 0, 0, 0) 100%) 100% 50% / 100% 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    /* --mask: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 40%,
+            rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 0) 100% 50% / 100% 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask); */
+}
+
+.carousel>* {
+    flex-grow: 0;
+    flex-shrink: 0;
 
 }
 
@@ -521,6 +568,7 @@ span.leader.double {
     /* Make the image height of it's parent, please */
     height: 100%;
     width: auto;
+
 
     /* This doesn't seem to word :-( */
 }
@@ -543,7 +591,7 @@ span.leader.double {
 
 .carousel-control-l,
 .carousel-control-r {
-    position: absolute;
+    /* position: absolute; */
     top: 50%;
 
     font-family: "Material Icons";
@@ -557,8 +605,30 @@ span.leader.double {
     opacity: 0.3;
 }
 
-.carousel-control-l:hover,
-.carousel-control-r:hover {
+.carousel-parent .left-control,
+.carousel-parent .right-control {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+}
+
+.carousel-parent .left-control {
+    left: 0px;
+    padding-right: 15px;
+}
+
+.carousel-parent .right-control {
+    right: 0px;
+    padding-left: 15px;
+}
+
+
+.carousel-parent .left-control:hover .carousel-control-l,
+.carousel-parent .right-control:hover .carousel-control-r {
     opacity: 1;
     /* shadow - primary-hover */
     box-shadow: 0px 8px 10px 1px rgba(157, 34, 223, 0.4);
@@ -576,6 +646,11 @@ span.leader.double {
     content: "chevron_right";
 }
 
+.carousel img,
+img {
+    pointer-events: none;
+    user-select: none;
+}
 
 
 /* * Practical things */
@@ -595,4 +670,155 @@ span.leader.double {
 .shadow-primary-hover:hover {
     transition: all 0.2s ease-in-out;
     box-shadow: 0px 8px 10px 1px rgba(157, 34, 223, 0.4);
+}
+
+
+
+/* * BADGES */
+.badge {
+    font-size: 40%;
+    /* background-color: var(--primary-color);
+    color: var(--font-color-light); */
+    padding: 3px;
+    border-radius: 55px;
+    display: inline-flex;
+    vertical-align: text-top;
+    width: fit-content;
+}
+
+.badge.primary {
+    background-color: var(--primary-color);
+    color: var(--font-color-light);
+}
+
+.badge.secondary {
+    background-color: #9d22df2d;
+    color: var(--primary-color);
+    /* border: 1px solid #9d22df2d; */
+}
+
+.badge.terciary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* * TABS */
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.tab {
+    /* Same as secondary button */
+    background-color: #9d22df2d;
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px;
+
+    cursor: pointer;
+}
+
+
+.tab.active {
+    background-color: var(--primary-color);
+    color: var(--font-color-light);
+
+    /* shadow - primary */
+    box-shadow: 0px 3px 5px 0.5px rgba(157, 34, 223, 0.2);
+}
+
+/* * Chips */
+
+.chip {
+    /* Seconadry */
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    display: flex;
+}
+
+.chip.primary {
+    background-color: #9d22df2d;
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+
+input:checked+.chip.primary {
+    background-color: var(--primary-color);
+    color: var(--font-color-light);
+}
+
+input:checked+.chip {
+    background-color: #9d22df2d;
+    color: var(--primary-color);
+}
+
+
+/* Remove default from  */
+.chip::before,
+.chip::after {
+    display: none !important;
+}
+
+input:checked+.chip.with-close::after {
+    display: block !important;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+    content: "close";
+    font-family: "Material Icons";
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.modal-parent {
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+.modal {
+    background-color: var(--font-color-light);
+    border-radius: 5px;
+
+    max-width: 400px;
+    padding: 20px;
 }

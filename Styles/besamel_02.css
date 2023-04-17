@@ -129,12 +129,16 @@ a {
 
 
 /* 2.2 Custom image bg */
+.bg {
+    position: relative;
+}
+
 .make-section-bg {
     pointer-events: none;
     user-select: none;
 
     position: absolute;
-    z-index: 0;
+    z-index: -99;
 }
 
 .make-section-bg.default {
@@ -230,7 +234,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .content {
@@ -305,11 +309,21 @@ nav .navbar.island {
     padding: 15px;
 }
 
-.dropdown:hover .dropdown-window {
+.dropdown-window,
+.dropdown-window * {
+    z-index: 99999 !important;
+
+}
+
+.dropdown:hover .dropdown-window,
+.dropdown:active .dropdown-window,
+.dropdown:focus .dropdown-window {
     display: inherit;
     animation: dropdown 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
+    z-index: 99999 !important;
+
 }
 
 .dropdown-window * {
@@ -626,4 +640,18 @@ button {
     .pc-inline {
         display: inline;
     }
+}
+
+/* Moc důležité */
+.static {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.butttons-section * {
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-decoration: underline;
 }

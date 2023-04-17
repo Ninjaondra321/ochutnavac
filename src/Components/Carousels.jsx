@@ -20,7 +20,7 @@ import Img_16 from "../Imgs/Img_16.png";
 import { createSignal, mergeProps, Match, onMount } from "solid-js";
 
 
-function ImgCarousel(props) {
+export function ImgCarousel(props) {
 
     let carouselRef;
 
@@ -43,13 +43,47 @@ function ImgCarousel(props) {
         carouselRef.scrollLeft = carouselRef.scrollLeft + 200;
     }
 
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+    function mouseDownHandler(e) {
+        pos = {
+            left: carouselRef.scrollLeft,
+            x: e.clientX
+        }
+
+        // carouselRef.style.userSelect = 'none';
 
 
-    return (<div style="position:relative; height:100%" class="carousel-parent ">
-        <button class="carousel-control-l" onClick={scrollLeft} >chevron_left</button>
-        <button class="carousel-control-r" onClick={scrollRight} >chevron_right</button>
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    }
 
-        <div className="carousel " ref={carouselRef}>
+    const mouseMoveHandler = function (e) {
+        // How far the mouse has been moved
+        const dx = e.clientX - pos.x;
+        carouselRef.scrollLeft = pos.left - dx;
+    };
+
+    const mouseUpHandler = function () {
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+
+        carouselRef.style.removeProperty('user-select');
+    };
+
+
+
+
+
+    return (<div style="position:relative; height:100%; user-select:none" class="carousel-parent ">
+        <div className="left-control m-hidden" onClick={scrollLeft}>
+            <button class="carousel-control-l"  >chevron_left</button>
+        </div>
+        <div className="right-control m-hidden" onClick={scrollRight}>
+            <button class="carousel-control-r"  >chevron_right</button>
+        </div>
+
+        <div className="carousel fade-edge " ref={carouselRef} onmousedown={mouseDownHandler} >
             {merged.imgs.map((img, index) =>
                 <img src={img.img} alt={img.alt} />
             )}
@@ -58,4 +92,61 @@ function ImgCarousel(props) {
     </div>);
 }
 
-export default ImgCarousel;
+
+
+export function CarouselWrap(props) {
+    let carouselRef;
+    function scrollLeft() {
+        carouselRef.scrollLeft = carouselRef.scrollLeft - 200;
+    }
+
+    function scrollRight() {
+        carouselRef.scrollLeft = carouselRef.scrollLeft + 200;
+    }
+
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+    function mouseDownHandler(e) {
+        pos = {
+            left: carouselRef.scrollLeft,
+            x: e.clientX
+        }
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    }
+
+    const mouseMoveHandler = function (e) {
+        // How far the mouse has been moved
+        const dx = e.clientX - pos.x;
+        carouselRef.scrollLeft = pos.left - dx;
+    };
+
+    const mouseUpHandler = function () {
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+
+        carouselRef.style.removeProperty('user-select');
+    };
+
+
+
+    return (<div style="position:relative; height:100% " class="carousel-parent">
+        <style>
+            {`
+            .carousel-parent * {
+                user-select: none;
+            }
+            `}
+        </style>
+        <div className="left-control m-hidden" onClick={scrollLeft}>
+            <button class="carousel-control-l"  >chevron_left</button>
+        </div>
+        <div className="right-control m-hidden" onClick={scrollRight}>
+            <button class="carousel-control-r"  >chevron_right</button>
+        </div>
+        <div className="carousel" ref={carouselRef} onmousedown={mouseDownHandler}>
+            {props.children}
+        </div>
+    </div>);
+}
