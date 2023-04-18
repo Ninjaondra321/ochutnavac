@@ -112,6 +112,10 @@ function App() {
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
 
+          <div className="info">
+            askjdbhHSBGHJG
+          </div>
+
           <Cookies />
         </div>
         <Footer />

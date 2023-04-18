@@ -805,13 +805,15 @@ input:checked+.chip.with-close::after {
     right: 0;
     bottom: 0;
 
-    /* center */
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.45);
 
+
+    animation: modalBG 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 
@@ -821,4 +823,93 @@ input:checked+.chip.with-close::after {
 
     max-width: 400px;
     padding: 20px;
+
+    z-index: 999;
+
+    animation: riseUp 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
+
+/* 
+button.modal-bacground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+
+cursor: pointer;
+}
+
+*/
+
+/* ANimation */
+@keyframes modalBG {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    90% {
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+}
+
+@keyframes riseUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+.modal-parent button.invisible {
+    background-color: transparent;
+    border: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: default;
+
+    z-index: 98;
+}
+
+/* Text loading animation */
+.loading {
+    color: transparent;
+    background: linear-gradient(125deg, #9d22df, #9d22df00, #9d22df);
+    background-size: 400% 400%;
+    animation: text-loading 1s infinite;
+
+    height: auto;
+    width: auto;
+
+    border-radius: 5px;
+
+}
+
+@keyframes text-loading {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+
+/* 
+    Podminka pro maximux Delta l lba bla bal
+
+    -- dopsat od honzy!!!!
+*/

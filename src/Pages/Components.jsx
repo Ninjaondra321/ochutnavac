@@ -20,11 +20,13 @@ import Img_16 from "../Imgs/Img_16.png";
 import { ImgCarousel, CarouselWrap } from "../Components/Carousels";
 
 import { createSignal } from "solid-js";
+import ModalWrap from "../Components/Modal";
 
 function ComponentsPage() {
 
     const [activeTab, setActiveTab] = createSignal(0);
     const [openModal, setOpenModal] = createSignal(false);
+    const [openModal2, setOpenModal2] = createSignal(false);
 
 
     return (<>
@@ -112,8 +114,6 @@ function ComponentsPage() {
                     </div>
                 </div>
             </div>
-
-
 
             <div className="cards-section">
                 <div className="content">
@@ -536,26 +536,47 @@ function ComponentsPage() {
                 </div>
             </div>
 
+            <div className="loading-anim-section ">
+                <div className="content ">
+
+                    <h1>Loading animation</h1>
+
+                    <h1 className="loading">
+                        AHojjjj
+                    </h1>
+
+                    <p >
+                        <span className="loading">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta id dignissimos, neque earum dolores facilis a adipisci, molestias deserunt aliquid animi asperiores fugiat! Itaque vero sit officiis dolorum amet!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta id dignissimos, neque earum dolores facilis a adipisci, molestias deserunt aliquid animi asperiores fugiat! Itaque vero sit officiis dolorum amet!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta id dignissimos, neque earum dolores facilis a adipisci, molestias deserunt aliquid animi asperiores fugiat! Itaque vero sit officiis dolorum amet!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempora blanditiis error optio quisquam cum fugit fugiat deserunt omnis ipsam fuga vero, alias ex aperiam ut veritatis, dignissimos sunt rem?
+                        </span>
+                    </p>
+
+                </div>
+            </div>
+
             <div className="modals-section">
                 <div className="content">
                     <h1>Modals</h1>
 
+                    <button class="primary" onclick={() => setOpenModal2(true)} >ModalWrap</button>
 
-                    <button className="btn primary" onClick={() => setOpenModal(!openModal())}>Open modal</button>
-
-                    {openModal() &&
-
-                        <div className="modal-parent">
-                            <div className="modal">
-                                <h3>HelloWorld</h3>
-                                <p>Modal lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nulla non illum nihil debitis tempore! Sequi similique enim perferendis doloremque, ipsa placeat odio exercitationem possimus, inventore iste nesciunt in odit.</p>
-                                <div className="row w-12 to-right">
-                                    <button className="btn primary">Primary</button>
-                                    <button className="btn secondary" onclick={() => setOpenModal(false)} >Secondary</button>
-                                </div>
-                            </div>
+                    <ModalWrap opened={openModal2} setOpened={setOpenModal2} >
+                        <h3>Titleeeee</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatibus nulla doloribus, delectus tenetur veritatis libero enim facilis dolor cumque assumenda praesentium ullam reiciendis, ea ad fuga, animi at sed.</p>
+                        <div className="row to-right">
+                            <button className="secondary" onclick={() => setOpenModal2(false)}>
+                                fwohh
+                            </button>
+                            <button className="primary">
+                                AGJKB
+                            </button>
                         </div>
-                    }
+                    </ModalWrap>
+
+
 
 
 

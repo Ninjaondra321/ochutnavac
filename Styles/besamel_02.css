@@ -257,7 +257,7 @@ nav>div {
     justify-content: space-between;
     align-items: center;
     padding: 0 calc(var(--padding-from-edge) - 15px);
-    z-index: 50;
+    z-index: 44;
 }
 
 nav ul,
@@ -311,7 +311,7 @@ nav .navbar.island {
 
 .dropdown-window,
 .dropdown-window * {
-    z-index: 99999 !important;
+    /* z-index: 99999 !important; */
 
 }
 

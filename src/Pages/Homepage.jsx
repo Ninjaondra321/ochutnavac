@@ -104,6 +104,31 @@ function HomePage() {
                 </div>
             </div>
 
+
+            <div className="karel">
+                <div className="content">
+                    <h1>jožo tos posral</h1>
+                </div>
+            </div>
+
+            <div className="albi">
+                <div className="content">
+                    <i>Oheň na Oheň</i>
+
+                </div>
+            </div>
+
+            <div className="honza ">
+                <div className="content">
+                    <p>Arnold černočernýčernochočernýčerčernončomrelmdmanoooo
+
+                    </p>
+
+                    <button class="plain" onclick={() => alert('Honza smrdí 🦨☠️⚰️ ')} >smrdis</button>
+                </div>
+            </div>
+
+
             <div className="cards-section">
                 <div className="content ">
 
