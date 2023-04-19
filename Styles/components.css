@@ -913,3 +913,40 @@ cursor: pointer;
 
     -- dopsat od honzy!!!!
 */
+
+
+/* !Predelej! */
+nav .nav-drawer {
+    z-index: 3;
+
+}
+
+
+
+
+.accordion-item.opened .accordion-content {
+    animation: accordion-open 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* max-height: 1000px; */
+}
+
+/* ˇAnimatino */
+/* @keyframes accordion-open {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+} */
+
+
+@keyframes accordion-open {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}

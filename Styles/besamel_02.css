@@ -131,6 +131,7 @@ a {
 /* 2.2 Custom image bg */
 .bg {
     position: relative;
+    overflow: hidden;
 }
 
 .make-section-bg {

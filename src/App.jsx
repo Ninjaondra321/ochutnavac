@@ -51,6 +51,8 @@ const Footer = lazy(() => import('./Components/Footer'));
 const CookiesPage = lazy(() => import('./Pages/CookiesPage'));
 const ComponentsPage = lazy(() => import('./Pages/Components'));
 
+import BackgroundsPage from './Pages/SectionPages/Backgrounds';
+
 // Components
 
 
@@ -108,13 +110,14 @@ function App() {
             <Route path="/sections" element={<NavbarsPage />} />
             <Route path="/sections/footers" element={<FootersPage />} />
             <Route path="/sections/navbars" element={<NavbarsPage />} />
+            <Route path="/sections/backgrounds" element={<BackgroundsPage />} />
 
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
 
-          <div className="info">
+          {/* <div className="info">
             askjdbhHSBGHJG
-          </div>
+          </div> */}
 
           <Cookies />
         </div>

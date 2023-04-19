@@ -114,7 +114,6 @@ function HomePage() {
             <div className="albi">
                 <div className="content">
                     <i>Oheň na Oheň</i>
-
                 </div>
             </div>
 
@@ -127,7 +126,6 @@ function HomePage() {
                     <button class="plain" onclick={() => alert('Honza smrdí 🦨☠️⚰️ ')} >smrdis</button>
                 </div>
             </div>
-
 
             <div className="cards-section">
                 <div className="content ">
