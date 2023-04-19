@@ -243,7 +243,6 @@ body {
     /* ! Neodstraňuj, usnadníš si život */
     /* PS: díky, pomohlo ;-) */
     width: 100%;
-    z-index: 10;
 }
 
 
@@ -654,4 +653,18 @@ button {
 
 h1 {
     text-decoration: underline;
+}
+
+.messages {
+    /* TODO! tohle změn! */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+
+/* IDK */
+.scroll {
+    overflow-y: scroll;
 }

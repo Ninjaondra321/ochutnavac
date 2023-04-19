@@ -5,6 +5,10 @@
 
     --font-color-light: #f7fcf1;
     --font-color-dark: #1e1d3a;
+
+    --bg-light: #e8e8e8;
+    --bg-dark: #2a2b2c;
+
 }
 
 body {

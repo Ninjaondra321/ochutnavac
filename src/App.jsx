@@ -112,7 +112,7 @@ function App() {
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
 
-          <div className="info">
+          <div className="messages">
             askjdbhHSBGHJG
           </div>
 

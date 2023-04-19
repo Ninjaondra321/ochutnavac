@@ -165,7 +165,7 @@ function HomePage() {
 
             <div className="accordion-section">
                 <div className="content">
-                    <Accordion />
+                    <Accordion oneOpened={true} />
                 </div>
             </div>
 
