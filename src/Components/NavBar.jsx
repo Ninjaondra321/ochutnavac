@@ -79,6 +79,7 @@ function NavBar() {
                             <div className="dropdown-window">
                                 <A href="/sections/footers">Footers</A>
                                 <A href="/dropdown">Dropdown</A>
+                                <A href="sections/backgrounds">Backgrounds</A>
                             </div>
                         </div>
                         <div className="dropdown">
@@ -126,7 +127,7 @@ function NavBar() {
 
             <div
                 // className={drawerShown() ? " nav-drawer drawer pc-hidden opened" : "nav-drawer drawer pc-hidden closed"}
-                className={"nav-drawer drawer pc-hidden" + (drawerShown() ? " opened" : " closed")}
+                className={"nav-drawer fullscreen pc-hidden" + (drawerShown() ? " opened" : " closed")}
             >
                 <div className="bg">
                     <img src={Img_26} style={{ filter: "opacity(0.4)" }} class="make-section-bg  default darken-more" />
