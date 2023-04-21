@@ -10,11 +10,42 @@ function Abc() {
                 <li>B</li>
                 <li>C</li>
                 <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
+                <li>D</li>
             </ul>
 
         </div>
 
-        <div className="sections">
+        <div className="sections small">
             <div className="nejaka-section">
                 <div className="content padding-large">
                     <h1>Accordion</h1>

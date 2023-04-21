@@ -388,17 +388,17 @@ function ComponentsPage() {
                     <h1>Tiles</h1>
 
                     <div className="center flex static" >
-                        <div className="tile primary">
+                        <div className="tile primary w-500px">
                             <h3>Primary tile</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis placeat totam impedit animi, natus officia quibusdam iure dolore, voluptates earum iste, id blanditiis praesentium quia suscipit voluptatum corrupti pariatur.</p>
                         </div>
-                        <div className="tile secondary">
+                        <div className="tile secondary w-5">
                             <h3>Sec tile</h3>
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, qui sunt eum aperiam ducimus explicabo molestias quod voluptatum eveniet veniam rerum, facilis quas incidunt dolorum ullam harum distinctio consequuntur ab.
                             </p>
                         </div>
-                        <div className="tile terciary ">
+                        <div className="tile terciary w-5 ">
                             <h3>Ter tile</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio beatae explicabo aliquam autem deserunt itaque voluptatum? Commodi eius dignissimos id corrupti. Rem reprehenderit laudantium quia cum magnam eveniet perferendis.</p>
                         </div>

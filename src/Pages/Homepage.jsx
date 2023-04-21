@@ -38,7 +38,7 @@ function HomePage() {
                 <img src={Img_0} alt="" class='make-section-bg stretch darken' />
 
                 <div className="content ">
-                    <div className="left padding-large w-7 m-w-12">
+                    <div className="left padding-large">
 
                         <h1 class='main-heading responsive-heading'>Lorem ipsum</h1>
 

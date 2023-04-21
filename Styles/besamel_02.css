@@ -32,9 +32,9 @@
 }
 
 /* 1 DEFAULT BROWSER CLEAROUT */
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 html,
 body {
@@ -58,11 +58,11 @@ img {
     height: 100%;
 }
 
-a {
+/* a {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-}
+} */
 
 /* 2 COMMONLY USED THINGS   */
 /* 2.1 Item position */
@@ -129,7 +129,7 @@ a {
 
 
 /* 2.2 Custom image bg */
-.bg {
+/* .bg {
     position: relative;
     overflow: hidden;
 }
@@ -139,10 +139,10 @@ a {
     user-select: none;
 
     position: absolute;
-    z-index: -99;
-}
+    /* z-index: -99; 
+}*/
 
-.make-section-bg.default {
+/* .make-section-bg.default {
     left: 0;
     right: 0;
     top: 0;
@@ -153,24 +153,25 @@ a {
 
     object-fit: cover;
     object-position: center;
-}
+} */
 
+/* 
 .make-section-bg.stretch {
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-}
+} */
 
 /* ! Rozmysli se a uprav to! */
-.make-section-bg.to-right {
+/* .make-section-bg.to-right {
     left: unset;
     right: 0;
     top: 0;
     bottom: unset;
 
     height: 100%;
-}
+} */
 
 /* ! Chybí to-left, to-top, to-bottom */
 .auto-height {
@@ -252,51 +253,41 @@ nav {
     display: grid;
 }
 
-nav>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 calc(var(--padding-from-edge) - 15px);
-    z-index: 44;
-}
 
-nav ul,
+/* nav ul,
 .navbar .right>* {
     list-style: none;
     display: flex;
     justify-content: space-between;
     margin: 0;
     position: relative;
-    /* align-items: center; */
     align-items: stretch;
 
-}
+} */
 
-nav .right>*>*,
+/* nav .right>*>*,
 nav .right>* {
-    /* Becuase of icons and links*/
-    /* padding-left: 17px;
-    padding-right: 3px; */
+     Becuase of icons and links
     padding: 0 10px;
+} */
 
-}
-
-nav .navbar a {
+/* nav .navbar a {
     padding-top: 0;
     padding-bottom: 0;
-    /* height: 250px; */
-}
+} */
 
 
 /* TODO! Navbar height!!! */
 
 
-nav .navbar.island {
-    margin: 5px clamp(-50px, var(--island-padding), 99vw);
+/* nav .navbar.island {
+
+    margin: 5px var(--island-padding);
     padding-right: 2px;
-    /* Prozože pravá část má padding v děckách */
+
+
     padding-left: 20px;
-}
+} */
 
 
 /* (Navbar) Dropdown */
@@ -335,8 +326,7 @@ nav .navbar.island {
 
 .nav-drawer {
     display: none;
-    z-index: 45;
-
+    z-index: 10;
 }
 
 .nav-drawer>div {
@@ -345,7 +335,6 @@ nav .navbar.island {
     justify-content: space-around;
     align-items: center;
 }
-
 
 
 .nav-drawer.fullscreen {
@@ -381,16 +370,8 @@ nav .navbar.island {
     animation: page-animation 0.2s ease-in-out;
 }
 
-.nav-drawer.fullscreen img.make-section-bg {
-    z-index: -1;
-}
-
-
-
-
 
 /* * Buttons */
-
 .icon-btn {
     background-color: transparent;
     border: none;
@@ -420,31 +401,29 @@ nav .navbar.island {
 
 /* * Accordion */
 /* .accordion-nice x .accodion-plain */
-.accordion-plain button.accordion-header,
+/* .accordion-plain button.accordion-header,
 .accordion-nice button.accordion-header {
     background-color: transparent;
     border: none;
     display: flex;
     width: 100%;
-
 }
 
 .accordion-plain button.accordion-header {
-    /* To left */
     justify-content: flex-start;
     color: black;
     padding: 0;
     font-size: 1rem;
 
-}
+} */
 
-.accordion-nice button.accordion-header {
+/* .accordion-nice button.accordion-header {
     justify-content: space-between;
+    text-align: left;
     font-size: 1rem;
-    padding: 10px 15px;
-}
+} */
 
-.accordion-plain button.accordion-header.narrow {
+/* .accordion-plain button.accordion-header.narrow {
     width: max-content;
 }
 
@@ -452,12 +431,12 @@ nav .navbar.island {
 .accordion-nice button.accordion-header::after,
 select::after {
     font-family: 'Material Icons';
-    content: 'expand_more';
+    content: 'mail';
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     transform: rotate(180deg);
-}
+} */
 
-.accordion-plain button.accordion-header::before {
+/* .accordion-plain button.accordion-header::before {
     transform: rotate(0deg);
 }
 
@@ -473,21 +452,31 @@ select::after {
 .accordion-header::before,
 .accordion-header::after {
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-}
+} */
 
 
-.accordion-content {
+/* .accordion-content {
     overflow-y: hidden;
     padding: 0 15px;
 }
 
 .accordion-item.closed .accordion-content {
     height: 0 !important;
-}
+} */
 
 
 
-
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
+/* ! ZÁLOŽKA */
 
 /* * 6 RESPONSIVNESS */
 
@@ -544,10 +533,8 @@ select::after {
     }
 }
 
-body,
 .main>* {
     animation: page-animation 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-
 }
 
 
@@ -615,9 +602,7 @@ a.dropdown-heading {
 
 .g-icon {
     font-family: 'Material Icons';
-    /* same fontsize as p */
     width: min-content;
-
 }
 
 button {
@@ -630,8 +615,8 @@ button {
     width: auto;
 }
 
-
-@media only screen and (min-width: 768px) {
+/* Do not use anymore - bad practise */
+/* @media only screen and (min-width: 768px) {
 
     .pc-flex {
         display: flex;
@@ -640,7 +625,7 @@ button {
     .pc-inline {
         display: inline;
     }
-}
+} */
 
 /* Moc důležité */
 .static {
@@ -666,6 +651,15 @@ h1 {
 
 
 /* IDK */
-.scroll {
-    overflow-y: scroll;
+/* .scroll {
+    overflow-y: auto;
+} */
+
+.sidebar-left {
+    max-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+}
+
+.main {
+    padding-top: var(--navbar-height);
 }

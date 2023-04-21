@@ -52,7 +52,7 @@ function NavBar() {
                 </div>
             }
 
-            <div className="navbar ">
+            <div className="navbar island">
 
                 <div className="left">
                     <A href="/#" end={true}>
@@ -127,11 +127,9 @@ function NavBar() {
 
             <div
                 // className={drawerShown() ? " nav-drawer drawer pc-hidden opened" : "nav-drawer drawer pc-hidden closed"}
-                className={"nav-drawer fullscreen pc-hidden" + (drawerShown() ? " opened" : " closed")}
+                className={"nav-drawer fullscreen  bg" + (drawerShown() ? " opened" : " closed")}
             >
-                <div className="bg">
-                    <img src={Img_26} style={{ filter: "opacity(0.4)" }} class="make-section-bg  default darken-more" />
-                </div>
+                <img src={Img_26} style={{ filter: "opacity(0.4)" }} class="make-section-bg  default darken-more" />
 
                 <div className="drawer-content to-left">
 
