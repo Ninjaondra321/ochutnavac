@@ -16,6 +16,7 @@
   "dependencies": {
     "@solidjs/meta": "^0.28.3",
     "@solidjs/router": "^0.8.2",
+    "prismjs": "^1.29.0",
     "solid-js": "^1.6.10"
   }
 }

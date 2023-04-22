@@ -245,6 +245,16 @@ function ComponentsPage() {
                 </div>
             </div>
 
+            <div className="code-section">
+                <div className="content">
+                    <h1>Code</h1>
+                    <pre><code class="hljs css language-css">{"p {color: red }"}</code></pre>
+
+
+                </div>
+            </div>
+
+
 
             <div className="dropdown-sections">
                 <div className="content">
@@ -255,6 +265,7 @@ function ComponentsPage() {
                         <div className="dropdown-window">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
+                            <hr />
                             <a href="#">Link 3</a>
                         </div>
                     </div>
@@ -305,6 +316,15 @@ function ComponentsPage() {
 
 
                     </div>
+                </div>
+            </div>
+
+            <div className="hr-section">
+                <div className="content">
+                    <h1>Horizontal ruler</h1>
+
+                    <hr />
+
                 </div>
             </div>
 

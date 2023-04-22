@@ -1,9 +1,112 @@
 // IMport img_0
 import Img_0 from "../../Imgs/Img_20.png";
 
+import pub from "../../Imgs/pub.jpg";
+import pasta from "../../Imgs/pasta.jpg";
+
 
 function BackgroundsPage() {
     return (<div class="sections">
+
+        <div className="padding">
+
+        </div>
+
+        <div className="hero-01" style={{ background: "var(--secondary-color)" }}>
+            <div className="content center padding-large">
+                <h1 className="responsive display">BEŠABEL</h1>
+                <h4 className="responsive display"
+                    // center the text
+                    style={{ "text-align": "center" }}
+
+                >Skvělý css framework</h4>
+                <div className="responsive-rotate center">
+                    <button className="secondary">Ukázky</button>
+                    <button className="primary">Dokumentace</button>
+                </div>
+            </div>
+        </div>
+
+        <div className="padding">
+            <hr />
+        </div>
+
+        <div className="hero-02 bg dark h-600px">
+            <img src={pub} alt="pubImg" class="make-section-bg darken-more" />
+            <div className="content center padding-large">
+                <h1 className="responsive display">Restaurace Paříž</h1>
+                <h4 className="responsive display"
+                    // center the text
+                    style={{ "text-align": "center" }}
+
+                >Nejlepší pivo v okolí</h4>
+            </div>
+        </div>
+
+        <div className="padding">
+            <hr />
+        </div>
+
+        <div className="hero-03 bg  " style="background: #f5ad4338">
+            <div className="content row">
+                <div className="w-6 h-12 center-v ">
+                    <h1 className="responsive display">Restaurace Paříž</h1>
+                    <h4 className="responsive display ">Nejlepší pivo v okolí</h4>
+                </div>
+
+                <div className="w-6 bg padding-large">
+                    <img src={pasta} alt="pubImg" style="position: relative; border-radius:9px" class="make-section-bg" />
+                </div>
+            </div>
+        </div>
+
+
+
+        <div className="padding">
+            <hr />
+        </div>
+
+
+        <div className="hero-04 bg  " style="background: #f5ad4338">
+            <div className="make-section-bg to-right bg w-6" >
+                <img src={pasta} alt="pubImg" class="make-section-bg" />
+            </div>
+
+            <div className="content row padding-large">
+                <div className="w-6 h-12 center-v ">
+                    <h1 className="responsive display">Restaurace Paříž</h1>
+                    <h4 className="responsive display ">Nejlepší pivo v okolí</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div className="padding">
+            <hr />
+        </div>
+
+
+
+        <div className="hero-04 bg  " style="background: #f5ad4338">
+            <div className="make-section-bg to-right bg w-6" >
+                <img src={pasta} alt="pubImg" class="make-section-bg" style="border-radius:500px 0 0 500px" />
+            </div>
+
+            <div className="content row padding-large">
+                <div className="w-6 h-12 center-v ">
+                    <h1 className="responsive display">Restaurace Paříž</h1>
+                    <h4 className="responsive display ">Nejlepší pivo v okolí</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div className="padding">
+            <hr />
+        </div>
+
+
+
 
         <div className="section">
             <div className="content">

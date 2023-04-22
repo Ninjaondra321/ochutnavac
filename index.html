@@ -8,9 +8,13 @@
   <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
   <title>Solid App</title>
 
-  <!-- <script src="https://api.mapy.cz/loader.js"></script>
-  <script>Loader.load()</script>
- -->
+  <!-- <link rel="stylesheet" href="src/Prism/prism.css" /> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ninjaondra321/ochutnavac@master/Styles/besamel_03.css"> -->
+
 
   <style>
     .g-icon {
@@ -29,53 +33,6 @@
     }
   </style>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f3ef1a38;
-
-      /* font */
-      font-family: 'Roboto', sans-serif;
-    }
-
-    #hovinval {
-      width: 100%;
-      min-height: calc(100vh - 35px);
-
-      /* center */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    .loader {
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      background-color: #9d22df;
-
-      animation: loader 1s infinite;
-      margin: 35px;
-    }
-
-    @keyframes loader {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.5);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
-
 
 </head>
 
@@ -83,6 +40,56 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root">
+
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f3ef1a38;
+
+        /* font */
+        font-family: 'Roboto', sans-serif;
+      }
+
+      #hovinval {
+        width: 100%;
+        min-height: calc(100vh - 35px);
+
+        /* center */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .loader {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: #9d22df;
+
+        animation: loader 1s infinite;
+        margin: 35px;
+      }
+
+      @keyframes loader {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.5);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+
+
     <div id="hovinval">
 
 
@@ -102,6 +109,9 @@
     <p style="color: white;">Created by</p><a href="#"
       style="background: linear-gradient(to right, rgb(16, 227, 50), rgb(27, 214, 255)); -webkit-background-clip: text ;-webkit-text-fill-color: transparent; margin-left: 5px;">NoTime</a>
   </div>
+
+  <!-- <script src="src/Prism/prism.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 
 
   <script src="/src/index.jsx" type="module"></script>
