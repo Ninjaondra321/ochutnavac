@@ -94,6 +94,12 @@ function ComponentsPage() {
                         <button className="plain">Lorem ipsum</button>
                     </div>
                     <div className="padding flex">
+                        <button disabled className="primary">Hello Word</button>
+                        <button disabled className="secondary">Lorem ipsum</button>
+                        <button disabled className="terciary">Lorem ipsum</button>
+                        <button disabled className="plain">Lorem ipsum</button>
+                    </div>
+                    <div className="padding flex">
                         <button className="primary"> <span className="g-icon">arrow_forward</span> Hello Word</button>
                         <button className="secondary"><span className="g-icon">arrow_forward</span>Lorem ipsum</button>
                         <button className="terciary">Lorem ipsum</button>
@@ -521,6 +527,25 @@ function ComponentsPage() {
                         </tbody>
                     </table>
 
+                </div>
+            </div>
+
+            <div className="text-section">
+                <div className="content">
+                    <h1 class="responsive">HelloWorld</h1>
+                    <h2 class="responsive">HelloWorld</h2>
+                    <h3 class="responsive">HelloWorld</h3>
+                    <p className="responsive">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum illo commodi dignissimos dolorum numquam explicabo ipsa quaerat debitis harum doloribus, quisquam saepe ex eligendi temporibus omnis autem est, laborum quam.</p>
+
+                    <h1>HelloWorld</h1>
+                    <h2>HelloWorld</h2>
+                    <h3>HelloWorld</h3>
+                    <h4>HelloWorld</h4>
+                    <h5>HelloWorld</h5>
+                    <h6>HelloWorld</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi consectetur reiciendis aperiam voluptates quas eius suscipit sunt veritatis, asperiores laboriosam aut libero quia ipsa aliquam cumque distinctio iure reprehenderit.
+                    </p>
                 </div>
             </div>
 

@@ -119,8 +119,8 @@ function HomePage() {
 
             <div className="honza ">
                 <div className="content">
-                    <p>Arnold černočernýčernochočernýčerčernončomrelmdmanoooo
-
+                    <p>
+                        Arnold černočernýče rnochočern ýčerčernon čomrelm dmanoooo
                     </p>
 
                     <button class="plain" onclick={() => alert('Honza smrdí 🦨☠️⚰️ ')} >smrdis</button>
@@ -183,7 +183,12 @@ function HomePage() {
 
                     <h1>Ahoj</h1>
 
-                    asd
+                    <p>Asd vhjasd hjsak</p>
+
+                    <button className="primary">
+                        HGello
+                    </button>
+
                 </div>
 
 

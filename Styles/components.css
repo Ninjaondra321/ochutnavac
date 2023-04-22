@@ -49,7 +49,6 @@ body {
     background: linear-gradient(180deg, rgb(157, 34, 223) 0%, rgba(157, 34, 223, 0.726) 100%);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .navbar a {
@@ -86,7 +85,6 @@ select {
 select:focus,
 select:focus-visible {
     outline: 1.3px solid var(--primary-color);
-
 }
 
 button:not(.icon-btn).large,
@@ -100,7 +98,6 @@ button.primary,
 select.primary {
     background: var(--primary-color);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 button.primary:hover {
@@ -199,7 +196,6 @@ input.large {
     height: 100%;
     font-size: 100%;
     pointer-events: none;
-
     margin: 9px;
 }
 
@@ -220,7 +216,7 @@ input.large {
     padding: 20px;
 
     /* TODO: asi vymaž? */
-    margin: 15px;
+    /* margin: 15px; */
 }
 
 .tile.primary {
@@ -474,17 +470,7 @@ span.leader {
     height: auto;
 }
 
-span.leader.dashed {
-    border-bottom-style: dashed;
-}
 
-span.leader.solid {
-    border-bottom-style: solid;
-}
-
-span.leader.double {
-    border-bottom-style: double;
-}
 
 
 .card {
@@ -498,7 +484,6 @@ span.leader.double {
     border-radius: 10px;
 
     transition: all 0.2s ease-in-out;
-
 }
 
 .card:hover {
@@ -565,19 +550,16 @@ span.leader.double {
 .carousel>* {
     flex-grow: 0;
     flex-shrink: 0;
-
 }
 
-.carousel img {
+/* .carousel img {
     padding: 5px;
 
-    /* Make the image height of it's parent, please */
-    height: 100%;
-    width: auto;
-
-
-    /* This doesn't seem to word :-( */
+height: 100%;
+width: auto;
 }
+
+*/
 
 /* Style scroll */
 .carousel::-webkit-scrollbar {
@@ -641,16 +623,7 @@ span.leader.double {
 }
 
 
-.carousel-control-l {
-    left: 0px;
-    content: "chevron_left";
 
-}
-
-.carousel-control-r {
-    right: 0px;
-    content: "chevron_right";
-}
 
 .carousel img,
 img {
@@ -740,7 +713,6 @@ img {
 }
 
 /* * Chips */
-
 .chip {
     /* Seconadry */
     background-color: transparent;
@@ -801,7 +773,7 @@ input:checked+.chip.with-close::after {
     cursor: pointer;
 }
 
-
+/* * MODAL */
 .modal-parent {
 
     position: fixed;
@@ -833,7 +805,6 @@ input:checked+.chip.with-close::after {
     z-index: 999;
 
     animation: riseUp 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-
 }
 
 /* 
@@ -903,7 +874,6 @@ cursor: pointer;
 
     /* Disable ::select */
     user-select: none;
-
 }
 
 @keyframes text-loading {
