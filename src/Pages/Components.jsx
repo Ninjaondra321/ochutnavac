@@ -87,32 +87,32 @@ function ComponentsPage() {
                 <div className="content">
 
                     <h1>Buttons</h1>
-                    <div className="padding flex">
+                    <div className="padding flex" style={{ "flex-wrap": "wrap" }}>
                         <button className="primary">Hello Word</button>
                         <button className="secondary">Lorem ipsum</button>
                         <button className="terciary">Lorem ipsum</button>
                         <button className="plain">Lorem ipsum</button>
                     </div>
-                    <div className="padding flex">
+                    <div className="padding flex" style={{ "flex-wrap": "wrap" }}>
                         <button disabled className="primary">Hello Word</button>
                         <button disabled className="secondary">Lorem ipsum</button>
                         <button disabled className="terciary">Lorem ipsum</button>
                         <button disabled className="plain">Lorem ipsum</button>
                     </div>
-                    <div className="padding flex">
+                    <div className="padding flex" style={{ "flex-wrap": "wrap" }}>
                         <button className="primary"> <span className="g-icon">arrow_forward</span> Hello Word</button>
                         <button className="secondary"><span className="g-icon">arrow_forward</span>Lorem ipsum</button>
                         <button className="terciary">Lorem ipsum</button>
                         <button className="plain">Lorem ipsum</button>
                     </div>
-                    <div className="padding flex">
+                    <div className="padding flex" style={{ "flex-wrap": "wrap" }}>
                         <button className="primary "> Hello Word  <span className="g-icon">arrow_forward</span></button>
                         <button className="secondary">Lorem ipsum  <span className="g-icon">arrow_forward</span></button>
                         <button className="terciary">Lorem ipsum  <span className="g-icon">arrow_forward</span></button>
                         <button className="plain">Lorem ipsum  <span className="g-icon">arrow_forward</span></button>
                     </div>
 
-                    <div className="padding flex">
+                    <div className="padding flex" style={{ "flex-wrap": "wrap" }}>
                         <button className="large primary">Hello Word</button>
                         <button className="large secondary">Lorem ipsum</button>
                         <button className="large terciary">Lorem ipsum</button>
@@ -160,22 +160,22 @@ function ComponentsPage() {
 
                         <div className="carousel fade-edge   ">
 
-                            <div className="card w-500px">
+                            <div className="card w-500px m-w-12">
                                 <h4>Hello World</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                             </div>
 
-                            <div className="card w-500px">
+                            <div className="card w-500px m-w-12">
                                 <h4>Hello World</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                             </div>
 
-                            <div className="card secondary w-500px">
+                            <div className="card secondary w-500px m-w-12">
                                 <h4>Hello World</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                             </div>
 
-                            <div className="card w-500px">
+                            <div className="card w-500px m-w-12">
                                 <h4>Hello World</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                             </div>
@@ -186,22 +186,22 @@ function ComponentsPage() {
 
 
                     <CarouselWrap>
-                        <div className="card w-500px">
+                        <div className="card w-500px m-w-12">
                             <h4>Hello World</h4>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                         </div>
 
-                        <div className="card w-500px">
+                        <div className="card w-500px m-w-12">
                             <h4>Hello World</h4>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                         </div>
 
-                        <div className="card secondary w-500px">
+                        <div className="card secondary w-500px m-w-12">
                             <h4>Hello World</h4>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                         </div>
 
-                        <div className="card w-500px">
+                        <div className="card w-500px m-w-12">
                             <h4>Hello World</h4>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eius enim nostrum, dolorum ex fuga facilis pariatur animi, tempore maiores esse dolor dolore sapiente quaerat repudiandae incidunt reiciendis eveniet explicabo!</p>
                         </div>
@@ -396,7 +396,7 @@ function ComponentsPage() {
             <div className="tabs-section">
                 <div className="content">
                     <h1>Tabs</h1>
-                    <div className="tabs">
+                    <div className="tabs" style={{ "flex-wrap": "wrap" }} >
 
                         <h5 class={"tab " + (activeTab() == 0 ? "active" : " ")} onclick={() => setActiveTab(0)}>Jan</h5>
                         <h5 class={"tab " + (activeTab() == 1 ? "active" : " ")} onclick={() => setActiveTab(1)}>Ámos</h5>
@@ -414,7 +414,7 @@ function ComponentsPage() {
                     <h1>Tiles</h1>
 
                     <div className="center flex static" >
-                        <div className="tile primary w-500px">
+                        <div className="tile primary w-500px m-w-12">
                             <h3>Primary tile</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis placeat totam impedit animi, natus officia quibusdam iure dolore, voluptates earum iste, id blanditiis praesentium quia suscipit voluptatum corrupti pariatur.</p>
                         </div>

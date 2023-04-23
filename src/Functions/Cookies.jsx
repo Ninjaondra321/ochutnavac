@@ -44,7 +44,7 @@ function Cookies() {
         {showCookies() &&
 
             <div className="cookies-banner center">
-                <div className="content  responsive-rotate">
+                <div className="content light padding-medium responsive-rotate">
 
                     <div className="head">
                         <h3>Cookies</h3>

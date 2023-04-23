@@ -14,7 +14,7 @@ function BackgroundsPage() {
 
         <div className="hero-01" style={{ background: "var(--secondary-color)" }}>
             <div className="content center padding-large">
-                <h1 className="responsive display">BEŠABEL</h1>
+                <h1 className="responsive display">BEŠAMEL</h1>
                 <h4 className="responsive display"
                     // center the text
                     style={{ "text-align": "center" }}
@@ -48,13 +48,13 @@ function BackgroundsPage() {
         </div>
 
         <div className="hero-03 bg  " style="background: #f5ad4338">
-            <div className="content row">
+            <div className="content responsive-rotate">
                 <div className="w-6 h-12 center-v ">
                     <h1 className="responsive display">Restaurace Paříž</h1>
                     <h4 className="responsive display ">Nejlepší pivo v okolí</h4>
                 </div>
 
-                <div className="w-6 bg padding-large">
+                <div className="w-6 m-w-11 bg padding-large">
                     <img src={pasta} alt="pubImg" style="position: relative; border-radius:9px" class="make-section-bg" />
                 </div>
             </div>
@@ -88,7 +88,7 @@ function BackgroundsPage() {
 
 
         <div className="hero-04 bg  " style="background: #f5ad4338">
-            <div className="make-section-bg to-right bg w-6" >
+            <div className="make-section-bg to-right bg w-7" >
                 <img src={pasta} alt="pubImg" class="make-section-bg" style="border-radius:500px 0 0 500px" />
             </div>
 

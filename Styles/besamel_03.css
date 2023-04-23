@@ -21,9 +21,25 @@
     --island-padding: clamp(6px, calc(var(--padding-from-edge) - 4vw), 99vw);
 
     --main-part-width: calc(100vw - 2 * var(--padding-from-edge));
+
+    /* TODO! TOHLE OPRAVIT!! NA MOBILU JE CONTENT MOC UZSKY!!!! */
     --main-part-width-small: calc(var(--main-part-width) / 1.5);
 
+
+
 }
+
+
+/* TODO! TOHLE JE UDĚLANÉ ÚPLNĚ ALIBISTICKY -- !SPRAVIT! */
+/* mobile */
+@media screen and (max-width: 770px) {
+    :root {
+        --main-part-width-small: 100%;
+    }
+}
+
+
+
 
 /* 1 DEFAULT BROWSER CLEAROUT */
 html,
@@ -178,7 +194,7 @@ a {
 }
 
 .make-section-bg.to-right {
-    width: auto;
+    /* width: auto; */
     left: unset;
 }
 
@@ -219,6 +235,76 @@ a {
     position: sticky;
     top: var(--navbar-height);
 
+    width: 100%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 15px;
+}
+
+ul a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.sidebar.left {
+    max-width: clamp(225px, 25vw, 280px);
+}
+
+.sidebar.right {
+    max-width: clamp(150px, 15vw, 300px);
+}
+
+.sidebar-left-controls {
+    display: none;
+}
+
+/* On mobile */
+@media screen and (max-width: 790px) {
+    .sidebar.left {
+        left: 0;
+        transform: translateX(-100%);
+        position: absolute;
+    }
+
+    .sidebar.left.open,
+    .sidebar.left.opened {
+        transform: translateX(0);
+    }
+
+    .sidebar.left::before {
+        content: "open";
+        /* g-icon */
+        font-family: "Material Icons";
+        font-size: 30px;
+        color: var(--font-color-dark);
+
+        position: fixed;
+        left: 50vh;
+        top: 50vh;
+        z-index: 11;
+
+        transform: translateY(-50%);
+
+    }
+
+    .sidebar-left-controls {
+        display: fixed;
+
+
+    }
+
+
+}
+
+.cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 
@@ -244,7 +330,8 @@ a {
 }
 
 .sections.small .content {
-    max-width: var(--main-part-width-small);
+    /* width: var(--main-part-width-small); */
+    max-width: 800px;
 }
 
 
@@ -453,6 +540,12 @@ select {
     font-weight: 600;
     cursor: pointer;
     background-color: unset;
+}
+
+button {
+    display: flex;
+    align-items: center;
+
 }
 
 button:not(.icon-btn).large,
@@ -710,7 +803,8 @@ input[type="radio"]:checked+label::after {
 }
 
 .modal-parent button.invisible {
-    background-color: transparent;
+    background: transparent !important;
+    border-radius: 0;
     border: none;
 
     position: fixed;
@@ -861,7 +955,7 @@ span.leader.double {
     z-index: 50;
     position: absolute;
     display: none;
-    background-color: var(--bg-light);
+    background: var(--bg-light);
     padding: 15px;
 }
 
@@ -883,4 +977,24 @@ span.leader.double {
 
 .dropdown-window * {
     padding: 5px;
+}
+
+/* TODO! TEST-mozna vymaz */
+
+
+/* .column {
+    flex-wrap: wrap;
+}
+
+
+.row:not(:has(.leader)) {
+    flex-wrap: wrap;
+}
+
+*/
+
+
+/* !Někam zařaď! */
+.wrap {
+    flex-wrap: wrap;
 }
