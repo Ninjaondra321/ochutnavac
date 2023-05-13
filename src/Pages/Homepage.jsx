@@ -127,6 +127,12 @@ function HomePage() {
                 </div>
             </div>
 
+            <div className="albi">
+                <h1 className="g-icon">
+                    coffee
+                </h1>
+            </div>
+
             <div className="cards-section">
                 <div className="content ">
 
