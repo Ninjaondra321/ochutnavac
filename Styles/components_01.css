@@ -40,7 +40,7 @@
     --button-padding: 10px 20px;
     --card-rise: 5px;
 
-    box-shadow: 0px 8px 10px 1px rgba(157, 34, 223, 0.4);
+    --box-shadow: 0px 8px 10px 1px rgba(157, 34, 223, 0.4);
 
 }
 
@@ -91,6 +91,7 @@
 
     box-shadow: 0px 8px 10px 1px rgba(34, 53, 223, 0.4);
 } */
+
 
 /* 
 :root {

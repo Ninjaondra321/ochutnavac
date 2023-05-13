@@ -155,7 +155,7 @@ function ComponentsPage() {
                         <ImgCarousel />
                     </div>
 
-
+                    {/* 
                     <div style="position:relative; height:100%; width:100%" class="carousel-parent ">
 
                         <div className="carousel fade-edge   ">
@@ -182,7 +182,7 @@ function ComponentsPage() {
 
                         </div>
 
-                    </div>
+                    </div> */}
 
 
                     <CarouselWrap>
@@ -208,6 +208,29 @@ function ComponentsPage() {
 
 
                     </CarouselWrap>
+
+
+                    <h2>Maximised</h2>
+
+                    <CarouselWrap maximised={true} >
+                        <div className="item bg">
+                            <img src={Img_12} />
+                        </div>
+                        <div className="item bg">
+                            <img src={Img_12} />
+                        </div>
+                        <div className="item bg">
+                            <img src={Img_12} />
+                        </div>
+
+                        <img src={Img_12} />
+                        <img src={Img_12} />
+
+
+
+                    </CarouselWrap>
+
+
 
                 </div>
 

@@ -32,7 +32,8 @@ export function ImgCarousel(props) {
             { "img": Img_3, "alt": "Img_3" },
             { "img": Img_4, "alt": "Img_4" },
             { "img": Img_5, "alt": "Img_5" },
-        ]
+        ],
+        maximised: false,
     }, props);
 
     function scrollLeft() {
@@ -94,7 +95,7 @@ export function ImgCarousel(props) {
 
 
 
-export function CarouselWrap(props) {
+export function CarouselWrap({ maximised = false, children }) {
     let carouselRef;
     function scrollLeft() {
         carouselRef.scrollLeft = carouselRef.scrollLeft - 200;
@@ -145,8 +146,9 @@ export function CarouselWrap(props) {
         <div className="right-control m-hidden" onClick={scrollRight}>
             <button class="carousel-control-r"  >chevron_right</button>
         </div>
-        <div className="carousel" ref={carouselRef} onmousedown={mouseDownHandler}>
-            {props.children}
+        <div className={"carousel " + (maximised ? " maximised" : "")} ref={carouselRef} onmousedown={mouseDownHandler}>
+            {/* {props.children} */}
+            {children}
         </div>
     </div>);
 }
