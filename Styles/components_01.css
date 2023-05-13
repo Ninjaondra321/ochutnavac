@@ -292,6 +292,8 @@ h4.responsive-heading {
 
 /* * Buttons */
 
+a.btn,
+a.button,
 button,
 select {
     color: var(--font-color-light);
@@ -309,30 +311,40 @@ button:focus-visible {
 }
 
 button.primary,
+a.btn.primary,
+a.button.primary,
 select.primary {
     background: var(--primary-color);
     box-shadow: var(--gray-shadow-small);
 
 }
 
+a.btn.primary:hover,
+a.button.primary:hover,
 button.primary:hover {
     background: var(--primary-color-hover);
 
 }
 
 button.secondary,
+a.btn.secondary,
+a.button.secondary,
 select.secondary {
     color: var(--primary-color);
     background: var(--primary-color-muted);
 }
 
 button.secondary:hover,
+a.btn.secondary:hover,
+a.button.secondary:hover,
 select.secondary:hover {
     outline: var(--primary-color) 1px solid;
 
 }
 
 button.terciary,
+a.btn.terciary,
+a.button.terciary,
 select.terciary {
     color: var(--primary-color);
     background: none;
@@ -340,6 +352,8 @@ select.terciary {
 }
 
 button.terciary:hover,
+a.btn.terciary:hover,
+a.button.terciary:hover,
 select.terciary:hover {
     background: var(--primary-color-muted);
 }
@@ -354,11 +368,15 @@ select:disabled {
 }
 
 button.plain,
+a.btn.plain,
+a.button.plain,
 .icon-btn {
     background: none;
     color: var(--primary-color);
 }
 
+a.btn.plain:hover,
+a.button.plain:hover,
 button.plain:hover {
     text-decoration: 1.7px underline var(--primary-color);
 }

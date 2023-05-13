@@ -19,14 +19,30 @@ import Img_15 from "../Imgs/Img_15.png";
 import Img_16 from "../Imgs/Img_16.png";
 import { ImgCarousel, CarouselWrap } from "../Components/Carousels";
 
-import { createSignal } from "solid-js";
+import { createSignal, onMount } from "solid-js";
 import ModalWrap from "../Components/Modal";
 
 function ComponentsPage() {
+    let iframeRef;
 
     const [activeTab, setActiveTab] = createSignal(0);
     const [openModal, setOpenModal] = createSignal(false);
     const [openModal2, setOpenModal2] = createSignal(false);
+
+
+    onMount(() => {
+
+        hljs.highlightAll();
+
+        iframeRef.innerHTML = <div className="ahoj">
+            <h1>ahoj</h1>
+        </div>
+        var innerDoc = iframeRef.contentDocument || iframeRef.contentWindow.document;
+        innerDoc.body.innerHTML = "<h1>Hello World!</h1>";
+    });
+
+
+
 
 
     return (<>
@@ -93,6 +109,13 @@ function ComponentsPage() {
                         <button className="terciary">Lorem ipsum</button>
                         <button className="plain">Lorem ipsum</button>
                     </div>
+                    <div className="padding flex">
+                        <a href="" className="btn primary">HelloWorld</a>
+                        <a href="" className="btn secondary">Lorem ipsum</a>
+                        <a href="" className="btn terciary">Lorem ipsum</a>
+                        <a href="" className="btn plain">Lorem ipsum</a>
+                    </div>
+
                     <div className="padding flex" style={{ "flex-wrap": "wrap" }}>
                         <button disabled className="primary">Hello Word</button>
                         <button disabled className="secondary">Lorem ipsum</button>
@@ -248,6 +271,10 @@ function ComponentsPage() {
             <div className="code-section">
                 <div className="content">
                     <h1>Code</h1>
+
+                    <h2>Sample</h2>
+                    <iframe frameborder="0" ref={iframeRef}></iframe>
+
                     <pre><code class="hljs css language-css">{"p {color: red }"}</code></pre>
 
 
@@ -439,7 +466,7 @@ function ComponentsPage() {
                 <div className="content">
                     <h1>Tables</h1>
 
-                    <table class="primary">
+                    <table class="striped centered ">
                         <thead>
                             <tr>
                                 <th>Firstname</th>
@@ -466,12 +493,14 @@ function ComponentsPage() {
                         </tbody>
                     </table>
 
-                    <table class="secondary">
+                    <table class="secondary hover centered striped w-5">
                         <thead>
                             <tr>
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Age</th>
+                                <th>Action</th>
+                                <th>Icon</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -479,70 +508,23 @@ function ComponentsPage() {
                                 <td>Bořek</td>
                                 <td>Stavitel</td>
                                 <td>24</td>
+                                <td><button class="btn primary">Click</button></td>
+                                <td><p class="g-icon large">search</p></td>
                             </tr>
                             <tr>
                                 <td>Julča</td>
                                 <td>Míchačka</td>
                                 <td>25</td>
+                                <td><button class="btn primary">Click</button></td>
+                                <td><p class="g-icon large"> phone </p> </td>
                             </tr>
                             <tr>
                                 <td>Štěpán</td>
                                 <td>Štěpán</td>
+                                {/* <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, doloribus enim! A dolore at perspiciatis iusto, ad consequuntur atque alias!</td> */}
                                 <td>18</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="terciary" >
-                        <thead>
-                            <tr>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                                <th>Age</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bořek</td>
-                                <td>Stavitel</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <td>Julča</td>
-                                <td>Míchačka</td>
-                                <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>Štěpán</td>
-                                <td>Štěpán</td>
-                                <td>18</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="plain" >
-                        <thead>
-                            <tr>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                                <th>Age</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bořek</td>
-                                <td>Stavitel</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <td>Julča</td>
-                                <td>Míchačka</td>
-                                <td>25</td>
-                            </tr>
-                            <tr>
-                                <td>Štěpán</td>
-                                <td>Štěpán</td>
-                                <td>18</td>
+                                <td><button class="btn primary">Click</button></td>
+                                <td><p class="g-icon large"> mail </p> </td>
                             </tr>
                         </tbody>
                     </table>

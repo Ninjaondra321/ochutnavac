@@ -531,6 +531,9 @@ nav .navbar.island {
 }
 
 /* * Buttons */
+
+a.btn,
+a.button,
 button,
 select {
     border: none;
@@ -828,6 +831,54 @@ input[type="radio"]:checked+label::after {
 
     /* Disable ::select */
     user-select: none;
+}
+
+/* * TABLES */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-radius: max(1px, var(--border-radius-components));
+    overflow: hidden;
+}
+
+table.centered td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table.hover tbody tr:hover {
+    background-color: var(--font-color-light) !important;
+}
+
+table thead {
+    border-bottom: 2px solid var(--font-color-dark-muted);
+}
+
+table tr {
+    border-bottom: 1px solid var(--font-color-dark-muted);
+}
+
+table.compact td,
+table.compact th {
+    padding: 1px;
+}
+
+table td {
+    padding: 5px;
+}
+
+/* TODO: PŘESUŇ DO COMPONENTS.CSS */
+table.striped tbody tr:nth-child(odd) {
+    background-color: var(--primary-color-muted);
 }
 
 

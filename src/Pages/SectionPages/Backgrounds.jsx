@@ -20,9 +20,9 @@ function BackgroundsPage() {
                     style={{ "text-align": "center" }}
 
                 >Skvělý css framework</h4>
-                <div className="responsive-rotate center">
-                    <button className="secondary">Ukázky</button>
-                    <button className="primary">Dokumentace</button>
+                <div className="responsive-rotate center padding-medium">
+                    <button className="secondary large">Ukázky</button>
+                    <button className="primary large">Dokumentace</button>
                 </div>
             </div>
         </div>

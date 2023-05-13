@@ -93,133 +93,137 @@ function Abc() {
 
         </div>
 
-
-        <div className="sections small">
-            <div className="nejaka-section">
-                <div className="content padding-large">
-                    <h1>Accordion</h1>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-
-                    <div className="flex row wrap ">
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                home
-                            </p>
-                            <p>Home</p>
-                        </div>
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                phone
-                            </p>
-                            <p>Phone</p>
-                        </div>
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                email
-                            </p>
-                        </div>
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                expand
-                            </p>
-                        </div>
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                expand_less
-                            </p>
-                        </div>
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                expand_more
-                            </p>
-                        </div>
-                        <div className="card">
-                            <p className="g-icon icon-btn large ">
-                                cookie
-                            </p>
-                        </div>
+        <div className="sections">
 
 
+            <div className="sections small">
+                <div className="nejaka-section">
+                    <div className="content padding-large">
+                        <h1>Accordion</h1>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+
+                        <div className="flex row wrap ">
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    home
+                                </p>
+                                <p>Home</p>
+                            </div>
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    phone
+                                </p>
+                                <p>Phone</p>
+                            </div>
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    email
+                                </p>
+                            </div>
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    expand
+                                </p>
+                            </div>
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    expand_less
+                                </p>
+                            </div>
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    expand_more
+                                </p>
+                            </div>
+                            <div className="card">
+                                <p className="g-icon icon-btn large ">
+                                    cookie
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
+                        </p>
                     </div>
-
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem distinctio aut voluptas sunt quas ratione sapiente culpa. Itaque minima, soluta accusamus dolorum ad quas repellendus dolore! Vitae aliquid eius ipsum.
-                    </p>
                 </div>
-            </div>
 
+            </div>
         </div>
+
 
         <div className="sidebar right nice-scroll m-hidden padding-medium scroll" >
             <h5>Sidebar - R</h5>
