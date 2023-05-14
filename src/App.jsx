@@ -3,10 +3,12 @@ import { createSignal, onMount, Show, lazy } from "solid-js";
 import { Router, Routes, Route } from "@solidjs/router"
 
 // Styles
-// import '../Styles/besamel_02.css';
+
 import '../Styles/besamel_03.css';
-// import '../Styles/components.css';
+
 import '../Styles/components_01.css';
+// import "../Styles/flat-components.css";
+
 import GenerateStyle from './Functions/GenerateStyle';
 
 

@@ -44,7 +44,7 @@ function NavBar() {
 
                     <div className="right">
 
-                        <button className="icon-btn small " onClick={() => setShowBanner(false)}>
+                        <button className="icon small " onClick={() => setShowBanner(false)}>
                             close
                         </button>
                     </div>
@@ -52,7 +52,7 @@ function NavBar() {
                 </div>
             }
 
-            <div className="navbar island">
+            <div className="navbar ">
 
                 <div className="left">
                     <A href="/#" end={true}>
@@ -101,6 +101,43 @@ function NavBar() {
                 </div>
 
             </div>
+
+
+            <div className="toolbar">
+
+                <div className="left ">
+                    <div className="m-hidden row">
+
+                        <button class="tool">Ahoj</button>
+
+                        <A href="#">Ahoj</A>
+                        <A href="#"><p class="g-icon">search</p></A>
+                        <A href="#"><p class="g-icon">cookie</p></A>
+                        {/* <A href="#"><p class="g-icon">mail </p></A> */}
+                        <button className="icon tool">edit</button>
+                    </div>
+
+                </div>
+
+
+                <div className="middle">
+                    <input type="text" name="ads" id="afds" placeholder="FileName" class="editable" />
+                </div>
+
+                <div className="right">
+                    <div className="m-hidden">
+                        <A href="#">Ahoj</A>
+                        <A href="#"><p class="g-icon">search</p></A>
+                        <A href="#"><p class="g-icon">cookie</p></A>
+                    </div>
+
+                    <div className="pc-hidden">
+                        <A href="#"><p class="g-icon">expand</p></A>
+                    </div>
+
+                </div>
+            </div>
+
 
             {/* <div
                 className={drawerShown() ? "drawer pc-hidden opened" : "drawer pc-hidden closed"}

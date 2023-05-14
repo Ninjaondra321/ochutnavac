@@ -1,5 +1,7 @@
 import Accordion from "../Components/Accordion";
 
+import { A } from "@solidjs/router";
+
 import Img_20 from "../Imgs/Img_0.png";
 import Img_1 from "../Imgs/Img_1.png";
 import Img_2 from "../Imgs/Img_2.png";
@@ -236,8 +238,13 @@ function ComponentsPage() {
                     <h2>Maximised</h2>
 
                     <CarouselWrap maximised={true} >
-                        <div className="item bg">
-                            <img src={Img_12} />
+                        <div className="item bg dark " >
+                            <img src={Img_12} class="make-section-bg" />
+                            <div className="padding-large">
+
+                                <h1>Nadpis</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis facilis quasi minus quis nam perspiciatis hic repellat consequuntur commodi eligendi?</p>
+                            </div>
                         </div>
                         <div className="item bg">
                             <img src={Img_12} />
@@ -296,7 +303,12 @@ function ComponentsPage() {
                     <h1>Code</h1>
 
                     <h2>Sample</h2>
-                    <iframe frameborder="0" ref={iframeRef}></iframe>
+                    {/* <iframe frameborder="0" ref={iframeRef}></iframe> */}
+
+                    <iframe srcdoc="
+                    <h1>Sample</h1>
+                    " frameborder="0"></iframe>
+
 
                     <pre><code class="hljs css language-css">{"p {color: red }"}</code></pre>
 
@@ -384,31 +396,50 @@ function ComponentsPage() {
 
                     <div className="">
                         <div className="inpputs">
+
+                            <label htmlFor="123654" class="light" >Input</label>
+                            <input type="text" name="Hello" id="123564" placeholder="username@mail.com" />
+
                             <div className="column">
-                                <label htmlFor="123654" class="light" >Xddd</label>
-                                <input type="text" name="Hello" id="123564" placeholder="username@mail.com" />
+                                <label htmlFor="123654" class="light" >Danger</label>
+                                <input type="text" name="Hello" id="123564" placeholder="username@mail.com" class="danger" />
+                            </div>
+                            <div className="column">
+                                <label htmlFor="123654" class="light" >Success</label>
+                                <input type="text" name="Hello" id="123564" placeholder="username@mail.com" class="success" />
                             </div>
 
 
-                            <label htmlFor="icooon" class="with-icon">Labell</label>
+                            <label htmlFor="icooon" class="with-icon">Wtih icon</label>
                             <div className=" iconned-input column ">
                                 <p class="g-icon ">search</p>
                                 <input type="text" class="with-icon" id="icooon" placeholder="username@mail.com" />
                             </div>
 
 
-                            <label htmlFor="icooon" class="with-icon">Labell</label>
+                            <label htmlFor="icooon" class="with-icon">With icon large</label>
                             <div className=" iconned-input column ">
                                 <p class="g-icon large">search</p>
                                 <input type="text" class="with-icon large" id="icooon" placeholder="username@mail.com" />
                             </div>
 
+                            <div className="row w-12">
+
+                                <input type="text" name="" id="" className="editable" placeholder="Editable input" />
+                            </div>
+
+                            <input type="date" name="" id="" />
 
 
                             <div className="column">
-                                <label htmlFor="852741" class="large">Xddd</label>
+                                <label htmlFor="852741" class="large">Large</label>
                                 <input type="text" class="large" id="852741" name="Hello2" placeholder="username@mail.com" />
                             </div>
+
+                            <div className="">
+                                <textarea name="as" id="qfdsa" cols="30" rows="10">Tohle je textarea</textarea>
+                            </div>
+
                         </div>
                         {/* Checkboxes */}
                         <div className="checkboxes">
@@ -434,14 +465,38 @@ function ComponentsPage() {
 
                         </div>
 
-
-
-
-
                     </div>
+                </div>
+            </div>
+
+            <div className="icons-section">
+                <div className="content">
+                    <h1>Icons</h1>
+
+                    <h3>Normal icon button</h3>
+                    <div className="row">
+                        <button className="icon">search</button>
+                        <p>Skakal pes pres</p>
+                        <button className="icon">mail</button>
+                    </div>
+
+                    {/* Není v .row protože změna výšky */}
+                    <button className="icon small">mail</button>
+                    <button className="icon ">mail</button>
+                    <button className="icon large">mail</button>
+
+                    <h3>Tool icon button</h3>
+                    <div className="row">
+                        <button className="icon tool">search</button>
+                        <button className="icon tool">mail</button>
+                    </div>
+
 
                 </div>
             </div>
+
+
+
 
             <div className="tabs-section">
                 <div className="content">
@@ -480,6 +535,38 @@ function ComponentsPage() {
                         </div>
                     </div>
 
+
+                </div>
+            </div>
+
+            <div className="toolbar-section">
+                <div className="content">
+                    <h1>Toolbar</h1>
+
+                    <div className="toolbar">
+                        <div className="left">
+                            <A href="#">Ahoj</A>
+                            <A href="#"><p class="g-icon">search</p></A>
+                            <A href="#"><p class="g-icon">cookie</p></A>
+                            <A href="#"><p class="g-icon">mail </p></A>
+
+
+
+                        </div>
+                        <div className="middle">
+                            <input type="text" name="ahoj" id="ahoj" />
+
+                        </div>
+                        <div className="right">
+
+                            <A href="#">Ahoj</A>
+                            <A href="#"><p class="g-icon">search</p></A>
+                            <A href="#"><p class="g-icon">cookie</p></A>
+                            <A href="#"><p class="g-icon">mail </p></A>
+
+
+                        </div>
+                    </div>
 
                 </div>
             </div>

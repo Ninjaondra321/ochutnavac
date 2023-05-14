@@ -98,11 +98,11 @@ export function ImgCarousel(props) {
 export function CarouselWrap({ maximised = false, children }) {
     let carouselRef;
     function scrollLeft() {
-        carouselRef.scrollLeft = carouselRef.scrollLeft - 200;
+        carouselRef.scrollLeft = carouselRef.scrollLeft - carouselRef.clientWidth + 50;
     }
 
     function scrollRight() {
-        carouselRef.scrollLeft = carouselRef.scrollLeft + 200;
+        carouselRef.scrollLeft = carouselRef.scrollLeft + carouselRef.clientWidth - 50;
     }
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };

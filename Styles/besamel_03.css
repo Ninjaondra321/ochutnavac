@@ -284,7 +284,9 @@ ul a.active {
         position: fixed;
         left: 50vh;
         top: 50vh;
-        z-index: 11;
+
+        /* TODO: Tohle jsem zakomentoval jako test- klidně odkomentuj */
+        /* z-index: 11; */
 
         transform: translateY(-50%);
 
@@ -304,7 +306,7 @@ ul a.active {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 
@@ -343,12 +345,22 @@ nav {
 
 }
 
+.toolbar,
 nav>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 calc(var(--padding-from-edge) - 15px);
-    z-index: 17;
+    /* z-index: 17; */
+}
+
+.toolbar {
+    margin: 0;
+    height: min-content;
+}
+
+.toolbar * {
+    margin: 3px;
 }
 
 
@@ -389,7 +401,7 @@ nav .navbar.island {
 /* * Navbar - drawer */
 .nav-drawer {
     display: none;
-    z-index: 11;
+    /* z-index: 11; */
 }
 
 .nav-drawer.opened,
@@ -459,12 +471,33 @@ nav .navbar.island {
     color: var(--secondary-color) !important;
 }
 
-.icon-btn.small {
-    font-size: calc(1.2rem * var(--font-multiplier));
+.icon {
+    font-family: 'Material Icons';
+    background-color: transparent;
+    border: none;
+    color: var(--font-color);
+    padding: 10px 10px;
+    font-size: calc(1.50rem * var(--font-multiplier));
+
 }
 
-.icon-btn.large {
-    font-size: calc(2rem * var(--font-multiplier));
+a.icon.small,
+button.icon.small {
+    font-size: calc(1rem * var(--font-multiplier));
+    padding: 5px 5px !important;
+}
+
+.icon.large {
+    font-size: calc(2rem * var(--font-multiplier)) !important;
+    padding: 10px 10px !important;
+
+}
+
+
+a.tool,
+button.tool {
+    padding: 5px 6px;
+    font-size: calc(1rem * var(--font-multiplier));
 }
 
 /* * DEFAULT COMPONENTS */
@@ -583,6 +616,8 @@ select.large {
     padding-left: 37px;
 }
 
+
+
 /* * Checkboxed and radios */
 input[type="checkbox"],
 input[type="radio"] {
@@ -669,7 +704,7 @@ input[type="radio"]:checked+label::after {
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: 5px;
+    /* padding: 5px; */
     scroll-behavior: smooth;
     height: 100% !important;
 }
@@ -680,16 +715,19 @@ input[type="radio"]:checked+label::after {
     overflow-x: scroll;
     scroll-behavior: smooth;
 
-
-
 }
+
+.carousel.maximised::-webkit-scrollbar {
+    display: none;
+}
+
 
 .carousel.maximised>* {
     width: 100% !important;
-    height: 100% !important;
+    /* height: 100% !important; */
     scroll-snap-align: start;
-
 }
+
 
 .carousel>img {
     padding: 5px;
@@ -894,13 +932,6 @@ table td {
     padding: 5px;
 }
 
-/* TODO: PŘESUŇ DO COMPONENTS.CSS */
-table.striped tbody tr:nth-child(odd) {
-    background-color: var(--primary-color-muted);
-}
-
-
-
 
 
 /* * Leaders */
@@ -1020,8 +1051,7 @@ span.leader.double {
 
 /*  S tímto  si ještě pohraj:*/
 .dropdown-window {
-    position: relative;
-    z-index: 50;
+    z-index: 8;
     position: absolute;
     display: none;
     background: var(--bg-light);
