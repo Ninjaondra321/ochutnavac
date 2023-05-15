@@ -591,31 +591,41 @@ select.large {
 }
 
 /* * Inputs */
-.iconned-input {
-    position: relative;
+.input {
+    display: flex;
+    flex-direction: column;
 }
 
-.iconned-input .icon,
-.iconned-input .g-icon {
-    position: absolute;
-    height: 100%;
-    font-size: 100%;
+.input>.icon {
+    margin-top: -8px;
+    margin-bottom: -51px;
     pointer-events: none;
-    margin: 9px;
+    z-index: 8;
 }
 
-.iconned-input .g-icon.large {
-    font-size: 1.4rem;
+.input>.icon.right {
+    margin-left: calc(100% - 45px);
 }
 
-.iconned-input input {
-    padding-left: 29px;
+.input>.icon+input {
+    padding-left: 38px;
 }
 
-.iconned-input input.large {
-    padding-left: 37px;
+.input>.icon.right+input {
+    padding-right: 38px;
 }
 
+.input input {
+    font-size: calc(1rem * var(--font-multiplier));
+}
+
+.input label.sub {
+    font-size: calc(0.85rem * var(--font-multiplier));
+}
+
+.input label.sub::before {
+    content: ' * ';
+}
 
 
 /* * Checkboxed and radios */
@@ -813,6 +823,52 @@ input[type="radio"]:checked+label::after {
     margin: 5px;
 }
 
+
+/* * TOOLTIPS */
+.tooltip {
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip-window {
+    display: none;
+    /* top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%); */
+}
+
+.tooltip:hover .tooltip-window {
+    display: inherit;
+    position: absolute;
+    z-index: 100;
+}
+
+.tooltip-window.left {
+    transform: translateX(-100%) translateY(-50%);
+    left: 0;
+    top: 50%;
+}
+
+.tooltip-window.right {
+    transform: translateX(100%) translateY(-50%);
+    right: 0;
+    top: 50%;
+}
+
+.tooltip-window.top {
+    transform: translateX(-50%) translateY(-100%);
+    left: 50%;
+    top: 0;
+}
+
+.tooltip-window.bottom {
+    transform: translateX(-50%) translateY(100%);
+    left: 50%;
+    bottom: 0;
+}
+
+
+
 /* * Chips */
 .chip {
     padding: 5px 15px;
@@ -848,7 +904,7 @@ input[type="radio"]:checked+label::after {
 .offcanvas {
     padding: 20px;
     z-index: 999;
-
+    background-color: #beefed;
 }
 
 .modal {
@@ -857,7 +913,7 @@ input[type="radio"]:checked+label::after {
     animation: riseUp 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.offcanvas {
+.offcanvas:not(.modal) {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -865,6 +921,11 @@ input[type="radio"]:checked+label::after {
 
 .offcanvas.left {
     left: 0;
+    max-width: 80vw;
+}
+
+.offcanvas.right {
+    right: 0;
     max-width: 80vw;
 }
 

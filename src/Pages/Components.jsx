@@ -322,8 +322,6 @@ function ComponentsPage() {
                 </div>
             </div>
 
-
-
             <div className="dropdown-sections">
                 <div className="content">
                     <h1>Dropdown</h1>
@@ -402,19 +400,64 @@ function ComponentsPage() {
 
                     <div className="">
                         <div className="inpputs">
+                            <h3>Heading 03</h3>
 
-                            <label htmlFor="123654" class="light" >Input</label>
-                            <input type="text" name="Hello" id="123564" placeholder="username@mail.com" />
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia distinctio eveniet excepturi officia possimus cupiditate ratione nesciunt. Exercitationem reprehenderit pariatur quos vero animi quisquam, eligendi voluptatem alias vel autem neque molestias quaerat, consequuntur sequi eaque praesentium nisi quis voluptatibus quasi, itaque iure illo odio accusantium. Ex voluptates incidunt odio quos.
+                            </p>
 
-                            <div className="column">
-                                <label htmlFor="123654" class="light" >Danger</label>
-                                <input type="text" name="Hello" id="123564" placeholder="username@mail.com" class="danger" />
+                            <div className="w-7">
+                                <div className="input">
+                                    <label htmlFor="123654" class="">Input
+                                        <div className="tooltip">
+                                            *
+                                            <div className="tooltip-window top">
+                                                Musí být vyplněno
+                                            </div>
+
+                                        </div>
+                                    </label>
+                                    <input type="text" name="Hello" id="123654" placeholder="Hovno v koši" />
+                                    <label htmlFor="123654" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="123654" class="sub danger" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
+                                </div>
+
+                                <div className="padding"></div>
+
+
+
+                                <div className="input">
+                                    {/* <label htmlFor="akfjsgafkjgh" class="">Input</label> */}
+                                    <span className="icon">search</span>
+                                    <span className="icon right">cookie</span>
+                                    <input type="text" name="Hello" id="akfjsgafkjgh" placeholder="Hovno v koši" />
+                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
+                                </div>
+                                <div className="padding"></div>
+                                <div className="input">
+                                    <label htmlFor="akfjsgafkjgh" class="">Input</label>
+                                    <span className="icon">search</span>
+                                    <input type="text" name="Hello" id="akfjsgafkjgh" placeholder="Hovno v koši" />
+                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
+                                </div>
+
+                                <div className="padding-large"></div>
+
+                                <label htmlFor="123654" class="light" >Input</label>
+                                <input type="text" name="Hello" id="12356asd4" placeholder="username@mail.com" />
+
+                                <div className="column">
+                                    <label htmlFor="123654" class="light" >Danger</label>
+                                    <input type="text" name="Hello" id="1235asd64" placeholder="username@mail.com" class="danger" />
+                                </div>
+                                <div className="column">
+                                    <label htmlFor="123654" class="light" >Success</label>
+                                    <input type="text" name="Hello" id="123asd564" placeholder="username@mail.com" class="success" />
+                                </div>
+
                             </div>
-                            <div className="column">
-                                <label htmlFor="123654" class="light" >Success</label>
-                                <input type="text" name="Hello" id="123564" placeholder="username@mail.com" class="success" />
-                            </div>
-
 
                             <label htmlFor="icooon" class="with-icon">Wtih icon</label>
                             <div className=" iconned-input column ">
@@ -486,6 +529,11 @@ function ComponentsPage() {
                         <button className="icon">mail</button>
                     </div>
 
+                    <h3>In text</h3>
+                    <p>
+                        Lorem ipsum <span className="icon">cookie</span> dolor sit amet consectetur adipisicing elit. Ex sint veniam dolore enim rerum ab qui recusandae deserunt? Sunt molestias porro tenetur vitae ex placeat non aliquid corporis blanditiis iste.
+                    </p>
+
                     {/* Není v .row protože změna výšky */}
                     <button className="icon small">mail</button>
                     <button className="icon ">mail</button>
@@ -500,9 +548,6 @@ function ComponentsPage() {
 
                 </div>
             </div>
-
-
-
 
             <div className="tabs-section">
                 <div className="content">
@@ -571,6 +616,49 @@ function ComponentsPage() {
                             <A href="#"><p class="g-icon">mail </p></A>
 
 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="tooltip-section">
+                <div className="content">
+                    <h1>Tooltip</h1>
+
+                    <div className="tooltip">
+                        <button>Default</button>
+                        <div className="tooltip-window ">
+                            <p>Cookie</p>
+                        </div>
+                    </div>
+
+                    <div className="tooltip">
+                        <button>Left</button>
+                        <div className="tooltip-window left">
+                            <p>Cookie</p>
+                        </div>
+                    </div>
+
+                    <div className="tooltip">
+                        <button>Right</button>
+                        <div className="tooltip-window right">
+                            <p>Cookie</p>
+                        </div>
+                    </div>
+
+                    <div className="tooltip">
+                        <button>Bottom</button>
+                        <div className="tooltip-window bottom">
+                            <p>Cookie</p>
+                        </div>
+                    </div>
+
+                    <div className="tooltip">
+                        {/* <button>Top</button> */}
+                        <span className="icon">search</span>
+                        <div className="tooltip-window top">
+                            <p>Cookie</p>
                         </div>
                     </div>
 

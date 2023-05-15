@@ -759,3 +759,12 @@ textarea::-webkit-scrollbar-thumb:hover,
 .carousel::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-color);
 }
+
+
+.tooltip-window {
+    background-color: var(--bg-light);
+    padding: 5px;
+    border-radius: var(--border-radius-components);
+    border: 1px solid var(--primary-color-static);
+
+}

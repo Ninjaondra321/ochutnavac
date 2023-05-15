@@ -5,7 +5,6 @@ import { Router, Routes, Route } from "@solidjs/router"
 // Styles
 
 import '../Styles/besamel_03.css';
-
 import '../Styles/components_01.css';
 // import "../Styles/flat-components.css";
 
