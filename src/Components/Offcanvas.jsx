@@ -1,7 +1,7 @@
 import { createSignal, mergeProps, Match, onMount } from "solid-js";
 
 
-function ModalWrap(props) {
+function Offcanvas(props) {
     // Merge props
     const merged = mergeProps({
         closeOnClickAway: true,
@@ -21,7 +21,7 @@ function ModalWrap(props) {
             <div class="offcanvas-parent" >
                 <button className="" onclick={handleClose}  >
                 </button>
-                <div className="offcanvas modal">
+                <div className="offcanvas left">
                     {props.children}
                 </div>
             </div>
@@ -30,4 +30,4 @@ function ModalWrap(props) {
     );
 }
 
-export default ModalWrap;
+export default Offcanvas;

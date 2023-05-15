@@ -680,8 +680,9 @@ input:checked+.chip {
 .modal {
     background: var(--font-color-light);
     border-radius: var(--border-radius-components);
-
 }
+
+.offcanvas {}
 
 /* * Text loading animation */
 .loading {

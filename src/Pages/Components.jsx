@@ -23,6 +23,7 @@ import { ImgCarousel, CarouselWrap } from "../Components/Carousels";
 
 import { createSignal, onMount } from "solid-js";
 import ModalWrap from "../Components/Modal";
+import Offcanvas from "../Components/Offcanvas";
 
 function ComponentsPage() {
     let iframeRef;
@@ -30,6 +31,11 @@ function ComponentsPage() {
     const [activeTab, setActiveTab] = createSignal(0);
     const [openModal, setOpenModal] = createSignal(false);
     const [openModal2, setOpenModal2] = createSignal(false);
+
+
+    // Offcanvas opened
+    const [offCanL, setOffCanL] = createSignal(false)
+    const [offCanR, setOffCanR] = createSignal(false)
 
 
     onMount(() => {
@@ -715,6 +721,22 @@ function ComponentsPage() {
 
 
 
+
+                </div>
+            </div>
+
+            <div className="offcanvas-sections">
+                <div className="content">
+
+                    <h1>Offcanvas</h1>
+                    <button onclick={() => setOffCanL(true)}>From scrollLeft</button>
+
+                    <Offcanvas opened={offCanL} setOpened={setOffCanL} >
+                        <h1>Offcanvas</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed suscipit libero quibusdam consequatur pariatur necessitatibus sapiente cum dignissimos dicta reprehenderit!</p>
+                    </Offcanvas>
+
+                    <button onclick={() => setOffCanR(true)}>From scrollLeft</button>
 
                 </div>
             </div>

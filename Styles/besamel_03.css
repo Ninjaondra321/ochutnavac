@@ -830,49 +830,54 @@ input[type="radio"]:checked+label::after {
 }
 
 /* * MODAL */
-.modal-parent {
-
+.offcanvas-parent {
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: rgba(0, 0, 0, 0.45);
-
 
     animation: modalBG 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.modal {
-    background-color: var(--font-color-light);
-
-    max-width: 400px;
+.offcanvas {
     padding: 20px;
-
     z-index: 999;
 
+}
+
+.modal {
+    background-color: var(--font-color-light);
+    max-width: 400px;
     animation: riseUp 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.modal-parent button.invisible {
+.offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.offcanvas.left {
+    left: 0;
+    max-width: 80vw;
+}
+
+.offcanvas-parent>button {
     background: transparent !important;
     border-radius: 0;
     border: none;
-
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     cursor: default;
-
     z-index: 98;
 }
 
