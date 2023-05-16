@@ -83,7 +83,6 @@ function ComponentsPage() {
                                 Ahoooooj
                             </button>
 
-                            {/* <div dangerouslySetInnerHTML={{ __html: item.content }} class="accordion-content" ></div> */}
                             <div className="accordion-content">
                                 <p>XdxdXdddd</p>
                             </div>
@@ -418,21 +417,21 @@ function ComponentsPage() {
                                         </div>
                                     </label>
                                     <input type="text" name="Hello" id="123654" placeholder="Hovno v koši" />
-                                    <label htmlFor="123654" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
-                                    <label htmlFor="123654" class="sub danger" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
+                                    <label htmlFor="123654" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="123654" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
                                 </div>
 
                                 <div className="padding"></div>
 
 
 
-                                <div className="input">
+                                <div className="input ">
                                     {/* <label htmlFor="akfjsgafkjgh" class="">Input</label> */}
                                     <span className="icon">search</span>
                                     <span className="icon right">cookie</span>
                                     <input type="text" name="Hello" id="akfjsgafkjgh" placeholder="Hovno v koši" />
-                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
-                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
+                                    <label htmlFor="akfjsgafkjgh" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="akfjsgafkjgh" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
                                 </div>
                                 <div className="padding"></div>
                                 <div className="input">
@@ -440,77 +439,79 @@ function ComponentsPage() {
                                     <span className="icon">search</span>
                                     <input type="text" name="Hello" id="akfjsgafkjgh" placeholder="Hovno v koši" />
                                     <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
-                                    <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
+                                    <label htmlFor="akfjsgafkjgh" class="sub success" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
                                 </div>
 
                                 <div className="padding-large"></div>
 
-                                <label htmlFor="123654" class="light" >Input</label>
-                                <input type="text" name="Hello" id="12356asd4" placeholder="username@mail.com" />
 
-                                <div className="column">
-                                    <label htmlFor="123654" class="light" >Danger</label>
-                                    <input type="text" name="Hello" id="1235asd64" placeholder="username@mail.com" class="danger" />
+                                <div className="input danger">
+                                    <label htmlFor="eaihfagoivgoghai" class="">Input</label>
+                                    <span className="icon">search</span>
+                                    <input type="text" name="Hello" id="eaihfagoivgoghai" placeholder="Hovno v koši" />
+                                    <label htmlFor="eaihfagoivgoghai" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="eaihfagoivgoghai" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
                                 </div>
-                                <div className="column">
-                                    <label htmlFor="123654" class="light" >Success</label>
-                                    <input type="text" name="Hello" id="123asd564" placeholder="username@mail.com" class="success" />
+                                <div className="padding"></div>
+                                <div className="input success">
+                                    <label htmlFor="oiwhodghvdohbi" class="">Input</label>
+                                    <span className="icon">search</span>
+                                    <input type="text" name="Hello" id="oiwhodghvdohbi" placeholder="Hovno v koši" />
+                                    <label htmlFor="oiwhodghvdohbi" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="oiwhodghvdohbi" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
                                 </div>
 
+                                <div className="padding"></div>
+
+                                <div className="input">
+                                    <label htmlFor="oihlgsdhgshiol" class="">Additional ingredientes</label>
+                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                                    <label for="vehicle1"> Cheese</label>
+                                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+                                    <label for="vehicle2">Salami
+                                        <div className="tooltip">
+                                            *
+                                            <div className="tooltip-window top">
+                                                Pokud je na skladu
+                                            </div>
+                                        </div>
+
+                                    </label>
+                                    <input type="checkbox" id="wsfge68" name="vehicle2" disabled value="Car" />
+                                    <label for="wsfge68">Mushrooms</label>
+                                </div>
+
+                                <br />
+
+                                <div className="input ">
+                                    <label htmlFor="oiwhodghvdohbi" class="">Velikost</label>
+                                    <input type="radio" id="vehicle3" name="vehicle" value="Bike" />
+                                    <label for="vehicle3"> Malá</label>
+                                    <input type="radio" id="vehicle4" name="vehicle" value="Car" />
+                                    <label for="vehicle4"> Velká</label>
+
+                                    <label htmlFor="" className="sub">Vyberte, kterou chcete, stejně vám dovezeme tu malou</label>
+
+
+                                </div>
+
+                                <br />
+
+                                <div className="input ">
+                                    <label htmlFor="oiwhodghvdohbi" class="">Range</label>
+                                    <input type="range" />
+                                    <label htmlFor="" className="sub">Vyberte, kterou chcete, stejně vám dovezeme tu malou</label>
+
+
+                                </div>
+
+
+
+
                             </div>
 
-                            <label htmlFor="icooon" class="with-icon">Wtih icon</label>
-                            <div className=" iconned-input column ">
-                                <p class="g-icon ">search</p>
-                                <input type="text" class="with-icon" id="icooon" placeholder="username@mail.com" />
-                            </div>
+                            <div className="padding"></div>
 
-
-                            <label htmlFor="icooon" class="with-icon">With icon large</label>
-                            <div className=" iconned-input column ">
-                                <p class="g-icon large">search</p>
-                                <input type="text" class="with-icon large" id="icooon" placeholder="username@mail.com" />
-                            </div>
-
-                            <div className="row w-12">
-
-                                <input type="text" name="" id="" className="editable" placeholder="Editable input" />
-                            </div>
-
-                            <input type="date" name="" id="" />
-
-
-                            <div className="column">
-                                <label htmlFor="852741" class="large">Large</label>
-                                <input type="text" class="large" id="852741" name="Hello2" placeholder="username@mail.com" />
-                            </div>
-
-                            <div className="">
-                                <textarea name="as" id="qfdsa" cols="30" rows="10">Tohle je textarea</textarea>
-                            </div>
-
-                        </div>
-                        {/* Checkboxes */}
-                        <div className="checkboxes">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                            <label for="vehicle1"> I have a bike</label><br />
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-                            <label for="vehicle2"> I have a car</label><br />
-                        </div>
-                        {/* Radios */}
-                        <div className="radios">
-                            <input type="radio" id="vehicle3" name="vehicle" value="Bike" />
-                            <label for="vehicle3"> I have a bike</label><br />
-                            <input type="radio" id="vehicle4" name="vehicle" value="Car" />
-                            <label for="vehicle4"> I have a car</label><br />
-
-
-                        </div>
-
-                        {/* Sliders */}
-                        <div className="sliders">
-                            <input type="range" id="volume" name="volume" min="0" max="100" />
-                            <label for="volume">Volume</label>
 
                         </div>
 
@@ -825,6 +826,10 @@ function ComponentsPage() {
                     </Offcanvas>
 
                     <button onclick={() => setOffCanR(true)}>From scrollLeft</button>
+                    <Offcanvas opened={offCanR} setOpened={setOffCanR} direction={"right"} >
+                        <h1>Offcanvas</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed suscipit libero quibusdam consequatur pariatur necessitatibus sapiente cum dignissimos dicta reprehenderit!</p>
+                    </Offcanvas>
 
                 </div>
             </div>

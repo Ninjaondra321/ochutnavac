@@ -479,10 +479,29 @@ input.editable:focus {
     box-shadow: none;
 }
 
-.iconned-input .icon,
-.iconned-input .g-icon {
-    /* color: var(--primary-color); */
-    color: var(--font-color);
+.input .icon {
+    color: var(--primary-color);
+    /* color: var(--prim-color); */
+}
+
+.input.danger input,
+input.danger {
+    border-color: var(--danger-color);
+}
+
+.input.danger label.sub,
+label.sub.danger {
+    color: var(--danger-color);
+}
+
+.input.success input,
+input.success {
+    border-color: var(--success-color);
+}
+
+.input.success label.sub,
+label.sub.success {
+    color: var(--success-color);
 }
 
 /* * TILES */

@@ -6,6 +6,7 @@ function Offcanvas(props) {
     const merged = mergeProps({
         closeOnClickAway: true,
         opened: false,
+        direction: "left",
     }, props);
 
 
@@ -21,7 +22,7 @@ function Offcanvas(props) {
             <div class="offcanvas-parent" >
                 <button className="" onclick={handleClose}  >
                 </button>
-                <div className="offcanvas left">
+                <div className={"offcanvas " + merged.direction}>
                     {props.children}
                 </div>
             </div>
