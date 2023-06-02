@@ -106,6 +106,48 @@ function BackgroundsPage() {
         </div>
 
 
+        <div className="section-1 bg">
+            <div className="content  bg padding-large responsive-rotate">
+                <div className="make-section-bg">
+                    <h6 style={{ color: "rgba(0,0,0,0.4)", "font-size": "calc(10vw + 50px )" }}>#1</h6>
+                </div>
+
+                <div className="w-5 m-w-12 h-12 center padding">
+                    <h1>Section one</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quae aspernatur, incidunt quibusdam vero deleniti unde voluptatibus perferendis illo dolorem odit ea fugiat qui adipisci possimus iusto eligendi similique officia?</p>
+                    <div className="w-12 to-right">
+                        <button className="primary large m-w-12 center">Button</button>
+                    </div>
+                </div>
+
+                <div className="w-7 m-w-12 padding">
+                    <img src={pasta} alt="pubImg" />
+                </div>
+
+            </div>
+        </div>
+
+        <div className="section-1 bg">
+            <div className="content  bg padding-large responsive-rotate  m-reversed">
+                <div className="make-section-bg to-right" style={{ "flex-direction": "column-reverse" }}>
+                    <h6 style={{ color: "rgba(0,0,0,0.4)", "font-size": "calc(10vw + 50px )" }}>#2</h6>
+                </div>
+
+                <div className="w-7 m-w-12 padding">
+                    <img src={pasta} alt="pubImg" />
+                </div>
+
+                <div className="w-5 m-w-12 h-12 center padding">
+                    <h1>Section two</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quae aspernatur, incidunt quibusdam vero deleniti unde voluptatibus perferendis illo dolorem odit ea fugiat qui adipisci possimus iusto eligendi similique officia?</p>
+                    <div className="w-12 ">
+                        <button className="primary large m-w-12 center">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
         <div className="section">

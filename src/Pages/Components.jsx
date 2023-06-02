@@ -498,11 +498,26 @@ function ComponentsPage() {
                                 <br />
 
                                 <div className="input ">
-                                    <label htmlFor="oiwhodghvdohbi" class="">Range</label>
-                                    <input type="range" />
+                                    <label htmlFor="fdhasfuahiuafiugafh" class="">Velikost</label>
+                                    <select name="" id="fdhasfuahiuafiugafh">
+                                        <option value="das">01</option>
+                                        <option value="a">asd 02</option>
+                                        <option value="sad">lorem</option>
+                                        <option value="sads">ipsum</option>
+                                    </select>
+
+
                                     <label htmlFor="" className="sub">Vyberte, kterou chcete, stejně vám dovezeme tu malou</label>
 
 
+                                </div>
+
+                                <br />
+
+                                <div className="input ">
+                                    <label htmlFor="oiwhodghvdohbi" class="">Range</label>
+                                    <input type="range" />
+                                    <label htmlFor="" className="sub">Vyberte, kterou chcete, stejně vám dovezeme tu malou</label>
                                 </div>
 
 
@@ -546,6 +561,14 @@ function ComponentsPage() {
                         <button className="icon tool">mail</button>
                     </div>
 
+
+                </div>
+            </div>
+
+            <div className="keyboard-input-section">
+                <div className="content">
+                    <h1>Keyboard input</h1>
+                    <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
 
                 </div>
             </div>
