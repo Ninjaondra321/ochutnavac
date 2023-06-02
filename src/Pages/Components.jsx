@@ -323,7 +323,28 @@ function ComponentsPage() {
 
             <div className="dropdown-sections">
                 <div className="content">
+                    {/* Test of a button inside another button  */}
+                    <button class="secondary">
+                        Secondary
+                        {/* <button className="primary">
+                            Primary inside secondary
+                        </button> */}
+                    </button>
+
                     <h1>Dropdown</h1>
+
+                    <div className="new-dropdown">
+                        <button className="my-dropdown-button">
+                            New dropdown
+                        </button>
+                        <div className="new-dropdown-window">
+                            <p>Ahoj</p>
+                            <p>jkasjkasjkfg</p>
+                            <button>adsdggj</button>
+                        </div>
+                    </div>
+
+
 
                     <div className="dropdown">
                         <button className="dropdown-heading">Dropdown</button>
@@ -726,7 +747,6 @@ function ComponentsPage() {
                             <tr>
                                 <td>Štěpán</td>
                                 <td>Štěpán</td>
-                                {/* <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, doloribus enim! A dolore at perspiciatis iusto, ad consequuntur atque alias!</td> */}
                                 <td>18</td>
                                 <td><button class="btn primary">Click</button></td>
                                 <td><p class="g-icon large"> mail </p> </td>
