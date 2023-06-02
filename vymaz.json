@@ -1,0 +1,70 @@
+{
+    "meta": {
+        "title": "TODO CHANGE TILE",
+        "description": "Introduction to the Sketch Design System",
+        "keywords": "sketch, design, system, sketch design system, sketch design, sketch system, sketch design system",
+        "author": "NoTime",
+        "date": "16.5.2023"
+    },
+    "page": [
+        {
+            "type": "p",
+            "content": "TODO: sem dopi\u0161 uk\u00e1zku"
+        },
+        {
+            "type": "h1",
+            "content": "Structure"
+        },
+        {
+            "type": "code",
+            "content": "<p class=\"row\">Default <span className=\"leader\"></span> span.leader</p>\n",
+            "language": "html"
+        },
+        {
+            "type": "h1",
+            "content": "Options"
+        },
+        {
+            "type": "p",
+            "content": "There are 3 default styles"
+        },
+        {
+            "type": "p",
+            "content": "* .leader (dotted)"
+        },
+        {
+            "type": "p",
+            "content": "* .leader.dashed"
+        },
+        {
+            "type": "p",
+            "content": "* .leader.solid"
+        },
+        {
+            "type": "list",
+            "content": [
+                ".leader (dotted)",
+                ".leader.dashed",
+                ".leader.solid"
+            ]
+        },
+        {
+            "type": "h1",
+            "content": "Design guidelines"
+        },
+        {
+            "type": "code",
+            "content": "hr {\n /* Style here */\n}\n",
+            "language": "css"
+        },
+        {
+            "type": "h1",
+            "content": "Part from BE\u0160AMEL"
+        },
+        {
+            "type": "code",
+            "content": "hr {\n\u00a0 \u00a0 width: 100%;\n\u00a0 \u00a0 height: 1px;\n}\n",
+            "language": "css"
+        }
+    ]
+}

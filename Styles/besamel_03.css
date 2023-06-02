@@ -1184,3 +1184,9 @@ span.leader.double {
 .wrap {
     flex-wrap: wrap;
 }
+
+/* TODO! Někam zařaď!! */
+hr {
+    width: 100%;
+    height: 1px;
+}
