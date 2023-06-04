@@ -41,6 +41,11 @@ function GenerateStyle() {
         let pixels = i * 50
 
         w_i_px += `.w-${pixels}px{width: ${pixels}px;}`
+
+        // Ať nemám tolik proměnných
+        w_i_px += `.max-w-${pixels}px{max-width: ${pixels}px;}`
+
+
         m_w_i_px += `.m-w-${pixels}px{width: ${pixels}px;}`
 
         h_i_px += `.h-${pixels}px{height: ${pixels}px;}`

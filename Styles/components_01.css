@@ -264,9 +264,12 @@ h4.responsive-heading {
 .navbar {
     background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-color-muted) 100%);
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+nav {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+}
 
 
 .navbar .inactive,
@@ -701,7 +704,15 @@ input:checked+.chip {
     border-radius: var(--border-radius-components);
 }
 
-.offcanvas {}
+.offcanvas {
+    background: var(--font-color-light);
+    animation: slide-l 0.3s ease-in-out;
+}
+
+.offcanvas.right {
+    animation: slide-r 0.3s ease-in-out;
+}
+
 
 /* * Text loading animation */
 .loading {
@@ -777,6 +788,19 @@ textarea::-webkit-scrollbar-thumb:hover,
     background-color: var(--primary-color);
 }
 
+.subtle-scroll::-webkit-scrollbar {
+    background-color: transparent;
+    height: 3px;
+}
+
+.subtle-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color-muted);
+}
+
+.subtle-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
 
 .tooltip-window {
     background-color: var(--bg-light);
@@ -798,4 +822,12 @@ textarea::-webkit-scrollbar-thumb:hover,
 
 .new-dropdown *:focus+.new-dropdown-window {
     display: block;
+}
+
+
+.example {
+    background-color: var(--primary-color-muted);
+    border-radius: var(--border-radius-components);
+    padding: 10px;
+    border: 1px solid var(--primary-color-static);
 }
