@@ -831,3 +831,32 @@ textarea::-webkit-scrollbar-thumb:hover,
     padding: 10px;
     border: 1px solid var(--primary-color-static);
 }
+
+
+/* * STEPPER */
+
+/* Before .active */
+.stepper .stepper-a {
+    background-color: green;
+}
+
+/* Active */
+.stepper .active .stepper-a {
+    background-color: var(--primary-color);
+}
+
+.stepper .active .stepper-b {
+    font-weight: 700;
+}
+
+.stepper .active:hover .stepper-a {
+    background-color: var(--primary-color-hover);
+}
+
+/* After .active  */
+.stepper li.active~li .stepper-a {
+    color: var(--primary-color);
+    background-color: var(--primary-color-muted);
+    outline: 1px solid var(--primary-color);
+
+}

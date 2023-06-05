@@ -1369,7 +1369,7 @@ hr {
 
 
 /* * STEPPER */
-ol.stepper {
+/* ol.stepper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1390,7 +1390,6 @@ ol.stepper li {
 }
 
 ol.stepper li::before {
-    /* Content:  index of the list item */
     counter-increment: section;
     content: counters(section, ".") " ";
     background: red;
@@ -1401,7 +1400,7 @@ ol.stepper li::before {
 
 ol.stepper li.active::before {
     background: green;
-}
+} */
 
 
 /* * EXAMPLE */
@@ -1421,4 +1420,55 @@ ol.stepper li.active::before {
 .subtle-scroll {
     overflow-x: scroll;
     overflow-y: hidden;
+}
+
+
+
+/* * STEPPER */
+.stepper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+
+}
+
+.stepper.stepper.type-column {
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.stepper.stepper li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.stepper.type-column .stepper-b {
+    position: absolute;
+    bottom: calc(-1 * 100% - 7px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stepper.type-row .stepper-b {
+    margin-left: 8px;
+}
+
+
+.stepper li .stepper-a,
+.stepper li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.stepper .stepper-a {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
 }

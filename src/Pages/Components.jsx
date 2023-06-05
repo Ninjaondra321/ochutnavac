@@ -146,8 +146,8 @@ function ComponentsPage() {
                 <div className="content">
                     <h1>Accordion</h1>
                     <Accordion contents={[
-                        { header: "Ahoj", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!" },
-                        { header: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est!" },
+                        { header: "Ahoj", content: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est! </p>" },
+                        { header: " <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sequi quaerat. Possimus hic, quaerat ut eos repellat sint minus doloremque beatae fuga mollitia nulla perferendis commodi quibusdam sequi? Saepe, est! </p>" },
                     ]}
                         oneOpened={true}
                     />
@@ -758,29 +758,52 @@ function ComponentsPage() {
 
                     <h1>Stepper - W.I.P.</h1>
 
-                    <ol className="stepper">
-                        <li >Košík</li>
-                        <li class="active"> Platba</li>
-                        <li> Hotovo</li>
+                    <h3>Row</h3>
+                    <ul className="stepper type-row">
+                        <li>
+                            <p className="stepper-a">1</p>
+                            <p className="stepper-b">Košík</p>
+                        </li>
+                        <hr />
+                        <li>
+                            <p className="stepper-a">2</p>
+                            <p className="stepper-b">Doprava</p>
+                        </li>
+                        <hr />
+                        <li class="active">
+                            <p className="stepper-a">3</p>
+                            <p className="stepper-b">Platba</p>
+                        </li>
+                        <hr />
+                        <li>
+                            <p className="stepper-a">4</p>
+                            <p className="stepper-b">Done</p>
+                        </li>
+                    </ul>
 
-                    </ol>
+                    <h3>Column</h3>
+                    <ul className="stepper type-column">
+                        <li>
+                            <p className="stepper-a">1</p>
+                            <p className="stepper-b">Košík</p>
+                        </li>
+                        <hr />
+                        <li>
+                            <p className="stepper-a">2</p>
+                            <p className="stepper-b">Doprava</p>
+                        </li>
+                        <hr />
+                        <li class="active">
+                            <p className="stepper-a">3</p>
+                            <p className="stepper-b">Platba</p>
+                        </li>
+                        <hr />
+                        <li>
+                            <p className="stepper-a">4</p>
+                            <p className="stepper-b">Hotovo</p>
+                        </li>
+                    </ul>
 
-                    <div className="setpper">
-                        <div className="stepper-item">
-                            <div className="stepper-header">
-                                <h3>1</h3>
-                            </div>
-                            <div className="stepper-content">
-                                <h4>Košík</h4>
-                            </div>
-                            <label >asd</label>
-                        </div>
-                        <input type="radio" name="stepper" id="stepperA" />
-
-
-                        <input type="radio" name="stepper" id="stepperB" />
-                        <input type="radio" name="stepper" id="stepperC" />
-                    </div>
 
                 </div>
 
