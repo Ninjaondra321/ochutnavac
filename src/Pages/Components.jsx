@@ -97,7 +97,8 @@ function ComponentsPage() {
                 </div>
             </div>
 
-            <div className="position-section">
+            <div className="position-section bg">
+                <img src={Img_1} class="make-section-bg to-w to-left" alt="" />
                 <div className="content">
                     <h1>Position</h1>
 
@@ -136,6 +137,64 @@ function ComponentsPage() {
                             <span className="icon hover-hide">south_west</span>
                             <h4 className="hover-show">South west</h4>
                         </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div className="row wrap">
+                        <div className="card h-200px w-2 hover pos">
+                            <div className="to-w">
+                                <h4 class="hover-hide"><span class="icon">west</span></h4>
+                                <h4 class="hover-show">To west</h4>
+                            </div>
+                        </div>
+                        <div className="card h-200px w-2 hover pos">
+                            <div className="to-s">
+                                <h4 class="hover-hide"><span class="icon">south</span></h4>
+                                <h4 class="hover-show">To south</h4>
+                            </div>
+                        </div>
+                        <div className="card h-200px w-2 hover pos">
+                            <div className="to-n">
+                                <h4 class="hover-hide"><span class="icon">north</span></h4>
+                                <h4 class="hover-show">To north</h4>
+                            </div>
+                        </div>
+                        <div className="card h-200px w-2 hover pos ">
+                            <div className="to-e">
+                                <h4 class="hover-hide"><span class="icon">east</span></h4>
+                                <h4 class="hover-show">To east</h4>
+
+                            </div>
+                        </div>
+
+                        <div className="card h-200px w-2 hover pos ">
+                            <div className="to-sw">
+                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-show">To south west</h4>
+                            </div>
+                        </div>
+                        <div className="card h-200px w-2 hover pos ">
+                            <div className="to-se">
+                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-show">To south west</h4>
+                            </div>
+                        </div>
+
+                        <div className="card h-200px w-2 hover pos ">
+                            <div className="to-nw">
+                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-show">To south west</h4>
+                            </div>
+                        </div>
+                        <div className="card h-200px w-2 hover pos ">
+                            <div className="to-ne">
+                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-show">To south west</h4>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
@@ -784,17 +843,18 @@ function ComponentsPage() {
                     <h3>Column</h3>
                     <ul className="stepper type-column">
                         <li>
-                            <p className="stepper-a">1</p>
+                            <p className="stepper-a"> <span class="icon">shop</span> </p>
                             <p className="stepper-b">Košík</p>
                         </li>
                         <hr />
                         <li>
-                            <p className="stepper-a">2</p>
+                            <p className="stepper-a"> <span class="icon">motorcycle</span> </p>
+
                             <p className="stepper-b">Doprava</p>
                         </li>
                         <hr />
                         <li class="active">
-                            <p className="stepper-a">3</p>
+                            <p className="stepper-a"> <span class="icon">money</span> </p>
                             <p className="stepper-b">Platba</p>
                         </li>
                         <hr />
@@ -802,6 +862,39 @@ function ComponentsPage() {
                             <p className="stepper-a">4</p>
                             <p className="stepper-b">Hotovo</p>
                         </li>
+                    </ul>
+
+                    <h3>Horizontal</h3>
+                    <ul className="stepper horizontal">
+                        <li>
+                            <div className="stepper-head">
+                                <p className="stepper-a">1</p>
+                                <p className="stepper-b">Košík</p>
+                            </div>
+                            <div className="stepper-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sequi id earum laboriosam omnis. Sequi ut optio doloribus numquam reprehenderit!</p>
+                            </div>
+                        </li>
+                        <li class="active">
+                            <div className="stepper-head">
+                                <p className="stepper-a">2</p>
+                                <p className="stepper-b">Doprava</p>
+                            </div>
+                            <div className="stepper-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sequi id earum laboriosam omnis. Sequi ut optio doloribus numquam reprehenderit!</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="stepper-head">
+                                <p className="stepper-a">3</p>
+                                <p className="stepper-b">Platba</p>
+                            </div>
+                            <div className="stepper-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sequi id earum laboriosam omnis. Sequi ut optio doloribus numquam reprehenderit!</p>
+                            </div>
+                        </li>
+
+
                     </ul>
 
 

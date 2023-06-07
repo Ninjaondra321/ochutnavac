@@ -1348,6 +1348,68 @@ hr {
     justify-content: flex-end;
 }
 
+.pos {
+    position: relative;
+}
+
+.to-w,
+.to-e,
+.to-n,
+.to-s,
+.to-nw,
+.to-ne,
+.to-sw,
+.to-se {
+    position: absolute;
+    padding: inherit;
+
+}
+
+.to-w {
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.to-s {
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.to-e {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.to-n {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.to-sw {
+    bottom: 0;
+    left: 0;
+}
+
+.to-se {
+    bottom: 0;
+    right: 0;
+}
+
+.to-nw {
+    top: 0;
+    left: 0;
+}
+
+.to-ne {
+    top: 0;
+    right: 0;
+}
 
 .joiner {
     z-index: -1;
@@ -1425,7 +1487,8 @@ ol.stepper li.active::before {
 
 
 /* * STEPPER */
-.stepper {
+.stepper,
+.stepper-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1435,17 +1498,19 @@ ol.stepper li.active::before {
 
 }
 
-.stepper.stepper.type-column {
+.stepper.type-column {
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0;
 }
 
-.stepper.stepper li {
+
+.stepper li {
     position: relative;
     margin: 0 15px;
 }
+
 
 .stepper.type-column .stepper-b {
     position: absolute;
@@ -1454,9 +1519,11 @@ ol.stepper li.active::before {
     transform: translateX(-50%);
 }
 
-.stepper.type-row .stepper-b {
+.stepper.type-row .stepper-b,
+.stepper.horizontal .stepper-b {
     margin-left: 8px;
 }
+
 
 
 .stepper li .stepper-a,
@@ -1471,4 +1538,36 @@ ol.stepper li.active::before {
     border-radius: 50%;
     height: 35px;
     width: 35px;
+}
+
+
+.stepper.horizontal {
+    flex-direction: column;
+}
+
+.stepper.horizontal li {
+    flex-direction: column;
+    /* TO left */
+    align-items: flex-start;
+}
+
+.stepper.horizontal .stepper-body {
+    border-left: 1px solid black;
+    padding-left: 15px;
+    margin-left: 15px;
+
+}
+
+.stepper li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 15px;
+}
+
+
+.stepper li:not(.active) .stepper-body {
+    height: 0;
+    overflow: hidden;
 }
