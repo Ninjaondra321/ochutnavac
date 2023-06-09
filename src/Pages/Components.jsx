@@ -60,13 +60,14 @@ function ComponentsPage() {
             <div className="utilities">
                 <div className="content">
                     <h1>Utilities</h1>
+                    <img src={Img_11} align="l" />
                     <h1>Utilities</h1>
 
                     <div className="row">
 
 
                         <div className="card hover bg w-4 h-200px dark pos-sw">
-                            <img src={Img_20} alt="Img_20" id="debug" class="make-section-bg" />
+                            <img src={Img_20} alt="Img_20" align="r" id="debug" class="make-section-bg" />
 
                             <div className="hover-show column pos-e">
                                 <h4 className="">Hovered</h4>

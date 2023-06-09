@@ -32,7 +32,7 @@ function FormPage() {
                             {/* Příjmení */}
                             <div className="input w-6 m-w-12 padding-small">
                                 <label htmlFor="surname" class="">Surname</label>
-                                <input type="text" name="surname" id="surname" placeholder="Novák" />
+                                <input type="text" name="$surname" id="$surname" placeholder="Novák" />
                             </div>
 
 
@@ -43,7 +43,7 @@ function FormPage() {
                         {/* Telefoní číslo */}
                         <div className="input padding-small">
                             <label htmlFor="telephone" class="">Telefoní číslo</label>
-                            <input type="text" name="Hello" id="telephone" placeholder="Novák" />
+                            <input type="text" name="$telephone" id="telephone" placeholder="Novák" />
                         </div>
 
                         {/* Zpráva */}

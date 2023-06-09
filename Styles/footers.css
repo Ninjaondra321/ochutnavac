@@ -1,3 +1,7 @@
 .malina {
     background-color: red;
 }
+
+footer.row {
+    justify-content: space-around;
+}

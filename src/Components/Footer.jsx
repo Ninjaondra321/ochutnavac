@@ -82,6 +82,32 @@ function Footer() {
             </div>
         </footer>
 
+        <footer class="boruvka row">
+            <div className="column center">
+                <h6>Stránky</h6>
+                <ul className="">
+                    <li><A href="/">Domů</A></li>
+                    <li><A href="/career">Kariera</A></li>
+                    <li><A href="/contact">Kontakt</A></li>
+                    <li><A href="/sitemap">Sitemap</A></li>
+                </ul>
+            </div>
+
+            <div className="column center">
+                <h6>Kontakt</h6>
+                <ul className="">
+                    <li><A href="/">+420 123 456 789</A></li>
+                    <li><A href="/">
+                        example@email.com
+                    </A></li>
+
+                </ul>
+            </div>
+
+
+
+        </footer>
+
 
 
     </>);
