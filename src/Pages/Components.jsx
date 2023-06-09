@@ -98,7 +98,7 @@ function ComponentsPage() {
             </div>
 
             <div className="position-section bg">
-                <img src={Img_1} class="make-section-bg to-w to-left" alt="" />
+                <img src={Img_1} class="make-section-bg to-n" alt="" />
                 <div className="content">
                     <h1>Position</h1>
 
@@ -177,20 +177,20 @@ function ComponentsPage() {
                         </div>
                         <div className="card h-200px w-2 hover pos ">
                             <div className="to-se">
-                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-hide"><span class="icon">south_east</span></h4>
                                 <h4 class="hover-show">To south west</h4>
                             </div>
                         </div>
 
                         <div className="card h-200px w-2 hover pos ">
                             <div className="to-nw">
-                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-hide"><span class="icon">north_west</span></h4>
                                 <h4 class="hover-show">To south west</h4>
                             </div>
                         </div>
                         <div className="card h-200px w-2 hover pos ">
                             <div className="to-ne">
-                                <h4 class="hover-hide"><span class="icon">south_west</span></h4>
+                                <h4 class="hover-hide"><span class="icon">north_east</span></h4>
                                 <h4 class="hover-show">To south west</h4>
                             </div>
                         </div>

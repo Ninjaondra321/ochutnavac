@@ -64,6 +64,7 @@ import BackgroundsPage from './Pages/SectionPages/Backgrounds';
 // Functions
 import Cookies from './Functions/Cookies';
 import FootersPage from "./Pages/SectionPages/FootersPage";
+import FormPage from "./Pages/Form";
 
 function App() {
 
@@ -116,6 +117,7 @@ function App() {
             <Route path="/sections/footers" element={<FootersPage />} />
             <Route path="/sections/navbars" element={<NavbarsPage />} />
             <Route path="/sections/backgrounds" element={<BackgroundsPage />} />
+            <Route path="/form" element={<FormPage />} />
 
             <Route path="*" element={<div>Not found</div>} />
           </Routes>

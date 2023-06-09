@@ -1,6 +1,8 @@
 
 import { A } from "@solidjs/router";
 
+import "../../../Styles/footers.css"
+
 
 function FootersPage() {
     return (<div style={{ width: "95vw" }}>

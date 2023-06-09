@@ -73,6 +73,7 @@ function NavBar() {
                             abc
                         </A>
                         <A href="/components">componentss</A>
+                        <A href="/form">Form</A>
                         <div className="dropdown">
 
                             <A href="/sections" className="dropdown-heading">Sections</A>
