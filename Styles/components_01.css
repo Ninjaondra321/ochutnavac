@@ -21,6 +21,7 @@
     --font-color-dark-muted: #1e1d3ab3;
 
     --font-color: var(--font-color-dark);
+    --font-color-muted: var(--font-color-dark-muted);
 
     --bg-light: #f7fcf1;
     --bg-dark: #1e1d3a;
@@ -181,7 +182,7 @@ h6 {
 
 /* !KDYZTAK VYMAZ! */
 a {
-    color: var(--secondary-color-static);
+    color: var(--primary-color-static);
 }
 
 .g-icon {
@@ -616,7 +617,6 @@ span.leader {
 .carousel-control-l,
 .carousel-control-r {
     font-family: "Material Icons";
-    top: 50%;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -635,9 +635,6 @@ span.leader {
 
 
 /* * BADGES */
-.badge {
-    border-radius: 55px;
-}
 
 .badge.primary {
     background: var(--primary-color);
@@ -812,7 +809,7 @@ textarea::-webkit-scrollbar-thumb:hover,
 
 
 /* ! */
-.new-dropdown>.new-dropdown-window {
+/* .new-dropdown>.new-dropdown-window {
     background-color: var(--font-color-light);
 }
 
@@ -822,7 +819,7 @@ textarea::-webkit-scrollbar-thumb:hover,
 
 .new-dropdown *:focus+.new-dropdown-window {
     display: block;
-}
+} */
 
 
 .example {
@@ -859,4 +856,12 @@ textarea::-webkit-scrollbar-thumb:hover,
     background-color: var(--primary-color-muted);
     outline: 1px solid var(--primary-color);
 
+}
+
+.dropdown .dropdown-window {
+    box-shadow: var(--primary-shadow);
+}
+
+.input-icon {
+    color: var(--primary-color);
 }

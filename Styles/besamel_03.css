@@ -164,7 +164,8 @@ a {
 
 }
 
-.make-section-bg {
+.make-section-bg,
+.joiner {
     pointer-events: none;
     user-select: none;
 
@@ -376,7 +377,7 @@ nav>div {
     align-items: stretch;
 }
 
-.navbar .dropdown>a {
+.navbar .nav-dropdown>a {
     height: 100%;
 }
 
@@ -1189,7 +1190,7 @@ span.leader.double {
 }
 
 /*  S tímto  si ještě pohraj:*/
-.dropdown-window {
+.nav-dropdown .dropdown-window {
     z-index: 8;
     position: absolute;
     display: none;
@@ -1197,24 +1198,48 @@ span.leader.double {
     padding: 15px;
 }
 
-.dropdown-window,
-.dropdown-window * {
-    /* z-index: 99999 !important; */
 
-}
-
-.dropdown:hover .dropdown-window,
-.dropdown:active .dropdown-window,
-.dropdown:focus .dropdown-window {
+.nav-dropdown:hover .dropdown-window,
+.nav-dropdown:active .dropdown-window,
+.nav-dropdown:focus .dropdown-window {
     animation: dropdown 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    /* z-index: 99999 !important; */
-
 }
 
-.dropdown-window * {
+.nav-dropdown .dropdown-window * {
     padding: 5px;
+}
+
+.nav-dropdown .dropdown-button+.dropdown-window {
+    display: none;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown.open .dropdown-window,
+.dropdown.opened .dropdown-window {
+    position: absolute;
+    display: flex;
+    background: var(--bg-light);
+    border-radius: var(--border-radius-components);
+    padding: 10px;
+    z-index: 8;
+    flex-direction: column;
+
+    top: calc(100%);
+
+    animation: dropdown 0.2s ease-in-out;
+
+    /* left: 0;
+    top: 200%; */
+}
+
+.dropdown .dropdown-window {
+    display: none;
 }
 
 /* TODO! TEST-mozna vymaz */
@@ -1482,8 +1507,6 @@ ol.stepper li.active::before {
 
     max-width: 100%;
     max-height: 100%;
-
-
 }
 
 /* ? Tohle hoď ke scrollování: */
@@ -1592,8 +1615,8 @@ ul.responsive {
     margin: 0;
 }
 
-ul.responsive li {
-    padding: 2px 10px;
+ul li {
+    padding: 1px 5px;
 }
 
 
@@ -1605,4 +1628,33 @@ ul.responsive li {
     .responsive li {
         padding: 2px 0px;
     }
+}
+
+ul.plain {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+li .icon,
+a .icon,
+p .icon {
+    margin-right: 5px;
+    padding: 0;
+    font-size: inherit;
+}
+
+footer {
+    padding: 30px 30px 0 30px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.muted {
+    color: var(--font-color-muted);
 }

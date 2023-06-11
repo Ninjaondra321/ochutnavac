@@ -60,7 +60,6 @@ function ComponentsPage() {
             <div className="utilities">
                 <div className="content">
                     <h1>Utilities</h1>
-                    <img src={Img_11} align="l" />
                     <h1>Utilities</h1>
 
                     <div className="row">
@@ -255,6 +254,25 @@ function ComponentsPage() {
                 <div className="content">
 
                     <h1>Buttons</h1>
+                    <div className="banner">
+
+                        <div className="left">
+                        </div>
+                        <div className="center">
+                            <header>Nové menu najdete <a href="#">zde</a>
+
+                            </header>
+                        </div>
+
+                        <div className="right">
+
+                            <button className="icon small " >
+                                close
+                            </button>
+                        </div>
+
+                    </div>
+
                     <div className="padding row subtle-scroll" >
                         <button className="primary">Hello Word</button>
                         <button className="secondary">Lorem ipsum</button>
@@ -518,24 +536,65 @@ function ComponentsPage() {
                         </button> */}
                     </button>
 
-                    <h1>Dropdown</h1>
+                    <h1 id="dropdown"> Dropdown</h1>
+                    {/* 
+                    <div className="dropdown">
+                        <button className="dropdown-button"
+                            onClick={(e) => {
+                                e.currentTarget.parentElement.classList.toggle("open");
 
-                    <div className="new-dropdown">
-                        <button className="my-dropdown-button">
+                            
+                                    //   // Create an event listener that closes the dropdown when clicked outside
+                                    // document.addEventListener("click", (e) => {
+                                    //     if (e.target.closest(".dropdown") !== null) {
+                                    //         console.log("clicked inside");
+                                    //         console.log(e.target.closest(".dropdown"));
+                                    //         e.target.classList.toggle("open");
+                                    //     } else {
+                                    //         console.log("clicked outside");
+                                    //         console.log(e.target);
+                                    //         // console.log(e.target)
+                                    //         // e.currentTarget.parentElement.classList.remove("open");
+                                    //         console.log(e);
+                                    //         // Remove the event listener
+                                    //         document.removeEventListener("click", () => { });
+                                    //     }
+                                    // }
+                                    // );
+
+
+                            }}
+
+                        >
                             New dropdown
                         </button>
-                        <div className="new-dropdown-window">
+                        <div className="dropdown-window">
                             <p>Ahoj</p>
                             <p>jkasjkasjkfg</p>
                             <button>adsdggj</button>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
                     <div className="dropdown">
-                        <button className="dropdown-heading">Dropdown</button>
-                        <div className="dropdown-window">
+                        <button className="dropdown-button"
+
+                            onClick={(e) => {
+
+
+
+
+
+                                e.currentTarget.parentElement.classList.toggle("open");
+                            }
+                            }
+                        >
+
+                            Dropdown</button>
+                        <div className="dropdown-window"
+
+                        >
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
                             <hr />
@@ -619,13 +678,13 @@ function ComponentsPage() {
                                         <div className="tooltip">
                                             *
                                             <div className="tooltip-window top">
-                                                Musí být vyplněno
+                                                Musí být vyplněno <span className="icon">cookie</span>
                                             </div>
 
                                         </div>
                                     </label>
                                     <input type="text" name="Hello" id="123654" placeholder="Hovno v koši" />
-                                    <label htmlFor="123654" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
+                                    <label htmlFor="123654" class="sub" >Heslo musí obsahovat  <span className="icon">cookie</span> alespoň jednu číslici</label>
                                     <label htmlFor="123654" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
                                 </div>
 
@@ -635,8 +694,8 @@ function ComponentsPage() {
 
                                 <div className="input ">
                                     {/* <label htmlFor="akfjsgafkjgh" class="">Input</label> */}
-                                    <span className="icon">search</span>
-                                    <span className="icon right">cookie</span>
+                                    <span className="input-icon  ">search</span>
+                                    <span className="input-icon  right">cookie</span>
                                     <input type="text" name="Hello" id="akfjsgafkjgh" placeholder="Hovno v koši" />
                                     <label htmlFor="akfjsgafkjgh" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
                                     <label htmlFor="akfjsgafkjgh" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
@@ -644,7 +703,7 @@ function ComponentsPage() {
                                 <div className="padding"></div>
                                 <div className="input">
                                     <label htmlFor="akfjsgafkjgh" class="">Input</label>
-                                    <span className="icon">search</span>
+                                    <span className="input-icon">search</span>
                                     <input type="text" name="Hello" id="akfjsgafkjgh" placeholder="Hovno v koši" />
                                     <label htmlFor="akfjsgafkjgh" class="sub danger" >Heslo musí obsahovat alespoň jednu číslici</label>
                                     <label htmlFor="akfjsgafkjgh" class="sub success" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
@@ -655,7 +714,7 @@ function ComponentsPage() {
 
                                 <div className="input danger">
                                     <label htmlFor="eaihfagoivgoghai" class="">Input</label>
-                                    <span className="icon">search</span>
+                                    <span className="input-icon">search</span>
                                     <input type="text" name="Hello" id="eaihfagoivgoghai" placeholder="Hovno v koši" />
                                     <label htmlFor="eaihfagoivgoghai" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
                                     <label htmlFor="eaihfagoivgoghai" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
@@ -663,7 +722,7 @@ function ComponentsPage() {
                                 <div className="padding"></div>
                                 <div className="input success">
                                     <label htmlFor="oiwhodghvdohbi" class="">Input</label>
-                                    <span className="icon">search</span>
+                                    <span className="input-icon">search</span>
                                     <input type="text" name="Hello" id="oiwhodghvdohbi" placeholder="Hovno v koši" />
                                     <label htmlFor="oiwhodghvdohbi" class="sub" >Heslo musí obsahovat alespoň jednu číslici</label>
                                     <label htmlFor="oiwhodghvdohbi" class="sub" >Heslo musí obsahovat alespoň sedmncáct trpaslíků</label>
@@ -785,7 +844,7 @@ function ComponentsPage() {
                 <div className="content">
                     <h1>Example</h1>
 
-                    <div className="example">
+                    <div className="example-window">
 
                         <div className="card layout max-w-500px">
                             <div className="card-head ">

@@ -147,6 +147,248 @@ function BackgroundsPage() {
             </div>
         </div>
 
+        <div className="pricing-section">
+            <div className="content">
+                <h1>Pricing</h1>
+
+                <div className="row center">
+                    <div className="card w-4 m-w-12  h-10 padding center">
+                        <p className="muted">Basic</p>
+                        <h4>150 Kč</h4>
+                        <ul class="plain">
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                        </ul>
+                        <button className="secondary w-12 center">Buy</button>
+                    </div>
+                    <div className="card primary w-4 h-12 m-w-12 padding center">
+                        <p className="muted">Basic</p>
+                        <h4>150 Kč</h4>
+                        <ul class="plain">
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                        </ul>
+                        <button className="primary w-12 center">Buy</button>
+                    </div>
+                    <div className="card w-4 m-w-12 h-10  padding  center">
+                        <p className="muted">Basic</p>
+                        <h4>150 Kč</h4>
+                        <ul class="plain">
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                            <li><span className="icon">done</span>Free 1GB Storage</li>
+                        </ul>
+                        <button className="secondary w-12 center">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div className="priority-section">
+            <div className="content center">
+                <h1>Naše priority</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique id sapiente animi ipsa in, expedita aperiam numquam quam doloremque exercitationem.</p>
+                <div className="row">
+                    <div className="tile">
+                        <div className="head-icon"
+                            style="
+                            background: #f44336;
+                            color: white;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            "
+                        >
+                            <span className="icon">forest</span>
+                        </div>
+                        <h1>AHoj</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus quod accusamus ab inventore, quis at consequatur reiciendis aliquam ullam.</p>
+                    </div>
+                    <div className="tile">
+                        <div className="head-icon"
+                            style="
+                            background: #f44336;
+                            color: white;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            "
+                        >
+                            <span className="icon">forest</span>
+                        </div>
+                        <h1>AHoj</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus quod accusamus ab inventore, quis at consequatur reiciendis aliquam ullam.</p>
+                    </div>
+                    <div className="tile">
+                        <div className="head-icon"
+                            style="
+                            background: #f44336;
+                            color: white;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            "
+                        >
+                            <span className="icon">forest</span>
+                        </div>
+                        <h1>AHoj</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus quod accusamus ab inventore, quis at consequatur reiciendis aliquam ullam.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div className="priority-section">
+            <div className="content center">
+                <h1>Naše priority</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique id sapiente animi ipsa in, expedita aperiam numquam quam doloremque exercitationem.</p>
+                <div className="row all-center">
+                    <div className="tile column">
+                        <div className="head-icon"
+                            style="
+                            background: #f44336;
+                            color: white;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            "
+                        >
+                            <span className="icon">forest</span>
+                        </div>
+                        <h1>AHoj</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus quod accusamus ab inventore, quis at consequatur reiciendis aliquam ullam.</p>
+                    </div>
+                    <div className="tile column">
+                        <div className="head-icon"
+                            style="
+                            background: #f44336;
+                            color: white;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            "
+                        >
+                            <span className="icon">forest</span>
+                        </div>
+                        <h1>AHoj</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus quod accusamus ab inventore, quis at consequatur reiciendis aliquam ullam.</p>
+                    </div>
+                    <div className="tile column">
+                        <div className="head-icon"
+                            style="
+                            background: #f44336;
+                            color: white;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            "
+                        >
+                            <span className="icon">forest</span>
+                        </div>
+                        <h1>AHoj</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus quod accusamus ab inventore, quis at consequatur reiciendis aliquam ullam.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div className="form-section">
+            <div className="content row space-between">
+                <div className="left pc-w-7">
+                    <img src={Img_0} alt="" />
+                </div>
+
+                <div className="right  w-5 padding ">
+                    <div className="tile secondary">
+                        <h1>Formulář</h1>
+
+                        <form action="">
+                            <div className="input">
+                                <label for="name">Jméno</label>
+                                <input type="text" name="name" id="name" />
+
+                            </div>
+                            <div className="input">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" />
+                            </div>
+
+                            <div className="input">
+                                <label for="message">Zpráva</label>
+                                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            </div>
+
+                            <div className="input">
+                                <button type="submit">Odeslat</button>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div className="gallery-section">
+            <div class="parent w-12 h-400px">
+                <div class="div1 bg">
+                    <img src={Img_0} alt="" class="make-section-bg" />
+                </div>
+                <div class="div2 bg">
+                    <img src={pasta} alt="" class="make-section-bg" />
+                </div>
+                <div class="div3 bg">
+                    <img src={Img_0} alt="" class="make-section-bg" />
+                </div>
+                <div class="div4 bg">
+                    <img src={pub} alt="" class="make-section-bg" />
+                </div>
+                <div class="div5 bg">
+                    <img src={Img_0} alt="" class="make-section-bg" />
+                </div>
+                <div class="div6 bg">
+                    <img src={pasta} alt="" class="make-section-bg" />
+                </div>
+                <div class="div7 bg">
+                    <img src={pasta} alt="" class="make-section-bg" />
+                </div>
+            </div>
+        </div>
 
 
 
@@ -221,9 +463,6 @@ function BackgroundsPage() {
 
             </div>
         </div>
-
-
-
     </div>);
 }
 

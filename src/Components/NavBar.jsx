@@ -74,7 +74,7 @@ function NavBar() {
                         </A>
                         <A href="/components">componentss</A>
                         <A href="/form">Form</A>
-                        <div className="dropdown">
+                        <div className="nav-dropdown">
 
                             <A href="/sections" className="dropdown-heading">Sections</A>
                             <div className="dropdown-window">
@@ -83,7 +83,7 @@ function NavBar() {
                                 <A href="sections/backgrounds">Backgrounds</A>
                             </div>
                         </div>
-                        <div className="dropdown">
+                        <div className="nav-dropdown">
                             <p className="dropdown-heading">Dropdown</p>
                             <div className="dropdown-window">
                                 <A href="/dropdown">Dropdown</A>

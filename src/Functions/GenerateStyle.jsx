@@ -26,6 +26,8 @@ function GenerateStyle() {
     var typography = ""
     var typography_mobile = ""
 
+    var pc = ""
+
     // TODO! add vertical and horizontal padding ?and margin?
 
     // TWELVES SYSTEM
@@ -34,6 +36,8 @@ function GenerateStyle() {
 
         w_i += `.w-${i}{width: ${twelves_system}%;}`
         m_w_i += `.m-w-${i}{width: ${twelves_system}%;}`
+
+        pc += `.pc-w-${i}{width: ${twelves_system}%;}`
     }
 
     // PIXELS SYSTEM
@@ -97,6 +101,11 @@ function GenerateStyle() {
                     ${m_h_i_vh}
                     ${m_padding_size}
                     ${m_margin_size}
+            }`}
+            {`
+            @media only screen and (min-width: 768px) {
+                ${pc}
+                    
             }`}
 
 

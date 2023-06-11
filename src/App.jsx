@@ -4,8 +4,9 @@ import { Router, Routes, Route } from "@solidjs/router"
 
 // Styles
 
-import '../Styles/besamel_03.css';
-import '../Styles/components_01.css';
+
+import '../Styles/besamel_04.css';
+import '../Styles/components_02.css';
 // import "../Styles/flat-components.css";
 
 import GenerateStyle from './Functions/GenerateStyle';
@@ -122,9 +123,6 @@ function App() {
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
 
-          {/* <div className="info">
-            askjdbhHSBGHJG
-          </div> */}
 
           <Cookies />
         </div>

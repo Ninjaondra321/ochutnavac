@@ -11,6 +11,7 @@ function FormPage() {
                         <input type="text" name="honeypot" style="display:none" />
                         <input type="hidden" name="accessKey" value="097efb22-c16e-4fbf-af52-6db19e4c4f6f" />
 
+                        <input type="hidden" name="redirectTo" value="" />
 
 
                         <div className="row">
