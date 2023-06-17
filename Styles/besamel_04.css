@@ -409,6 +409,16 @@ ul.plain {
 }
 
 
+/* * 2.8 Text position */
+.txt-l {
+    text-align: left;
+}
+
+.txt-r {
+    text-align: right;
+}
+
+
 /* * 3 TYPOGRAPHY */
 /* TODO? Nechat to takhle? */
 .icon,
