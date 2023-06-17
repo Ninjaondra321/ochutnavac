@@ -53,6 +53,11 @@ function GenerateStyle() {
         m_w_i_px += `.m-w-${pixels}px{width: ${pixels}px;}`
 
         h_i_px += `.h-${pixels}px{height: ${pixels}px;}`
+
+        h_i_px += `.min-h-${pixels}px{min-height: ${pixels}px;}`
+        h_i_px += `.min-w-${pixels}px{min-width: ${pixels}px;}`
+
+
         m_h_i_px += `.m-h-${pixels}px{height: ${pixels}px;}`
     }
 

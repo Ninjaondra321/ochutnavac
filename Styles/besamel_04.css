@@ -417,9 +417,13 @@ ul.plain {
     background-color: transparent;
     border: none;
     color: var(--font-color);
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
     font-size: calc(1.50rem * var(--font-multiplier));
 
+}
+
+.input-icon {
+    padding: 10px 10px;
 }
 
 li .icon,
@@ -768,6 +772,11 @@ footer {
     cursor: pointer;
 }
 
+.accordion-content {
+    transition: height .2s ease;
+    height: 500px;
+    max-height: 250px;
+}
 
 .accordion-plain button.accordion-header {
     justify-content: flex-start;
@@ -1156,6 +1165,15 @@ input[type="radio"]:checked+label::after {
 
 
 /* * 5.13 Leaders */
+span.leader {
+    width: 100%;
+    margin: 0 7px;
+    border-bottom: gray 2.5px dotted;
+    margin-bottom: 6px;
+    border-bottom-style: dotted;
+    height: auto;
+}
+
 span.leader.dashed {
     border-bottom-style: dashed;
 }
