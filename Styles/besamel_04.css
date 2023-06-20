@@ -588,6 +588,9 @@ nav {
 }
 
 /* * 4.2.1 Banner */
+.banner p {
+    margin: 0 !important;
+}
 
 /* * 4.2.2 Navbar */
 .navbar>*>*,
@@ -1182,6 +1185,10 @@ span.leader {
     margin-bottom: 6px;
     border-bottom-style: dotted;
     height: auto;
+    flex-grow: 1;
+    flex: 1;
+    min-width: 20px;
+
 }
 
 span.leader.dashed {
