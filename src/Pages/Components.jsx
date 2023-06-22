@@ -25,6 +25,7 @@ import { ImgCarousel, CarouselWrap } from "../Components/Carousels";
 import { createSignal, onMount } from "solid-js";
 import ModalWrap from "../Components/Modal";
 import Offcanvas from "../Components/Offcanvas";
+import LightBox from "../Components/Lightbox";
 
 function ComponentsPage() {
     let iframeRef;
@@ -33,22 +34,14 @@ function ComponentsPage() {
     const [openModal, setOpenModal] = createSignal(false);
     const [openModal2, setOpenModal2] = createSignal(false);
 
+    const [lightboxOpened, setLightboxOpened] = createSignal(false);
+    const [lightboxIndex, setLightboxIndex] = createSignal(0);
+
 
     // Offcanvas opened
     const [offCanL, setOffCanL] = createSignal(false)
     const [offCanR, setOffCanR] = createSignal(false)
 
-
-    onMount(() => {
-
-        hljs.highlightAll();
-
-        iframeRef.innerHTML = <div className="ahoj">
-            <h1>ahoj</h1>
-        </div>
-        var innerDoc = iframeRef.contentDocument || iframeRef.contentWindow.document;
-        innerDoc.body.innerHTML = "<h1>Hello World!</h1>";
-    });
 
 
 
@@ -198,6 +191,27 @@ function ComponentsPage() {
 
                     </div>
                 </div>
+            </div>
+
+            <div className="lightbox-section">
+                <div className="content">
+                    <h1>Lightbox</h1>
+                    <div className="row wrap">
+                        <img src={Img_1} alt="" onClick={() => { console.log("clicked"); setLightboxOpened(true); setLightboxIndex(0) }} />
+                        <img src={Img_2} alt="" onClick={() => { console.log("clicked"); setLightboxOpened(true); setLightboxIndex(1) }} />
+                        <img src={Img_3} alt="" onClick={() => { console.log("clicked"); setLightboxOpened(true); setLightboxIndex(2) }} />
+                    </div>
+
+                </div>
+
+                <LightBox opened={lightboxOpened} close={() => setLightboxOpened(false)} index={lightboxIndex} >
+                    <img src={Img_1} alt="" />
+                    <img src={Img_2} alt="" />
+                    <img src={Img_3} alt="" />
+                </LightBox>
+
+
+
             </div>
 
 

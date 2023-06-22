@@ -1609,3 +1609,34 @@ ul a.active {
     color: var(--primary-color);
     font-weight: bold;
 }
+
+
+
+/* ! Přesuň */
+.lightbox,
+.lightbox .modal {
+    max-width: unset;
+}
+
+.lightbox .modal {
+    background: none;
+}
+
+.lightbox .offcanvas-parent:first-child {
+    backdrop-filter: blur(10px);
+}
+
+.lightbox .w-12.h-12 {
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.lightbox img {
+
+    width: inherit !important;
+    height: inherit !important;
+}

@@ -110,7 +110,7 @@ export function CarouselWrap({ maximised = false, children }) {
     function mouseDownHandler(e) {
         pos = {
             left: carouselRef.scrollLeft,
-            x: e.clientX
+            x: e.clientX * 1.5
         }
 
         document.addEventListener('mousemove', mouseMoveHandler);
@@ -146,7 +146,7 @@ export function CarouselWrap({ maximised = false, children }) {
         <div className="right-control m-hidden" onClick={scrollRight}>
             <button class="carousel-control-r"  >chevron_right</button>
         </div>
-        <div className={"carousel " + (maximised ? " maximised" : "")} ref={carouselRef} onmousedown={mouseDownHandler}>
+        <div className={"carousel " + (maximised ? " maximised" : "")} id="carousel" ref={carouselRef} onmousedown={mouseDownHandler}>
             {/* {props.children} */}
             {children}
         </div>
