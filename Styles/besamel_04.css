@@ -1640,3 +1640,36 @@ ul a.active {
     width: inherit !important;
     height: inherit !important;
 }
+
+
+.lightbox .carousel>* {
+    max-height: 80vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox .carousel>* img {
+    max-height: 80vh;
+    max-width: 90vw;
+
+    /* Keep the aspect ration */
+    width: auto !important;
+
+
+}
+
+
+.lightbox .left-control {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox .right-control {
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}

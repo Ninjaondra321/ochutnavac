@@ -34,15 +34,15 @@ function LightBox({ children, index, opened, close }) {
 
 
                     <CarouselWrap maximised={true}  >
-                        {children}
-                        {/* {
+                        {/* {children} */}
+                        {
                             children.map((child, i) => {
-                                return <div className="w-12 h-12">
-                                {child}
+                                return <div className="">
+                                    {child}
                                 </div>
                             }
                             )
-                        } */}
+                        }
 
                     </CarouselWrap>
 
